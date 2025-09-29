@@ -96,20 +96,28 @@ print()
 
 print("q9. take the three digit number from the user and find the sum of its digit")
 def sumOfDigit():
-    digit=int(input("enter 3 digit number : "))
-    sum=0
-    quent=digit/10
-    while(digit!=0):
-        rem=digit%10
+    digit = int(input("Enter a 3-digit number: "))
+    total = 0
+    quent = digit
+
+    while quent != 0:
+        rem = quent % 10        # get last digit
+        quent = quent // 10     # remove last digit
+        total = total + rem     # add digit to sum
+    
+    print(f"The sum of digits of {digit} is {total}")
+
+sumOfDigit()
+
         
 
 print("q10. accept marks in 5 subjects, calculate the sum and average")
 def result():
-    marks={"operating system " : 75,
-           "dsa with c ": 80,
-           "pyhton " : 78,
-           "software development ": 85,
-           "dbms ": 80}
+    marks={"operating system" : 75,
+           "dsa with c": 80,
+           "pyhton" : 78,
+           "software development": 85,
+           "dbms": 80}
     total_mark=marks["dbms"]+marks["dsa with c"]+marks["operating system"]+marks["pyhton"]+marks["software development"]
     average_marks=total_mark/5
 
