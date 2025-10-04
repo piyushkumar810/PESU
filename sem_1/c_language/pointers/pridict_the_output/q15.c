@@ -7,3 +7,4 @@ int main() {
     printf("%d\n", a);
     return 0;
 }
+// **q modifies a. So a = 5+10 = 15.
