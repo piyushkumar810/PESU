@@ -39,6 +39,7 @@ print()
 print(0.1+0.2 == 0.3) 
 print()
 
+# ---------------------- string slicing--------------------
 s="programmingwithpython"
 print(s[::5])
 print(s[::-5])
@@ -64,7 +65,7 @@ print(x2[2][0])
 print(x2[3][1])
 print()
 
-# ------------------- 
+# ------------------- list slicing --------------------
 namelist=["harsh", "pratik", "bob",  "dhruv"]
 print(namelist[1][-1])
 l=[1,2,3,4]
