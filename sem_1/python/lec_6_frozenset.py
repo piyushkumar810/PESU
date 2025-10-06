@@ -23,3 +23,13 @@ a = frozenset([1, 2, 3])
 b = frozenset([3, 4, 5])
 print(a.union(b))        # frozenset({1, 2, 3, 4, 5})
 print(a.intersection(b)) # frozenset({3})
+
+
+# ---------------------- uses
+'''
+💡 Key Points:
+
+-- You cannot add or remove elements from a frozenset.
+-- You can use it as a dictionary key or set element (because it's hashable).
+-- It supports operations like union, intersection, difference, etc.
+'''
