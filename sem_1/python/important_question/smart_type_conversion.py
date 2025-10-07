@@ -39,6 +39,16 @@ except ValueError:
         print("string ", str)
 
 # note
+# what does is_integer() do
+'''
+f.is_integer()
+Checks if the number has no decimal part.
+
+Example:
+5.0 → is_integer() = True
+3.14 → is_integer() = False
+'''
+
 # what try and except block used
 '''
 “Try to do something. If it fails, don't crash, just do something else.”
