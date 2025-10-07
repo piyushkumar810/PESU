@@ -80,6 +80,23 @@ list2[0]=0
 print(list1)
 print()
 
+# note
+'''
+# what does rannge() do ?
+The range() function creates a sequence of numbers — but it doesn’t 
+actually store all the numbers in memory like a list does.
+
+here, you are printing list1
+output :- range(100, 110)
+That’s because range() doesn’t display the numbers by itself — 
+it’s a special type of object.
+
+To see the actual numbers, you can convert it to a list:
+print(list(list1))
+output:- [100, 101, 102, 103, 104, 105, 106, 107, 108, 109]
+
+'''
+
 # ------------------------ concatination with list
 list3=[2000,2002]
 list4=[2024,2026]
