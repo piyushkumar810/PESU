@@ -37,3 +37,17 @@ except ValueError:
             print("float","{:.2f}".format(f))
     except ValueError:
         print("string ", str)
+
+# note
+# what try and except block used
+'''
+“Try to do something. If it fails, don't crash, just do something else.”
+'''
+
+# What is ValueError?
+'''
+It's an error type that happens when you try to convert something to a number, 
+but it's not possible.
+eg:-
+int("abc")  # ❌ gives ValueError
+'''
