@@ -35,4 +35,24 @@
 //     return new_node;
 //     for(temp=head; temp!=link)
 // }
+//     int ins_last,del_front;
+//     display(head);
+
+//     head=ins_last(head,50);
+//     display(head);
+
+//     head=del_front(head);
+//     display(head);
+
+//     return 0;
+// }
+
+
+
+
+
+// insert at front
+// insert at last
+// del at front
+// del at last
 
