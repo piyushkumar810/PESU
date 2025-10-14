@@ -9,7 +9,7 @@ int main() {
     // scanf("%d ", &n);
     // note:- scanf will wait (hang) after reading the number, because the space tells it to keep waiting for a non-whitespace character (something that isn’t space, tab, or Enter).
     // So after you enter a number and press Enter, the program doesn’t move on — it keeps waiting for more input.
-    
+
     scanf("%d", &n);  // removed space
 
     int *ptr = (int *)malloc(n * sizeof(int));
@@ -21,6 +21,7 @@ int main() {
     printf("Enter the values: ");
     for (int i = 0; i < n; i++) {
         scanf("%d", (ptr + i));  // removed space
+        // suppose ptr is pointing 2000 then (2000+0*4) like this it will move
     }
 
     printf("The entered values are: ");
