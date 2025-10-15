@@ -151,6 +151,19 @@ NODE Delete_Position(NODE Head, int pos) {
     return Head;
 }
 
+// NODE search_and_return_previous(NODE Head, int value)
+// {
+//     if(Head == NULL || Head == value)
+//     {
+//         return NULL;
+//     }
+//     NODE curr=Head;
+//     while(curr -> link != NULL && curr-> link->data!=value)
+//     curr=curr->link;
+
+//     return (curr->link == NULL)? NULL : curr;
+// }
+
 // Delete node by value
 NODE Delete_Value(NODE Head, int value) {
     if (Head == NULL) {
