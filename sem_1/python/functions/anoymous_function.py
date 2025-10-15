@@ -45,3 +45,7 @@ print(odd)
 # ['1','2','3'] -> [1,2,3]
 print()
 strInt=['1','2','3']
+print(strInt)
+converInt=list(map(int, strInt))
+print(converInt)
+print(type(converInt))
