@@ -26,3 +26,4 @@ input1=['apple', 'mango', 'litchi']
 # output shoule be = ['A' , 'M', 'L']
 capt=[n[0].upper() for n in input1]
 print(capt)
+
