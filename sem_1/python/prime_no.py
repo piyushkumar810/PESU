@@ -16,19 +16,29 @@
 
 
 # --------------------------- little better way
-def prime(num):
-    if num <= 1:
-        print(f"{num} is not a prime number")
-        return
+# def prime(num):
+#     if num <= 1:
+#         print(f"{num} is not a prime number")
+#         return
 
+#     for i in range(2, int(num ** 0.5) + 1):
+#         if num % i == 0:
+#             print(f"{num} is not a prime number")
+#             return
+#     print(f"{num} is a prime number")
+
+
+# n = int(input("Enter a value: "))
+# prime(n)
+
+
+def finding_prime(num):
     for i in range(2, int(num ** 0.5) + 1):
         if num % i == 0:
-            print(f"{num} is not a prime number")
             return
-    print(f"{num} is a prime number")
+    print(f"{num}")
 
 
-n = int(input("Enter a value: "))
-prime(n)
-
-
+print("prime no's between 1 to 51 are \n :")
+for i in range(1,51):
+    finding_prime(i)
