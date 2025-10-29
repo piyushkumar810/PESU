@@ -1,7 +1,7 @@
 #include<stdio.h>
 #define N 5
 int stack[N];
-int top=-1;
+int top=-1;  //checking whether the skack is empty or not
 
 void push(){
     int x;
