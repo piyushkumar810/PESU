@@ -126,3 +126,16 @@ def expensive(x):
     return x*x
 
 d = {x: expensive(x) for x in range(10)}
+
+# create a dict maopping each number indicating whether numbers are prime or not
+
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+# Range of numbers (you can change this)
+n = [2,3,4,5,6]
