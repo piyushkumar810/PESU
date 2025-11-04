@@ -13,3 +13,14 @@ dictionary_of_employee = {
 extract_employees = {name: salary for name, salary in dictionary_of_employee.items() if salary > 50000}
 
 print(extract_employees)
+
+
+# Explanation:
+# .items() gives both employee name and salary.
+
+# ----------------------- if you want to fetch index wise element
+
+# convert dict_items to list first
+items_list = list(dictionary_of_employee.items())
+
+print(items_list[0])   # 0th element (first key-value pair)
