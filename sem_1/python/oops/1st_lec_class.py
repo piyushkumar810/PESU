@@ -8,5 +8,5 @@ class student:
         print("i am studing", self.course)
 
 
-s1=student("xyz", "programming with python")
+s1=student("piyush", "in peoples education sociaty (PESU) ")
 s1.inntroduce()
