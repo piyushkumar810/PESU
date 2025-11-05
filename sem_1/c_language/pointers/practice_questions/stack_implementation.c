@@ -47,7 +47,7 @@ void display()
     }else{
     printf("elements in stack : ");
     for(i=top; i>=0;i--){
-        printf("%d ", stack[i]);
+        printf("%d", stack[i]);
     }
     }
 }
