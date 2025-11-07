@@ -1,2 +1,3 @@
-passed_number_added=lambda x:x+5
-print(f"added 5 to that number : {passed_number_added(7)}")
+student=[("Raj", 80), ("Piyush", 90), ("Ramesh", 70)]
+sorted_list=sorted(student,key=lambda x:x[1])
+print(sorted_list)
