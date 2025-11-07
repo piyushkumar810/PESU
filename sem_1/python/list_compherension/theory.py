@@ -46,3 +46,17 @@ print(even_num)
 '''str="piyush"
 uped=str.upper().strip()
 print(uped)'''
+num2=["piyush","paarneet","rohit","priyanshu"]
+uped=[i.upper() for i in num2]
+print(uped)
+
+# ✅ Example 4: Add 5 to every number greater than 10
+num3=[3,6,10,13,54,6,8,9]
+increment=[i+5 for i in num3 if(i>10)]
+print(increment)
+
+# 🧠 4️⃣ Advanced / Nested Comprehensions
+# 🔹 Example 1: Flatten a 2D list
+matrix = [[1, 2], [3, 4], [5, 6]]
+flat = [num for row in matrix for num in row]
+print(flat)  # [1, 2, 3, 4, 5, 6]
