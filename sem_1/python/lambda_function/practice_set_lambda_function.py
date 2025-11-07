@@ -86,4 +86,10 @@ print(odd_or_even(num_int))
 # Use sorted() with lambda to sort this list by marks in descending order.
 student=[("Raj", 80), ("Piyush", 90), ("Ramesh", 70)]
 sorted_list=sorted(student,key=lambda x:x[1])
+'''
+⚡ Extra Tip
+
+If you want descending order, just add reverse=True:
+sorted_students = sorted(students, key=lambda x: x[1], reverse=True)
+'''
 print(sorted_list)
