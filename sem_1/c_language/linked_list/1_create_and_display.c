@@ -70,6 +70,6 @@ int main(){
     third->next=NULL;
 
     display(head);
-    
+
     return 0;
 }
