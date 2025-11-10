@@ -1,3 +1,4 @@
-student=[("Raj", 80), ("Piyush", 90), ("Ramesh", 70)]
-sorted_list=sorted(student,key=lambda x:x[1])
-print(sorted_list)
+from functools import reduce
+num=[5, 10, 15, 20]
+sum_of_all=reduce(lambda a,b:a+b , num)
+print(sum_of_all)
