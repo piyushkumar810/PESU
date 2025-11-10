@@ -21,8 +21,23 @@ void display(NODE head){
 
 
 // ----------1. at bignning
-NODE insert_at_bignning(NODE head, int newdata){
-    
+// NODE insert_at_bignning(NODE head, int newdata){
+//     NODE newnode=(NODE)malloc(sizeof(struct node));
+//     newnode->data=newdata;
+//     newnode->next=head;
+//     return newnode;
+// }
+
+void insertion_at_end(NODE head, int newdata){
+    NODE newnode=(NODE)malloc(sizeof(struct node));
+    newnode->data=newdata;
+    newnode->next=NULL;
+     
+    NODE temp=head;
+    while(temp->next!=NULL){
+        temp=temp->next;
+    }
+    temp->next=newnode;
 }
 
 int main(){
@@ -41,6 +56,9 @@ int main(){
 
     third->data=30;
     third->next=NULL;
+
+    insert_at_bignning(head,40);
+    insertion_at_end(head,50);
 
     display(head);
     
