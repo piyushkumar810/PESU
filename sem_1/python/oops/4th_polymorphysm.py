@@ -32,3 +32,24 @@ for animal in (cat1,dog1):
 
 cat1.make_sound()
 dog1.make_sound()
+
+# ---------------------------------------- duck typing---------------------------
+
+class duck:
+    def quack(self):
+        print("i am a duck and i quack.")
+
+class goose:
+    def quack(self):
+        print("i am a goose and a quack")
+
+class cat:
+    def meow(self):
+        print("i am a cat and i meow")
+
+def quack(animal):
+    animal.quack()
+
+duck1 = duck()
+goose1 = goose()
+cat1 = cat()
