@@ -60,3 +60,10 @@ print(increment)
 matrix = [[1, 2], [3, 4], [5, 6]]
 flat = [num for row in matrix for num in row]
 print(flat)  # [1, 2, 3, 4, 5, 6]
+
+
+# example 2:- pair every number with every letter
+num=[1,2,3]
+letter=["a","b","c"]
+pair=[(n,l) for n in num for l in letter]
+print(pair)
