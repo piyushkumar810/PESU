@@ -1,6 +1,6 @@
 // ------------- lets do it sll all operation
 // 1. create node
-// 2.display
+// 2. display
 // 3. insert front
 // 4. insert end
 // 5. insert_position
@@ -24,7 +24,20 @@ typedef struct node{
     struct node *next;
 }*NODE;
 
-void cretae_node(int data){
-    NODE temp=(NODE)malloc(sizeof(struct node));
+NODE cretae_node(int value){
+    NODE newnode=(NODE)malloc(sizeof(struct node));
+    if(newnode==NULL){
+        printf("memory allocation failed \n");
+        exit(1);
+    }
+    newnode->data=value;
+    newnode->next=NULL;
+    return newnode;
+}
 
+NODE insert_from_front(NODE head, int value){
+    NODE newnode=cretae_node(value);
+    newnode->next=head;
+    head=newnode;
+    return head;
 }

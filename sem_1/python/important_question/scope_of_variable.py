@@ -15,9 +15,9 @@ print(x)  # Accessible
 print(y)  # ❌ Error - y is local to show()
 
 # 🔍 Output:
-10
-20
-10
+# 10
+# 20
+# 10
 # NameError: name 'y' is not defined
 
 # 💡 Summary:
