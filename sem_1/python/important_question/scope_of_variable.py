@@ -12,7 +12,7 @@ def show():
 
 show()
 print(x)  # Accessible
-print(y)  # ❌ Error - y is local to show()
+# print(y)  # ❌ Error - y is local to show()
 
 # 🔍 Output:
 # 10
@@ -161,4 +161,43 @@ print(a, b, c)
 # global	Modify global variable	Inside function
 # nonlocal	Modify outer variable	Inside nested functions
 # Packing	*args	Collect many values
-# Unpacking	a,b = (1,2)	Distribute tuple elem
+# Unpacking	a,b = (1,2)	Distribute tuple element
+
+# -------------------------------------- important ----------------------------------------
+from datetime import datetime
+
+now = datetime.now()
+print(now.isoformat())
+
+
+'''
+⏰ ISO Format for Date + Time
+If you include time, the full ISO datetime format looks like this:
+YYYY-MM-DDTHH:MM:SS
+
+2025-11-12T16:45:30.123456
+'''
+
+
+z=10
+
+def change():
+    print("inside the function: ",z)
+    global z
+    z=20
+    print("inside the function after changing value: ",z)
+
+change()
+print("outside  the function: ",z)
+
+
+
+x = 10
+
+def change():
+    global x   # tells Python: “use the global x”
+    x = 5
+    print("Inside function:", x)
+
+change()
+print("Outside function:", x)
