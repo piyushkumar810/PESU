@@ -6,7 +6,7 @@
 # it also support multiple optional behaviour
 # you can also use @ symbol to use decorator
 # decortors are mostly used with flask and zanjo
-1
+
 
 # # creating outer function
 # def make_pretty(func):
