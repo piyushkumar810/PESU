@@ -7,12 +7,26 @@ def change():
 change()
 print(x)  
 
-# ---------------------------
+# --------------------------- predict the output
+
 y=10
 def changed():
     print(y)
    
 changed()
+
+# q3
+def outer():
+    x21 = 10
+    def inner():
+        x21 = 20
+    inner()
+    print(x21)  #10
+
+outer()
+# Explanation: x21 = 20 creates inner local, does not modify enclosing x.
+
+
 
 # -------------------------- practice questions --------------------------------
 # Try these to test yourself:
