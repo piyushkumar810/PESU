@@ -176,6 +176,7 @@ NODE delete_last(NODE head){
         return NULL;
     }
 
+    
     // if there is more than one element in the list
     NODE temp=head;
 
