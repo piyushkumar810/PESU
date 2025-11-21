@@ -84,9 +84,16 @@ Q) why we are checking while(head!=NULL) because head cannot be NULL head ka nex
 
 // insert at front
 NODE insert_front(NODE head, int data){
+    
+    // if(head==NULL){
+    //     newnode=head;
+    //     return newnode;
+    // }
+
+
     // 1st create newnode then you  will insert na
     NODE newnode=create_node(data);  // allocate a new node
-    newnode->next=head;        // link new_node to the old head
+    newnode->next=head;        // link new_node to the old head    //Works for both empty and non-empty list no need for creating if condition above
     return newnode;            // return new_node as the new head
 }
 
@@ -104,7 +111,7 @@ NODE insert_end(NODE head,int data){
         temp=temp->next;
     }
     temp->next=newnode;
-    return head;
+    return head;   //here you can think to (return newnode) but it is incorrect i have to return full head not only newnode
 }
 
 
