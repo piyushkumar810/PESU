@@ -89,10 +89,66 @@ NODE delete_last(NODE head){
         while(temp->next->next!=NULL){
             temp=temp->next;
         }
-        
+
     printf("Deleted: %d\n",temp->next->data);
     free(temp->next);
     temp->next=NULL;
     return head;
     }
 } 
+
+int main()
+{
+    NODE head=NULL;
+    int choice,data;
+
+    while(1){
+        printf("\n======== LINKED LIST MENU =======");
+        printf("\n1. Insert at front");
+        printf("\n2. Insert at end");
+
+        printf("\n3. delete first node");
+        printf("\n4. delete last node");
+
+        printf("\n5. Display list");
+        printf("\n6. Exit");
+
+        printf("\nEnter your choice: ");
+        scanf("%d",&choice);
+
+        switch(choice){
+            case 1:
+            printf("\nEnter data to insert at front: ");
+            scanf("%d", &data);
+            head = insert_front(head, data);
+            break; 
+
+            case 2:
+            printf("\nenter the data to insert at last: ");
+            scanf("%d",&data);
+            head=insert_last(head,data);
+            break;
+
+            case 3:
+            head=delete_front(head);
+            break;
+
+            case 4:
+            head=delete_last(head);
+            break;
+
+            case 5:
+            display(head);
+            break;
+
+            case 6:
+            printf("\nExiting program. Goodbye!\n");
+            return 0;
+
+            default:
+            printf("\n wrong choice\n");
+        }
+    }
+    
+    return 0;
+}
