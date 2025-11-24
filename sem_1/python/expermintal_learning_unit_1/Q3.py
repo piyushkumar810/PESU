@@ -12,6 +12,8 @@ for i in range(input_no_of_words):
     words.append(word)
     
 groups=defaultdict(list)
+print(groups)
+ 
 for word in words:
     key=''.join(sorted(word))
     groups[key].append(word)
