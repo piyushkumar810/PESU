@@ -8,7 +8,6 @@ int main()
         printf("Memory allocation failed!\n");
         return 1;
     }
-
     int i;
     // if you comment this value entering part then you will see by default initialized values calloc have is (0 0 0 0 0) 
     printf("enter the values : ");
