@@ -7,7 +7,6 @@ def reverse_string(inp):
 n = input("Enter the string value: ")
 print("Reversed string:", reverse_string(n))
 
-
 # -------------------------- string palindrom
 def is_palindrome(s):
     left = 0
