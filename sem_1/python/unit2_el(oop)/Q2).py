@@ -5,12 +5,12 @@
 # Each has a method info().
 # Call info() from an instance of D and display the MRO using D.mro().
 
-class A:
-    def info(self):
-        print(f"")
+# class A:
+#     def info(self):
+#         print(f"")
 
-class B(A):
+# class B(A):
 
-class C(A):
+# class C(A):
 
-class D(B,C):
+# class D(B,C):
