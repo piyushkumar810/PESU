@@ -6,23 +6,29 @@ Q1)Reads two numbers
 Divides them
 Uses try, except, else, finally
 '''
-def two_number(n,m):
-    try:
-        z=n+m
-        print("sum is ", z)
+try:
+    # reading two numbers
+    a = float(input("Enter first number: "))
+    b = float(input("Enter second number: "))
 
-    except Exception as e:
-        print("error is : ", e)
+    # division (may cause ZeroDivisionError)
+    result = a / b
 
-    else:
-        print("it cannot be bivided by 0")
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero!")
 
-    finally:
-        print("this code block will run in any ciondition")
+except ValueError:
+    print("Error: Please enter only numbers!")
 
-n=int(input("enter the value : "))
-m=int(input("enter the value : "))
-two_number(n,m)
+else:
+    # runs only when NO error occurs
+    print("Division successful!")
+    print("Result =", result)
+
+finally:
+    # always runs
+    print("Program Ended.")
+
     
 
 '''
@@ -33,8 +39,42 @@ ZeroDivisionError
 TypeError
 '''
 
+def handling_error():
+    try:
+        a = input("Enter first number: ")
+        b = input("Enter second number: ")
+    
+        # Convert to integers (may raise ValueError)
+        a = int(a)
+        b = int(b)
+    
+        # Division (may raise ZeroDivisionError)
+        result = a / b
+    
+        # TypeError example (doing invalid operation) 
+        x = result + "hello"   # This will raise TypeError
+    
+    except ValueError:
+        print("Error: You entered an invalid number! (ValueError)")
+    
+    except ZeroDivisionError:
+        print("Error: Cannot divide a number by zero! (ZeroDivisionError)")
+    
+    except TypeError:
+        print("Error: Invalid operation between different data types! (TypeError)")
+    
+    else:
+        print("Operation successful!")
+        print("Result:", result)
+    
+    finally:
+        print("Program Finished.")
+
+handling_error()
+
 
 # Q3)Create a custom exception “InvalidMarkError” and raise it if marks > 100 or < 0.
+
 
 # Q4)Write a program that handles file opening errors using try…except…finally.
 
