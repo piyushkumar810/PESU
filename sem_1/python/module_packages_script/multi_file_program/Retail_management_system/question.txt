@@ -1,0 +1,5 @@
+. Retail store management sysytem
+   . inventory management: function for adding and removing product
+   . billing: function for calculation bills and appling discount
+   . custoomer management: function to manage customer details
+   . utilities: general_purpose function like logging and date formatting
