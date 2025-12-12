@@ -17,5 +17,6 @@ items=[(120,2), (40,3)]
 bill_amount=billing.calculate_bill(items,discount=10)
 print("final bill: ", bill_amount)
 
+
 # utilities
 utility.log("billing done on "+str(utility.current_data()))
