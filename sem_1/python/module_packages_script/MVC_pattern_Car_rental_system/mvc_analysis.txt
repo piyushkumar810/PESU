@@ -1,0 +1,25 @@
+what is mvc of my project :- car rental systm
+
+| Layer          | Responsibility        | From Your SRS                      |
+| -------------- | --------------------- | ---------------------------------- |
+| **Model**      | Business logic + data | Car, User, Booking, Payment        |
+| **View**       | UI / Output           | Booking confirmation, availability |
+| **Controller** | Handles flow          | Booking logic, validation          |
+
+
+# structure
+car_rental_system/
+│
+├── model/
+│   ├── car.py
+│   ├── user.py
+│   ├── booking.py
+│
+├── view/
+│   ├── user_view.py
+│   ├── admin_view.py
+│
+├── controller/
+│   ├── booking_controller.py
+│
+└── main.py
