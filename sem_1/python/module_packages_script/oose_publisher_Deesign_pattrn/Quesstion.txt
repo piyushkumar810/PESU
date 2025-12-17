@@ -1,0 +1,4 @@
+social Media Feed updates
+     publishers:Users creating posts,commenting,liking/reaching 
+     Messages:New posts,commentts,likes/reactions 
+     Subscribers:User feeds,notification system
