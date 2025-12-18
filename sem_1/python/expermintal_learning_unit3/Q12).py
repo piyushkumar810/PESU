@@ -1,0 +1,2 @@
+# 12. Build a text-based calculator. Accept operations from the user. 
+#    Raise a custom OperationError for unsupported operations. Raise a custom InputError when inputs are invalid. Keep the program running until the user exits.
