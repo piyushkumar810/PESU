@@ -2,3 +2,8 @@ social Media Feed updates
      publishers:Users creating posts,commenting,liking/reaching 
      Messages:New posts,commentts,likes/reactions 
      Subscribers:User feeds,notification system
+
+
+Publisher–Subscriber is a design pattern where one object (Publisher)
+notifies multiple objects (Subscribers) automatically when an event occurs, 
+without knowing who they are.
