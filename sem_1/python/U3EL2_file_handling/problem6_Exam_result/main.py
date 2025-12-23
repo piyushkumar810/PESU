@@ -66,5 +66,6 @@ with open("C://Users//piyush kumar//OneDrive//Desktop//GitHub//PESU//sem_1//pyth
         writer.writerow({
             "RollNo":roll,
             "TotalMarks":total,
-            
+            "Result":result
         })
+print("final_result.csv created successfully.")
