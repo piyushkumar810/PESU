@@ -1,0 +1,6 @@
+ProductID,ProductName,Stock,ReorderLevel
+P101,Keyboard,20,30
+P102,Mouse,50,40
+P103,Monitor,10,25
+P104,Printer,15,15
+P105,Webcam,8,20
