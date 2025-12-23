@@ -1,3 +1,27 @@
+# question
+'''
+Write a Python program to process student marks stored in a CSV file.
+A CSV file named students.csv is provided with the following columns:
+RollNo, Name, Subject, Marks.
+
+The program should perform the following tasks:
+
+Read the data from the CSV file stored on disk.
+Calculate the average marks for each student.
+Create a new CSV file named student_summary.csv.
+Store the following details in the new file:
+        RollNo
+        Name
+        AverageMarks
+        Result
+
+Assign the Result as:
+        Pass if the average marks are 40 or above
+        Fail otherwise.
+'''
+
+
+
 import csv
 
 student={}
@@ -80,7 +104,7 @@ with open("C://Users//piyush kumar//OneDrive//Desktop//GitHub//PESU//sem_1//pyth
             ✔ Professional
     '''
 
-    
+
 
     '''
     Loops through each student stored in the dictionary
