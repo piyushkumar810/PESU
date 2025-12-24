@@ -50,5 +50,4 @@ df.to_excel("bus_pass_status.xlsx", index=False)
 # Step 6: Create separate CSV with required columns
 fare_df = df[["ReqID", "StudentID", "Fare"]]
 fare_df.to_csv("C://Users//piyush kumar//OneDrive//Desktop//GitHub//PESU//sem_1//python//U3EL2_file_handling//problem8_bus_pass_request//bus_pass_fare_list.csv", index=False)
-
 print("bus_pass_status.xlsx and bus_pass_fare_list.csv created successfully.")
