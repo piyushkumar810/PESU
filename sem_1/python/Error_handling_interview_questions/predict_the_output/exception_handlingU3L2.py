@@ -254,3 +254,109 @@ finally → ALWAYS
 
 No matching except → CRASH
 '''
+
+# Q13) What happens?
+try:
+    raise ValueError
+except:
+    pass
+print("Done")
+
+'''
+A. ValueError
+B. Program crashes
+C. Done
+D. No output
+
+✅ Answer: C
+
+Explanation:
+Exception is handled silently using pass.
+'''
+
+# Q14)What is the output?
+try:
+    try:
+        1 / 0
+    finally:
+        print("Inner Finally")
+except:
+    print("Outer Except")
+
+'''
+A. Inner Finally
+B. Outer Except
+C. Inner Finally Outer Except
+D. Program crashes
+
+✅ Answer: C
+
+Explanation:
+
+Inner finally ALWAYS runs
+Exception propagates to outer except
+'''
+
+# Q15). Output?
+def test():
+    try:
+        return "Try"
+    except:
+        return "Except"
+    finally:
+        return "Finally"
+
+print(test())
+
+'''
+A. Try
+B. Except
+C. Finally
+D. Error
+
+✅ Answer: C
+
+Explanation:
+⚠️ finally overrides ALL returns.
+'''
+
+# Q16). What will happen?
+try:
+    print(10 / 2)
+except:
+    print("Error")
+else:
+    print(10 / 0)
+
+'''
+A. 5.0 Error
+B. 5.0
+C. 5.0 ZeroDivisionError
+D. Program crashes
+
+✅ Answer: D
+
+Explanation:
+try succeeds → else runs
+Error inside else is NOT handled → crash
+'''
+
+# Q17)What is printed?
+try:
+    raise KeyError
+except KeyError:
+    print("Key")
+except Exception:
+    print("General")
+
+'''
+A. General
+B. Key
+C. Both
+D. Error
+
+✅ Answer: B
+
+Explanation:
+Specific exceptions must come before general ones.
+'''
