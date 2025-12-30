@@ -1,0 +1,9 @@
+payment_id,order_id,payment_mode,payment_status
+PAY01,O9001,UPI,Completed
+PAY02,O9002,Credit Card,Completed
+PAY03,O9003,UPI,Completed
+PAY04,O9004,Debit Card,Pending
+PAY05,O9005,Net Banking,Completed
+PAY06,O9006,UPI,Completed
+PAY07,O9007,Credit Card,Completed
+PAY08,O9008,UPI,Pending

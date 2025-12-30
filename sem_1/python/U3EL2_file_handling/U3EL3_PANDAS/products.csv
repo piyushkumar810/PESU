@@ -1,0 +1,7 @@
+product_id,product_name,category,sub_category,unit_price
+P101,Notebook,Office Supplies,Paper,45
+P102,Pen,Office Supplies,Writing,10
+P103,Office Chair,Furniture,Chairs,5500
+P104,Study Table,Furniture,Tables,7200
+P105,Printer,Technology,Devices,18500
+P106,USB Drive,Technology,Accessories,650
