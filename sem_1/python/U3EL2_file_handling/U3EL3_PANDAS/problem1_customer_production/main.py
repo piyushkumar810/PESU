@@ -55,10 +55,10 @@ except FileNotFoundError:
 # ----------------------- real question solution ------------------------
 
 # Load CSV files into DataFrames
-customers_df = pd.read_csv("C://Users//piyush kumar//OneDrive//Desktop//GitHub//PESU//sem_1//python//U3EL2_file_handling//U3EL3_fille_handling//customer.csv")
-products_df = pd.read_csv("C://Users//piyush kumar//OneDrive//Desktop//GitHub//PESU//sem_1//python//U3EL2_file_handling//U3EL3_fille_handling//products.csv")
-orders_df = pd.read_csv("C://Users//piyush kumar//OneDrive//Desktop//GitHub//PESU//sem_1//python//U3EL2_file_handling//U3EL3_fille_handling//orders.csv")
-payments_df = pd.read_csv("C://Users//piyush kumar//OneDrive//Desktop//GitHub//PESU//sem_1//python//U3EL2_file_handling//U3EL3_fille_handling//payment.csv")
+customers_df = pd.read_csv("C:\\Users\\piyush kumar\\OneDrive\\Desktop\\GitHub\\PESU\\sem_1\\python\\U3EL2_file_handling\\U3EL3_PANDAS\\customer.csv")
+products_df = pd.read_csv("C://Users//piyush kumar//OneDrive//Desktop//GitHub//PESU//sem_1//python//U3EL2_file_handling//U3EL3_PANDAS//products.csv")
+orders_df = pd.read_csv("C:\\Users\\piyush kumar\\OneDrive\\Desktop\\GitHub\\PESU\\sem_1\\python\\U3EL2_file_handling\\U3EL3_PANDAS\\orders.csv")
+payments_df = pd.read_csv("C://Users//piyush kumar//OneDrive//Desktop//GitHub//PESU//sem_1//python//U3EL2_file_handling//U3EL3_PANDAS//payment.csv")
 
 # Display number of rows and columns
 print("Customers DataFrame:", customers_df.shape)
