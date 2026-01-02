@@ -43,3 +43,16 @@ dispatcher.register_service("CarService", car)
 # client requests service
 customer = Customer()
 customer.book_car(dispatcher)
+'''
+One-line definition:
+-> The Client does not directly talk to the Server.
+-> A Dispatcher sits in between and locates + provides the requested service.
+
+| Role                          | Class               | Responsibility               |
+| ----------------------------- | ------------------- | ---------------------------- |
+| **Server / Service Provider** | `Car`               | Provides actual service      |
+| **Dispatcher / Broker**       | `BookingDispatcher` | Registers & locates services |
+| **Client**                    | `Customer`          | Requests service             |
+| **Service Registry**          | `services` dict     | Stores services              |
+
+'''

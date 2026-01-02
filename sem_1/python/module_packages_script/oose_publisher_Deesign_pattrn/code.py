@@ -17,6 +17,7 @@ class AdminNotification(Subscriber):
 
 
 # -------- Publisher --------
+# publisher maintain list of subscriber
 class BookingService:
     def __init__(self):
         self.subscribers = []
@@ -46,3 +47,5 @@ booking_service.subscribe(customer)
 booking_service.subscribe(admin)
 
 booking_service.confirm_booking()
+# without pub-sub we have to send notification individually message to everyone
+# with publisher-sub the sender sends once and many recieives automatically 
