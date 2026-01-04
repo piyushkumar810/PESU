@@ -54,5 +54,4 @@ One-line definition:
 | **Dispatcher / Broker**       | `BookingDispatcher` | Registers & locates services |
 | **Client**                    | `Customer`          | Requests service             |
 | **Service Registry**          | `services` dict     | Stores services              |
-
 '''
