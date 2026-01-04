@@ -1,0 +1,29 @@
+{
+  "alpha": {
+    "number": "9876543210",
+    "age": 21,
+    "address": [
+      "Mangalore",
+      "Karnataka",
+      "India"
+    ]
+  },
+  "beta": {
+    "number": "9123456789",
+    "age": 20,
+    "address": [
+      "Mysore",
+      "Karnataka",
+      "India"
+    ]
+  },
+  "gamma": {
+    "number": "9012345678",
+    "age": 18,
+    "address": [
+      "Bangalore",
+      "Karnataka",
+      "India"
+    ]
+  }
+}

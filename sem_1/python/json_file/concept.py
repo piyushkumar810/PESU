@@ -6,6 +6,7 @@
 Reads JSON from a file and converts it into a Python dictionary or list
 
 📁 Example JSON file (data.json)
+
 {
   "name": "Alice",
   "age": 25,
@@ -14,6 +15,43 @@ Reads JSON from a file and converts it into a Python dictionary or list
 
 🧪 Python Code
 '''
+
+data=[
+  {"name": "Alpha", "age": 21},
+  {"name": "Beta", "age": 20},
+  {"name": "Gamma", "age": 18}
+]
+
+print(data[0]["name"])   
+print(data[2]["age"])    
+
+
+# ---------------------------------
+data=[
+  {"alpha": {
+    "age": 21,
+    "city": ["Mangalore", "Bantwal"]}
+  },
+  {"beta": {
+    "age": 20,
+    "city": "Mysore"}
+  },
+  {"gamma": {
+    "age": 18,
+    "city": "Bangalore"}
+  }
+]
+print(data[0])
+
+
+prabhat=[10, 20, "abc", {"a": 1}]
+print(prabhat[3]["a"])
+
+
+# ---------------------------------------------
+
+
+
 import json
 
 with open("C://Users//piyush kumar//OneDrive//Desktop//GitHub//PESU//sem_1//python//json_file//data.json", "r") as f:
@@ -77,7 +115,7 @@ data={
     "college_allocated":"PESU"
 }
 
-with open("C://Users//piyush kumar//OneDrive//Desktop//GitHub//PESU//sem_1//python//json_file//data1.json","w") as file:
+with open("C://Users//piyush kumar//OneDrive//Desktop//GitHub//PESU//sem_1//python//json_file//data2.json","w") as file:
     json.dump(data,file)
 
 '''
@@ -115,6 +153,9 @@ json_string = json.dumps(data)
 
 print(json_string)
 print(type(json_string))
+
+a=json.dumps(data, indent=4,sort_keys=True)
+print(a)
 '''
 ✅ Output
 {"name": "Daisy", "age": 22, "children": null}
@@ -126,7 +167,8 @@ print(type(json_string))
 '''
 
 # 🔥 Pretty Printing (Very Common in Exams)
-json.dumps(data, indent=4, sort_keys=True)
+a=json.dumps(data, indent=4, sort_keys=True)
+print(a)
 '''
 Output
 {

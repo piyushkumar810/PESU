@@ -1,0 +1,9 @@
+{
+    "name": "Andromeda",
+    "languages": [
+        "English",
+        "French"
+    ],
+    "married": true,
+    "age": 32
+}
