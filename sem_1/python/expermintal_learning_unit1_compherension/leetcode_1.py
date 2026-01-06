@@ -26,7 +26,6 @@ class Solution:
                 return [seen[diff], i]
             seen[num] = i
 
-
 '''
 What does enumerate() do?
 
@@ -41,5 +40,4 @@ for i, num in enumerate(nums):
 0 10
 1 20
 2 30
-
 '''
