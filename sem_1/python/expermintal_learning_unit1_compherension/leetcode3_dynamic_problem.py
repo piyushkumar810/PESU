@@ -42,13 +42,22 @@ this is nothing but a fibnaccio series
 
 class Solution(object):
     def climbStairs(self, n):
+        # print("total no of staires are ",n)
 
-        print("total no of staires are ",n)
+        if n<=2:
+            return n
         
+        prev1=2
+        prev2=1
+        for i in range(3,n+1):
+            curr=prev1+prev2
+            prev2=prev1
+            prev1=curr
 
+        return prev1
         
 
 obj1=Solution()
-n1=int(input("enter total how many staires are there"))
+n1=int(input("enter total how many staires are there :"))
 print(obj1.climbStairs(n1))
         
