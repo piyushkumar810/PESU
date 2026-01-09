@@ -33,13 +33,6 @@ print(s1.longestCommonPrefix(strs))
 
 
 
-
-
-
-
-
-
-
 # def longestCommonPrefix(strs):
 #     if not strs:
 #         return ""
@@ -54,3 +47,60 @@ print(s1.longestCommonPrefix(strs))
 #                 return shortest[:i]
 
 #     return shortest
+
+
+# --------------------------------- explanation ----------------------------
+'''
+🔸 i = 0
+shortest_char[0] = 'f'
+flower[0] = 'f' ✅
+flow[0]   = 'f' ✅
+flight[0]= 'f' ✅
+
+✔ All match → continue
+
+
+🔸 i = 1
+shortest_char[1] = 'l'
+flower[1] = 'l' ✅
+flow[1]   = 'l' ✅
+flight[1]= 'l' ✅
+
+✔ All match → continue
+
+
+🔸 i = 2
+shortest_char[2] = 'o'
+flower[2] = 'o' ✅
+flow[2]   = 'o' ✅
+flight[2]= 'i' ❌
+
+
+🚨 Mismatch found
+
+🔥 Code executes here
+if s[i] != char:
+    return shortest_char[:i]
+
+
+i = 2
+
+shortest_char[:2] → "fl"
+
+✅ Returned result = "fl"
+
+🧠 Meaning of shortest_char[:i]
+
+This is string slicing:
+
+shortest_char[:i]
+
+
+👉 Take characters from index 0 to i-1
+
+i	Result
+0	""
+1	"f"
+2	"fl"
+3	"flo"
+'''
