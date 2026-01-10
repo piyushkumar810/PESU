@@ -40,24 +40,41 @@ this is nothing but a fibnaccio series
 
 '''
 
-class Solution(object):
-    def climbStairs(self, n):
-        # print("total no of staires are ",n)
+# class Solution(object):
+#     def climbStairs(self, n):
+#         # print("total no of staires are ",n)
 
+#         if n<=2:
+#             return n
+        
+#         prev1=2
+#         prev2=1
+#         for i in range(3,n+1):
+#             curr=prev1+prev2
+#             prev2=prev1
+#             prev1=curr
+
+#         return prev1
+        
+
+# obj1=Solution()
+# n1=int(input("enter total how many staires are there :"))
+# print(obj1.climbStairs(n1))
+        
+
+class Solution:
+    def staires(self,n):
         if n<=2:
             return n
         
-        prev1=2
-        prev2=1
+        prev1=1
+        prev2=2
         for i in range(3,n+1):
-            curr=prev1+prev2
-            prev2=prev1
-            prev1=curr
-
-        return prev1
+            curr=prev2+prev1
+            prev1=prev2
+            prev2=curr
         
-
-obj1=Solution()
-n1=int(input("enter total how many staires are there :"))
-print(obj1.climbStairs(n1))
-        
+        return prev2
+    
+obj2=Solution()
+print(obj2.staires(5))
