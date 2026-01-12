@@ -34,5 +34,3 @@ Why?
 To verify you loaded the correct page
 To see raw content without tags
 '''
-
-
