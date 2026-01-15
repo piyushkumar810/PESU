@@ -1,0 +1,37 @@
+TREE – REPRESENTATION (DSA UNIT)
+
+❓ How many ways can a Tree be represented?
+👉 MAINLY TWO ways (as you said):
+
+-> Array Representation
+-> Linked List Representation
+(Internally, there are sub-types, but exam answer = these two)
+
+------------------------------------------
+---1️⃣ ARRAY REPRESENTATION OF TREE
+🧠 IDEA
+
+Store tree elements in an array
+Mostly used for Binary Trees
+Parent–child relationship is found using index formula
+
+📌 Index Rules (VERY IMPORTANT ⭐)
+If a node is at index i:
+
+Relationship	     Index
+Root	             0
+Left child	         2*i + 1
+Right child	         2*i + 2
+Parent	             (i-1)/2
+
+eg:-
+        A
+       / \
+      B   C
+     / \   \
+    D   E   F
+
+Array stores:- 
+
+Index:  0  1  2  3  4  5
+Array:  A  B  C  D  E  F
