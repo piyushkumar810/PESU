@@ -11,8 +11,7 @@ file=open("C:\\Users\\piyush kumar\\OneDrive\\Desktop\\GitHub\\PESU\\sem_1\\pyth
 read_file=file.writelines(["i love \n","yes i know"])
 
 
-
 print(read_file)
 print(type(read_file))
-# file.close()
+file.close()
 print(file.closed)
