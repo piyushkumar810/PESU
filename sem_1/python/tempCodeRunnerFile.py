@@ -1,15 +1,11 @@
-def check_pallindrom(num):
-    sum=0
-    quotp=num
-    while(quotp!=0):
-        r=quotp%10
-        sum=sum*10+r
-        quotp=quotp//10
-
-    if(num==sum):
-        print(f"yes your number {sum} is an pallindrom  number")
+def factorial1(num):
+    if(num==1 or num==0):
+        return 1
     else:
-        print(f"no this is not pellindrom number")
+        f=1
+        while(num>1):
+            f=f*num
+            num =num-1
+        return f
 
-inptup=int(input("enter the numbur you want to check: "))
-check_pallindrom(inptup)
+print(factorial1(5))
