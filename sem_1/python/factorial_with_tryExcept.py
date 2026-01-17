@@ -9,7 +9,6 @@ def factorial(num):
 num1=(int(input("enter the number")))
 print(factorial(num1))
 
-
 # -------------------- another method
 def factorial1(num):
     if(num==1 or num==0):
