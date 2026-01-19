@@ -1,11 +1,15 @@
-def factorial1(num):
-    if(num==1 or num==0):
-        return 1
-    else:
-        f=1
-        while(num>1):
-            f=f*num
-            num =num-1
-        return f
+def fibonacci():
+    a = 0
+    b = 1
+    print(a)
+    print(b)
 
-print(factorial1(5))
+    while True:
+        c = a + b
+        if c > 50:
+            break
+        print(c)
+        a = b
+        b = c
+
+fibonacci()
