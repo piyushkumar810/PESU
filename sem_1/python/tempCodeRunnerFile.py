@@ -1,15 +1,12 @@
-def fibonacci():
-    a = 0
-    b = 1
-    print(a)
-    print(b)
+def fibonacci3(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci3(n-1) + fibonacci3(n-2)
 
-    while True:
-        c = a + b
-        if c > 50:
-            break
-        print(c)
-        a = b
-        b = c
-
-fibonacci()
+# print first 10 Fibonacci numbers
+n = 10
+for i in range(n):
+    print(fibonacci3(i), end=" ")
