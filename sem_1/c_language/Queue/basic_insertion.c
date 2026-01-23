@@ -28,6 +28,7 @@ void enqueue(int value){
     }
 }
 
+
 void dequeue(){
     if(front==-1 || front > rear){
         printf("Queue is empty\n");
