@@ -1,0 +1,218 @@
+✅ PART 2: MCQ PRACTICE (AS YOU ASKED)
+Format: MEDIUM → ADVANCED → SCENARIO-BASED
+🔹 MEDIUM LEVEL MCQs
+Q1) A graph with n vertices and n−1 edges and no cycles is called:
+
+A. Complete graph
+B. Tree
+C. Bipartite graph
+D. Regular graph
+
+✅ Answer: B
+
+Q2) In an undirected graph, the sum of degrees of all vertices is equal to:
+
+A. |E|
+B. |V|
+C. 2|E|
+D. |V|²
+
+✅ Answer: C
+
+Q3) Which graph allows self-loops and parallel edges?
+
+A. Simple graph
+B. Multigraph
+C. Pseudograph
+D. Complete graph
+
+✅ Answer: C
+
+Q4) A complete graph with n vertices has how many edges?
+
+A. n
+B. n − 1
+C. n(n − 1)/2
+D. n²
+
+✅ Answer: C
+
+🔹 ADVANCED LEVEL MCQs
+Q5) Which representation is most space-efficient for a sparse graph?
+
+A. Adjacency matrix
+B. Adjacency list
+C. Incidence matrix
+D. Complete matrix
+
+✅ Answer: B
+
+Q6) In a directed graph, if a vertex has indegree = 3 and outdegree = 2, its total degree is:
+
+A. 3
+B. 2
+C. 5
+D. Not defined
+
+✅ Answer: C
+
+Q7) A graph that has vertices but no edges is called:
+
+A. Trivial graph
+B. Null graph
+C. Disconnected graph
+D. Simple graph
+
+✅ Answer: B
+
+Q8) BFS guarantees the shortest path when the graph is:
+
+A. Weighted
+B. Directed
+C. Unweighted
+D. Cyclic
+
+✅ Answer: C
+
+🔹 SCENARIO-BASED MCQs (EXAM FAVORITE)
+Q9) A graph has 12 vertices and 11 edges and contains no cycles. What is it?
+
+A. Forest
+B. Tree
+C. Complete graph
+D. Bipartite graph
+
+✅ Answer: B
+
+Q10) Two graphs have the same degree sequence but different structures. They are called:
+
+A. Identical graphs
+B. Isomorphic graphs
+C. Non-isomorphic graphs
+D. Complete graphs
+
+✅ Answer: C
+
+Q11) Replacing the queue with a stack in BFS will make it behave like:
+
+A. BFS
+B. DFS
+C. Dijkstra
+D. Warshall
+
+✅ Answer: B
+
+Q12) Warshall’s algorithm is inefficient for sparse graphs because:
+
+A. Time complexity is O(V²)
+B. It uses recursion
+C. It needs adjacency matrix
+D. It cannot find paths
+
+✅ Answer: C
+
+
+
+
+// question 6 explanation
+'''
+🎯 DEGREE IN DIRECTED GRAPH (STEP-BY-STEP)
+1️⃣ First: What is a DIRECTED GRAPH?
+
+A directed graph (digraph) has arrows on edges.
+
+Example:
+
+A → B
+C → B
+D → B
+B → E
+B → F
+
+
+Here arrows matter.
+
+2️⃣ Two DIFFERENT types of degree in directed graphs
+🔹 (A) Indegree
+
+➡️ Number of edges coming INTO a vertex
+
+Think:
+👉 “How many arrows are pointing to me?”
+
+Example:
+
+C → B
+A → B
+D → B
+
+
+Indegree of B = 3
+
+🔹 (B) Outdegree
+
+➡️ Number of edges going OUT from a vertex
+
+Think:
+👉 “How many arrows leave me?”
+
+Example:
+
+B → E
+B → F
+
+
+Outdegree of B = 2
+
+3️⃣ What is TOTAL DEGREE in a directed graph?
+
+📌 Total degree = Indegree + Outdegree
+
+This is the key formula.
+
+4️⃣ Now apply to your MCQ
+Given:
+
+Indegree = 3
+
+Outdegree = 2
+
+Calculation:
+Total degree = 3 + 2 = 5
+
+
+✅ Correct answer: C. 5
+
+5️⃣ PICTURIZE IT (VERY IMPORTANT 🧠)
+
+Imagine the vertex as YOU 👤
+
+3 people are sending messages to you → indegree = 3
+
+You are sending messages to 2 people → outdegree = 2
+
+📊 Total interactions involving you = 5
+
+That’s the total degree.
+
+6️⃣ COMMON EXAM CONFUSION (READ THIS!)
+
+❌ Wrong thought:
+
+“Total degree is not defined in directed graph”
+
+👉 ❌ WRONG
+
+✔ Correct:
+
+Indegree → defined
+
+Outdegree → defined
+
+Total degree → indegree + outdegree
+
+7️⃣ QUICK COMPARISON (MCQ GOLD)
+Graph Type	Degree Meaning
+Undirected	Degree = number of edges connected
+Directed	Total degree = indegree + outdegree
+'''
