@@ -1,0 +1,145 @@
+🔴 RED–BLACK TREE MCQs (15 Questions)
+Q1) Which property is TRUE for every Red–Black Tree?
+
+A. Every node has two children
+B. Root is always black
+C. All leaves are red
+D. Tree is perfectly balanced
+
+✅ Answer: B
+
+Q2) What is the color of all NULL (NIL) leaves in a Red–Black Tree?
+
+A. Red
+B. Black
+C. White
+D. Depends on tree
+
+✅ Answer: B
+
+Q3) A red node can have which of the following children?
+
+A. Only red
+B. Only black
+C. Either red or black
+D. No children
+
+✅ Answer: B
+
+Q4) Which property prevents two consecutive red nodes?
+
+A. Root property
+B. Black-height property
+C. Red property
+D. BST property
+
+✅ Answer: C
+
+Q5) What is the maximum height of a Red–Black Tree with n nodes?
+
+A. log₂n
+B. n
+C. 2 log₂(n + 1)
+D. log₁₀n
+
+✅ Answer: C
+
+Q6) Which operations may violate Red–Black properties?
+
+A. Search
+B. Traversal
+C. Insertion
+D. Display
+
+✅ Answer: C
+
+Q7) Which operation is used to fix Red–Black Tree violations?
+
+A. Heapify
+B. Recoloring
+C. Rotations
+D. Both B and C
+
+✅ Answer: D
+
+Q8) Red–Black Tree is a relaxed form of which tree?
+
+A. Heap
+B. AVL Tree
+C. B-tree (2–3 tree)
+D. Trie
+
+✅ Answer: C
+
+Q9) In Red–Black Tree insertion, the newly inserted node is colored:
+
+A. Black
+B. Red
+C. White
+D. Depends
+
+✅ Answer: B
+
+Q10) If both parent and uncle of a node are red, what is done?
+
+A. Rotate
+B. Recolor
+C. Delete node
+D. Ignore
+
+✅ Answer: B
+
+Q11) Which case requires rotation in Red–Black Tree insertion?
+
+A. Parent is black
+B. Parent and uncle are red
+C. Parent is red and uncle is black
+D. Root is black
+
+✅ Answer: C
+
+Q12) Black-height of a node means:
+
+A. Number of red nodes below it
+B. Height of tree
+C. Number of black nodes on any path to a leaf
+D. Depth of node
+
+✅ Answer: C
+
+Q13) Red–Black Tree guarantees search complexity of:
+
+A. O(n)
+B. O(log n)
+C. O(n log n)
+D. O(1)
+
+✅ Answer: B
+
+Q14) Which traversal shows Red–Black Tree in sorted order?
+
+A. Preorder
+B. Postorder
+C. Inorder
+D. Level order
+
+✅ Answer: C
+
+Q15) Compared to AVL trees, Red–Black Trees are:
+
+A. More strictly balanced
+B. Less balanced but faster insertion/deletion
+C. Slower
+D. Not balanced
+
+✅ Answer: B
+
+🧠 FINAL EXAM MEMORY (RED–BLACK)
+
+Root → Black
+NULL leaves → Black
+No Red–Red parent-child
+Equal black-height on all root-to-leaf paths
+Insert node → Red
+Fix using Recoloring + Rotations
+Height ≤ 2 log₂(n+1)
