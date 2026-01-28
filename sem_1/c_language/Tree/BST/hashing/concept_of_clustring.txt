@@ -1,0 +1,93 @@
+🔹 What is CLUSTERING in Hashing?
+
+👉 Clustering means
+
+Keys group together in the hash table, creating long blocks of occupied slots.
+
+This causes:
+
+More collisions
+
+Slower search / insertion
+
+Poor performance
+
+🔹 Why clustering happens?
+
+Because collision resolution methods often probe nearby locations repeatedly.
+
+📊 CLUSTERING COMPARISON TABLE (VERY IMPORTANT)
+Collision Resolution Technique	Primary Clustering	Secondary Clustering	Explanation
+Linear Probing	✅ YES	❌ NO	Collisions create long continuous blocks
+Quadratic Probing	❌ NO	✅ YES	Same probe sequence for same initial hash
+Double Hashing	❌ NO	❌ NO	Different step size → different probe paths
+Separate Chaining	❌ NO	❌ NO	Uses linked lists, no probing
+🔹 TYPES OF CLUSTERING (EXAM DEFINITIONS)
+🔴 1. Primary Clustering
+
+📌 Occurs in Linear Probing
+
+Visualize:
+Index:  2  3  4  5  6
+Table: [ ][X][X][X][ ]
+
+
+One collision → small block
+
+More collisions → block grows
+
+New keys always attach to same block
+
+🧠 Exam line:
+
+Linear probing suffers from primary clustering
+
+🔵 2. Secondary Clustering
+
+📌 Occurs in Quadratic Probing
+
+Why?
+
+Keys with same hash value
+
+Follow same quadratic sequence
+
+Example:
+
+h(k) + 1², 2², 3² ...
+
+
+Different keys → same path → clustering
+
+🧠 Exam line:
+
+Quadratic probing eliminates primary but causes secondary clustering
+
+🟢 3. No Clustering
+
+📌 Double Hashing
+
+Why?
+h(k, i) = (h1(k) + i × h2(k)) mod m
+
+
+Step size depends on key
+
+Different keys → different probe sequences
+
+🧠 Exam line:
+
+Double hashing avoids both primary and secondary clustering
+
+🔥 MCQ TRAP STATEMENTS (VERY IMPORTANT)
+Statement	True / False
+Linear probing has primary clustering	✅ True
+Quadratic probing avoids all clustering	❌ False
+Double hashing gives best distribution	✅ True
+Separate chaining causes clustering	❌ False
+Quadratic probing avoids primary clustering	✅ True
+🧠 ONE-LINE MEMORY TRICK
+Linear   → Primary ❌
+Quadratic → Secondary ❌
+Double   → No clustering ✅
+Chaining → No clustering ✅
