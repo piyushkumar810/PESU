@@ -1,0 +1,271 @@
+🔹 MEDIUM LEVEL MCQs (Concept clarity)
+Q1) An expression tree is a:
+
+A. General tree
+B. Binary tree
+C. Complete tree
+D. AVL tree
+
+✅ Answer: B
+
+Q2) In an expression tree:
+
+A. Operators are stored in leaf nodes
+B. Operands are stored in internal nodes
+C. Operands are stored in leaf nodes
+D. All nodes store operators
+
+✅ Answer: C
+
+Q3) Internal nodes of an expression tree contain:
+
+A. Numbers only
+B. Variables only
+C. Operators
+D. Constants
+
+✅ Answer: C
+
+Q4) Which notation is most commonly used to construct an expression tree?
+
+A. Infix
+B. Prefix
+C. Postfix
+D. Level order
+
+✅ Answer: C
+
+Q5) Which data structure is used while building an expression tree from postfix expression?
+
+A. Queue
+B. Stack
+C. Heap
+D. Array
+
+✅ Answer: B
+
+🔹 ADVANCED LEVEL MCQs (Exam favorite)
+Q6) In expression trees, inorder traversal gives:
+
+A. Prefix expression
+B. Postfix expression
+C. Infix expression
+D. Level order expression
+
+✅ Answer: C
+
+Q7) Preorder traversal of an expression tree gives:
+
+A. Infix
+B. Postfix
+C. Prefix
+D. Reverse infix
+
+✅ Answer: C
+
+Q8) Postorder traversal of an expression tree gives:
+
+A. Prefix
+B. Infix
+C. Postfix
+D. Level order
+
+✅ Answer: C
+
+Q9) While scanning a postfix expression, when an operator is encountered:
+
+A. Push operator directly
+B. Pop one operand
+C. Pop two operands
+D. Ignore operator
+
+✅ Answer: C
+
+Q10) When an operator node is created during construction:
+
+A. First popped node → left child
+B. First popped node → right child
+C. Operator becomes leaf
+D. Operands are discarded
+
+✅ Answer: B
+
+📌 (Second popped → left, first popped → right)
+
+🔹 SCENARIO-BASED MCQs (VERY IMPORTANT)
+Q11) Construct an expression tree for postfix expression 34+
+
+What is the root node?
+
+A. 3
+B. 4
+C. +
+D. NULL
+
+✅ Answer: C
+
+Q12) Given postfix expression 34+52-*, the root operator of expression tree is:
+
+A. +
+B. -
+C. *
+D. /
+
+✅ Answer: C
+
+Q13) If postfix expression has n operands, number of operators is:
+
+A. n
+B. n − 1
+C. n + 1
+D. 2n
+
+✅ Answer: B
+
+Q14) In evaluation of an expression tree:
+
+A. Root is evaluated first
+B. Left subtree evaluated first
+C. Right subtree evaluated first
+D. Both subtrees evaluated before root
+
+✅ Answer: D
+
+Q15) Which traversal is used to evaluate an expression tree?
+
+A. Inorder
+B. Preorder
+C. Postorder
+D. Level order
+
+✅ Answer: C
+
+🔹 TRICKY MCQs (To avoid silly mistakes)
+Q16) A leaf node in expression tree always contains:
+
+A. Operator
+B. Operand
+C. Both
+D. NULL
+
+✅ Answer: B
+
+Q17) Expression tree for A+B*C will have which root?
+
+A. +
+B. *
+C. A
+D. B
+
+✅ Answer: A
+
+(because * happens inside right subtree)
+
+Q18) Maximum number of children for any node in an expression tree is:
+
+A. 1
+B. 2
+C. 3
+D. Unlimited
+
+✅ Answer: B
+
+Q19) Which traversal preserves operator precedence implicitly?
+
+A. Inorder
+B. Preorder
+C. Postorder
+D. Level order
+
+✅ Answer: A
+
+Q20) Expression trees are mainly used for:
+
+A. Sorting
+B. Searching
+C. Expression evaluation
+D. Graph traversal
+
+✅ Answer: C
+
+
+
+🔥 FINAL EXAM MEMORY BLOCK
+
+Expression Tree = Binary Tree
+Leaf → Operand
+Internal → Operator
+Build using Postfix + Stack
+Evaluate using Postorder
+Inorder → Infix
+Preorder → Prefix
+Postorder → Postfix
+
+
+'''
+--------------------------------- complex question explanation---------------------
+🔹 Q17) Expression tree for A + B * C
+
+Which node is the root?
+
+Expression:
+A + B * C
+
+Step 1: Apply operator precedence
+
+* has higher precedence than +
+
+So expression is actually:
+
+A + (B * C)
+
+Step 2: Build the expression tree
+        +
+       / \
+      A   *
+         / \
+        B   C
+
+Observation:
+
++ combines the two main parts of the expression
+
+Therefore + is the ROOT
+
+✅ Correct answer: A. +
+
+🧠 One-line memory:
+The last operator applied (lowest precedence) becomes the root.
+
+
+
+🔹 Q19) Which traversal preserves operator precedence implicitly?
+Meaning of the question:
+
+Which traversal prints the expression in a way that operator precedence is naturally visible?
+
+Consider the same tree:
+        +
+       / \
+      A   *
+         / \
+        B   C
+
+Inorder Traversal (Left → Root → Right)
+A + B * C
+
+
+✔ * appears closer to operands
+✔ Precedence is naturally preserved
+✔ No extra symbols needed
+
+Other traversals:
+
+Preorder → + A * B C ❌
+
+Postorder → A B C * + ❌
+
+Level order → + A * B C ❌
+
+They do not show precedence clearly.
+'''
