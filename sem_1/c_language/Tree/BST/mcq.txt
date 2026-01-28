@@ -183,3 +183,12 @@ C. It is always balanced
 D. It uses less memory
 
 ✅ Answer: B
+
+Q21) If keys are inserted in sorted order into a BST, the resulting tree will be:
+
+A. Balanced BST
+B. Complete tree
+C. Skewed tree
+D. AVL tree
+
+✅ Answer: C
