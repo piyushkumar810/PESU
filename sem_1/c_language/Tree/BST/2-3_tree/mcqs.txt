@@ -1,0 +1,106 @@
+🔥 Now: MCQs on 2–3 Trees (Medium → Advanced)
+Q1) A 2–3 tree is always:
+
+A. Unbalanced
+B. Height balanced
+C. Left skewed
+D. Binary
+
+✅ Answer: B
+
+Q2) A node in a 2–3 tree can have at most:
+
+A. 1 key, 2 children
+B. 2 keys, 3 children
+C. 3 keys, 4 children
+D. 2 keys, 2 children
+
+✅ Answer: B
+
+Q3) All leaves in a 2–3 tree are:
+
+A. At different levels
+B. At same level
+C. On left side
+D. Optional
+
+✅ Answer: B
+
+Q4) Inserting a key in a 2–3 tree may cause:
+
+A. Rotation
+B. Node split
+C. Recoloring
+D. Heapify
+
+✅ Answer: B
+
+Q5) Maximum keys in a node of a 2–3 tree:
+
+A. 1
+B. 2
+C. 3
+D. Depends
+
+✅ Answer: B
+
+Q6) If a node overflows during insertion, the tree is fixed by:
+
+A. Rotations
+B. Rebalancing
+C. Splitting the node
+D. Deletion
+
+✅ Answer: C
+
+Q7) Time complexity of search in a 2–3 tree:
+
+A. O(n)
+B. O(log n)
+C. O(n log n)
+D. O(1)
+
+✅ Answer: B
+
+Q8) A 2–3 tree is a type of:
+
+A. Binary tree
+B. Heap
+C. Multiway search tree
+D. Graph
+
+✅ Answer: C
+
+Q9) Which structure inspired B-trees?
+
+A. AVL tree
+B. Red-Black tree
+C. 2–3 tree
+D. Heap
+
+✅ Answer: C
+
+Q10) During insertion, splitting may propagate:
+
+A. Downward
+B. Sideways
+C. Upward
+D. Randomly
+
+✅ Answer: C
+
+
+🧠 FINAL MEMORY BLOCK (EXAM GOLD)
+AVL
+
+Empty tree height = −1
+Leaf height = 0
+
+Only Insertion / Deletion affect balance
+2–3 Tree
+
+Always height balanced
+Nodes: 1 or 2 keys
+Children: 2 or 3
+Fix overflow by splitting
+All leaves at same level
