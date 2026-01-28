@@ -1,0 +1,143 @@
+🌳 AVL TREE – MCQs PRACTICE (15 QUESTIONS)
+Q1) An AVL tree is a special type of:
+
+A. Binary Tree
+B. Complete Binary Tree
+C. Binary Search Tree
+D. Heap
+
+✅ Answer: C
+
+Q2) The balance factor of a node in an AVL tree is:
+
+A. Height of left subtree
+B. Height of right subtree
+C. Height(left) − Height(right)
+D. Height(right) − Height(left)
+
+✅ Answer: C
+
+Q3) Valid balance factor values for an AVL node are:
+
+A. −2, −1, 0, 1, 2
+B. −1, 0, 1
+C. 0, 1
+D. −1, 1
+
+✅ Answer: B
+
+Q4) If the balance factor of a node becomes +2 after insertion, the tree is:
+
+A. Right heavy
+B. Left heavy
+C. Balanced
+D. Complete
+
+✅ Answer: B
+
+Q5) Which rotation is used when insertion happens in the left subtree of left child?
+
+A. RR
+B. RL
+C. LR
+D. LL
+
+✅ Answer: D
+
+Q6) Which rotation is used when insertion happens in the right subtree of right child?
+
+A. LL
+B. LR
+C. RL
+D. RR
+
+✅ Answer: D
+
+Q7) LR rotation is a combination of:
+
+A. Right then Left
+B. Left then Right
+C. Two Right rotations
+D. Two Left rotations
+
+✅ Answer: B
+
+Q8) RL rotation is performed when:
+
+A. Insertion in left of left subtree
+B. Insertion in right of right subtree
+C. Insertion in left of right subtree
+D. Insertion in right of left subtree
+
+✅ Answer: C
+
+Q9) After how many rotations can an AVL tree be rebalanced after insertion?
+
+A. Exactly one
+B. At most one
+C. At most two
+D. Depends on height
+
+✅ Answer: C
+
+Q10) Time complexity of search in AVL tree is:
+
+A. O(n)
+B. O(log n)
+C. O(n log n)
+D. O(1)
+
+✅ Answer: B
+
+Q11) Height of an empty AVL tree is defined as:
+
+A. 0
+B. −1
+C. 1
+D. Undefined
+
+✅ Answer: B
+
+Q12) AVL trees differ from BST because AVL trees:
+
+A. Allow duplicate keys
+B. Are always complete
+C. Are self-balancing
+D. Use queues
+
+✅ Answer: C
+
+Q13) Which operation may violate AVL balance?
+
+A. Search
+B. Traversal
+C. Insertion
+D. Display
+
+✅ Answer: C
+(Deletion also violates, but not listed)
+
+Q14) If multiple nodes become unbalanced after insertion, which node is rotated?
+
+A. Root
+B. First unbalanced node from root
+C. Last unbalanced node from root
+D. Closest unbalanced node to inserted leaf
+
+✅ Answer: D
+
+Q15) AVL trees guarantee height:
+
+A. O(n)
+B. O(n log n)
+C. O(log n)
+D. O(1)
+
+✅ Answer: C
+
+🧠 EXAM MEMORY BLOCK (VERY IMPORTANT)
+AVL = Self-balancing BST
+Balance Factor ∈ {−1, 0, +1}
+LL, RR → Single rotations
+LR, RL → Double rotations
+Height always O(log n)
