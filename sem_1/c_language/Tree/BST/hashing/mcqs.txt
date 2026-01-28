@@ -1,0 +1,189 @@
+🔐 HASHING MCQs (20 Questions)
+Q1) Hashing is mainly used for:
+
+A. Sorting data
+B. Searching data quickly
+C. Compressing files
+D. Encrypting data
+
+✅ Answer: B
+
+Q2) A hash function maps a key to:
+
+A. A sorted list
+B. A memory block
+C. A fixed-size value
+D. A tree node
+
+✅ Answer: C
+
+Q3) The ideal time complexity for search in a hash table is:
+
+A. O(n)
+B. O(log n)
+C. O(1)
+D. O(n log n)
+
+✅ Answer: C
+
+Q4) Collision occurs when:
+
+A. Table is full
+B. Two keys map to same index
+C. Hash value is zero
+D. Keys are sorted
+
+✅ Answer: B
+
+Q5) Which is NOT a property of a good hash function?
+
+A. Uniform distribution
+B. Deterministic
+C. Slow computation
+D. Minimal collisions
+
+✅ Answer: C
+
+Q6) In division-remainder method, hash function is:
+
+A. h(x) = x / m
+B. h(x) = x mod m
+C. h(x) = m mod x
+D. h(x) = x × m
+
+✅ Answer: B
+
+Q7) In hashing, m usually represents:
+
+A. Number of keys
+B. Load factor
+C. Table size
+D. Key size
+
+✅ Answer: C
+
+Q8) Which table size reduces collisions in division method?
+
+A. Even number
+B. Power of 2
+C. Prime number
+D. Odd number
+
+✅ Answer: C
+
+Q9) Load factor (α) of a hash table is:
+
+A. keys × table size
+B. table size / keys
+C. keys / table size
+D. collisions / keys
+
+✅ Answer: C
+
+Q10) If load factor increases, performance of hashing:
+
+A. Improves
+B. Remains same
+C. Degrades
+D. Becomes constant
+
+✅ Answer: C
+
+Q11) Which collision resolution stores collided elements in linked lists?
+
+A. Linear probing
+B. Quadratic probing
+C. Double hashing
+D. Separate chaining
+
+✅ Answer: D
+
+Q12) Linear probing suffers from:
+
+A. Secondary clustering
+B. Primary clustering
+C. No clustering
+D. Infinite loops
+
+✅ Answer: B
+
+Q13) Quadratic probing avoids:
+
+A. Collisions
+B. Hashing
+C. Primary clustering
+D. Secondary clustering
+
+✅ Answer: C
+
+Q14) Double hashing uses:
+
+A. One hash function
+B. Two hash functions
+C. Three hash functions
+D. No hash function
+
+✅ Answer: B
+
+Q15) In multiplication method, hashing depends on:
+
+A. Prime numbers
+B. Modulus
+C. Fractional part
+D. Division
+
+✅ Answer: C
+
+Q16) Multiplication method is preferred because:
+
+A. Easy to compute
+B. Less sensitive to key patterns
+C. No collisions
+D. Uses prime numbers
+
+✅ Answer: B
+
+Q17) Worst-case search time in hashing is:
+
+A. O(1)
+B. O(log n)
+C. O(n)
+D. O(n²)
+
+✅ Answer: C
+
+Q18) Which hashing method ensures probe sequence covers table fully?
+
+A. Linear probing
+B. Quadratic probing
+C. Double hashing
+D. Chaining
+
+✅ Answer: C
+
+Q19) Hashing is NOT suitable for:
+
+A. Database indexing
+B. Caching
+C. Range queries
+D. Symbol tables
+
+✅ Answer: C
+
+Q20) Which collision resolution technique does NOT require extra memory?
+
+A. Separate chaining
+B. Linked hashing
+C. Open addressing
+D. Bucketing
+
+✅ Answer: C
+
+🧠 ONE-LINE EXAM MEMORY
+
+Hashing → Fast access
+Ideal time → O(1)
+Collision → Same index
+Load factor ↑ → Performance ↓
+Best probing → Double hashing
+Range queries ❌
