@@ -1,0 +1,182 @@
+MEDIUM-LEVEL MCQs (Concept Check)
+Q1) In a directed graph, the sum of indegrees of all vertices is equal to:
+
+A. Number of vertices
+B. Number of edges
+C. Twice the number of edges
+D. Indegree of source vertex
+
+✅ Answer: B
+
+Q2) In an undirected graph, the sum of degrees of all vertices is:
+
+A. E
+B. V
+C. 2E
+D. V − 1
+
+✅ Answer: C
+
+Q3) BFS traversal uses which data structure internally?
+
+A. Stack
+B. Queue
+C. Priority queue
+D. Array
+
+✅ Answer: B
+
+Q4) DFS traversal uses which data structure (explicitly or implicitly)?
+
+A. Queue
+B. Heap
+C. Stack
+D. Tree
+
+✅ Answer: C
+
+Q5) BFS is guaranteed to find the shortest path when:
+
+A. Graph is weighted
+B. Graph is unweighted
+C. Graph is cyclic
+D. Graph is complete
+
+✅ Answer: B
+
+🟠 ADVANCED-LEVEL MCQs (Tricky)
+Q6) In a directed graph, if a vertex has indegree = 0, it is called:
+
+A. Sink
+B. Isolated vertex
+C. Source
+D. Root
+
+✅ Answer: C
+
+Q7) In a directed graph, if a vertex has outdegree = 0, it is called:
+
+A. Source
+B. Sink
+C. Leaf
+D. Root
+
+✅ Answer: B
+
+Q8) Which traversal may get stuck in infinite recursion if visited array is not used?
+
+A. BFS
+B. DFS
+C. Dijkstra
+D. Prim
+
+✅ Answer: B
+
+Q9) DFS does NOT guarantee shortest path because:
+
+A. It explores all nodes
+B. It uses recursion
+C. It goes deep before exploring neighbors
+D. It ignores edges
+
+✅ Answer: C
+
+Q10) If BFS is implemented using a stack instead of a queue, it becomes:
+
+A. DFS
+B. Topological sort
+C. Dijkstra
+D. Warshall
+
+✅ Answer: A
+
+🔴 SCENARIO-BASED MCQs (Exam Gold)
+Q11) A connected graph with n vertices and n−1 edges must be:
+
+A. Cyclic
+B. Tree
+C. Complete
+D. Disconnected
+
+✅ Answer: B
+
+Q12) A connected graph with n vertices and n edges contains:
+
+A. No cycle
+B. Exactly one cycle
+C. Two cycles
+D. A tree
+
+✅ Answer: B
+
+Q13) In BFS traversal, vertices are visited:
+
+A. Depth-wise
+B. Randomly
+C. Level by level
+D. Backtracking
+
+✅ Answer: C
+
+Q14) In DFS traversal, backtracking happens when:
+
+A. Queue becomes empty
+B. Stack overflows
+C. No unvisited adjacent vertex exists
+D. Graph becomes disconnected
+
+✅ Answer: C
+
+Q15) Which traversal is best to check reachability between two vertices?
+
+A. BFS
+B. DFS
+C. Either BFS or DFS
+D. Warshall only
+
+✅ Answer: C
+
+Q16) In BFS, the first time a vertex is visited ensures:
+
+A. Maximum distance
+B. Minimum distance (unweighted graph)
+C. Highest degree
+D. Lowest degree
+
+✅ Answer: B
+
+Q17) If a graph has multiple connected components, BFS starting from one vertex will:
+
+A. Visit all vertices
+B. Visit only that component
+C. Fail
+D. Loop infinitely
+
+✅ Answer: B
+
+Q18) Which algorithm computes reachability between all pairs of vertices?
+
+A. BFS
+B. DFS
+C. Warshall
+D. Kruskal
+
+✅ Answer: C
+
+Q19) DFS traversal is especially useful for:
+
+A. Shortest path
+B. Level order traversal
+C. Cycle detection
+D. Minimum spanning tree
+
+✅ Answer: C
+
+Q20) In a graph traversal, the purpose of a visited array is to:
+
+A. Store degree
+B. Store edges
+C. Avoid revisiting vertices
+D. Sort vertices
+
+✅ Answer: C
