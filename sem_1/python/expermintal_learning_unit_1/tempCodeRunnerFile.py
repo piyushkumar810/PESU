@@ -1,8 +1,10 @@
-from collections import Counter
-n=input("enter the string: ")
-freq=Counter(n)
-print(freq)
 
-for char, count in freq.items():
+from collections import Counter
+user_input=input("Enter a string: ")
+frequency=Counter(user_input)
+print(frequency)
+
+print("\ncharacter with frequency greater than 2: ")
+for char, count in frequency.items():
     if count>2:
-        print(f"{char} with {count}")
+        print(f"'{char}': {count}")
