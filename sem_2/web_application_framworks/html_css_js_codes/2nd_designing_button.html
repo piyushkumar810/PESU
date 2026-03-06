@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML,CSS AND JS EXAMPLE</title>
+
+    <style>
+       body{
+    /* display:flex; */
+    /* justify-content:center; */
+    /* align-items:center; */
+    text-align: center;
+    height:100vh;
+    background:#eef;
+    font-family:Arial;
+    }
+    
+    /* Button Style */
+    .btn{
+        padding:15px 30px;
+        font-size:18px;
+        border:none;
+        border-radius:8px;
+        background:linear-gradient(45deg,#007bff,#00c6ff);
+        color:white;
+        cursor:pointer;
+        transition:all 0.3s ease;
+    }
+    
+    /* Hover Effect */
+    .btn:hover{
+        transform:scale(1.1);
+        box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    }
+    
+    /* Click Effect */
+    .btn:active{
+        transform:scale(0.95);
+        box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    }
+    
+    /* Focus Effect */
+    .btn:focus{
+        outline:none;
+        border:2px solid darkblue;
+    }
+
+    h2 {color: black;}
+
+    button {padding: 10px 20px; background-color: blue; color: white;
+    border: none; cursor: pointer;}
+    #outer_para {
+        size: 20px;
+        color: aqua;
+    }
+    .use{
+        border: black;
+    border-radius: 20px;
+    background-color:blue;
+    }
+        
+    </style>
+
+    <script>
+        function showmessage(){
+            alert("this is a javascript interactivity");
+        }
+
+        function use(){
+            alert("before clicking me use click me");
+        }
+    </script>
+</head>
+<body>
+    <h2>welcome to my webpage</h2>
+    <p id="outer_para">this structure is build using HTML,CSS AND JS </p>
+    <button onclick="showmessage()">Click Me</button>
+    <button onclick="use()" class="btn">Use Me</button>
+
+</body>
+</html>
