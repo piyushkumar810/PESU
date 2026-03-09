@@ -10,7 +10,6 @@ df.columns=['Employee_Name']
 print(df)
 print()
 
-
 data={'Name':["Piyush", "Rahul", "Ankit", "Priya",],
       'Age':[23,22,22,21]}
 df_dict=pd.DataFrame(data)
