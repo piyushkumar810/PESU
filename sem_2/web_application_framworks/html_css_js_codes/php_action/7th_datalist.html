@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>datalist element</title>
+</head>
+<body>
+    <h1>The Datalist element</h1>
+
+    <form action="action_page.php" method="get">
+        <label for="browser">choose your browser from the list: </label>
+        <input list="browser" name="browser" id="browser">
+        <datalist id="browser">
+            <option value="Edge"></option>
+            <option value="firefox"></option>
+            <option value="chrome"></option>
+            <option value="opera"></option>
+            <option value="safari"></option>
+        </datalist>
+
+        <input type="submit" value="submit">
+    </form>
+
+    <p>
+        <srtong>Note: </srtong>
+        The datalist tag is not supported in safari 12.0
+    </p>
+</body>
+</html>
