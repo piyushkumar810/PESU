@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML5 Form Inputs Demo</title>
+<style>
+
+body{
+font-family: Arial;
+background:#f2f2f2;
+}
+
+.container{
+width:600px;
+margin:auto;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0px 0px 10px gray;
+}
+
+h2{
+    text-align: center;
+}
+
+label{
+font-weight:bold;
+display:block;
+margin-top:10px;
+}
+
+input,select,textarea{
+width:100%;
+padding:8px;
+margin-top:5px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>HTML5 Form Example</h2>
+    
+    <form action="#" method="post" autocomplete="on">
+    
+    <!-- NAME WITH PATTERN -->
+    <label>Name</label>
+    <input type="text"
+    name="name"
+    placeholder="Enter your name"
+    pattern="[A-Za-z ]{3,20}"
+    required>
+    
+    <!-- EMAIL -->
+    <label>Email</label>
+    <input type="email"
+    name="email"
+    placeholder="example@gmail.com"
+    required>
+    
+    <!-- TELEPHONE -->
+    <label>Phone</label>
+    <input type="tel"
+    name="phone"
+    placeholder="123-456-7890">
+    
+    <!-- URL -->
+    <label>Website</label>
+    <input type="url"
+    name="website"
+    placeholder="https://example.com">
+    
+    <!-- SEARCH -->
+    <label>Search</label>
+    <input type="search"
+    name="search"
+    placeholder="Search here">
+    
+    <!-- NUMBER -->
+    <label>Age</label>
+    <input type="number"
+    name="age"
+    min="1"
+    max="100"
+    step="1">
+    
+    <!-- COLOR -->
+    <label>Favorite Color</label>
+    <input type="color"
+    name="color">
+    
+    <!-- DATE -->
+    <label>Date of Birth</label>
+    <input type="date"
+    name="dob">
+    
+    <!-- MONTH -->
+    <label>Birth Month</label>
+    <input type="month"
+    name="month">
+    
+    <!-- WEEK -->
+    <label>Select Week</label>
+    <input type="week"
+    name="week">
+    
+    <!-- TIME -->
+    <label>Select Time</label>
+    <input type="time"
+    name="time">
+    
+    <!-- RANGE -->
+    <label>Rate this site (1-10)</label>
+    <input type="range"
+    min="1"
+    max="10"
+    value="5"
+    onchange="showValue(this.value)">
+    
+    <span id="rangeValue">5</span>
+    
+    <!-- DATALIST -->
+    <label>Country</label>
+    <input list="countries" name="country">
+    
+    <datalist id="countries">
+    <option value="India">
+    <option value="USA">
+    <option value="UK">
+    <option value="Canada">
+    </datalist>
+    
+    <!-- MULTIPLE EMAIL -->
+    <label>Multiple Emails</label>
+    <input type="email"
+    name="emails"
+    multiple
+    placeholder="a@gmail.com, b@gmail.com">
+    
+    <!-- FILE MULTIPLE -->
+    <label>Upload Files</label>
+    <input type="file" multiple>
+    
+    <!-- TEXTAREA -->
+    <label>Message</label>
+    <textarea rows="4" cols="50"
+    placeholder="Write message here"></textarea>
+    
+    <br><br>
+    
+    <input type="submit" value="Submit Form">
+    <input type="reset" value="Reset Form">
+    
+    </form>
+    
+</div>
+
+<script>
+
+function showValue(val)
+{
+document.getElementById("rangeValue").innerHTML=val;
+}
+
+</script>
+
+</body>
+</html>
