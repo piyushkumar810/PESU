@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>CSS3 Complete Demo</title>
+
+<style>
+
+/* WEB FONT */
+@font-face{
+font-family: myFont;
+src:url("Arial.ttf");
+}
+
+/* BODY STYLE */
+body{
+font-family: Arial;
+background:#f2f2f2;
+padding:20px;
+}
+
+/* TEXT OVERFLOW */
+.overflow{
+width:200px;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+border:1px solid black;
+}
+
+/* WORD WRAP */
+.wrap{
+width:200px;
+border:1px solid red;
+word-wrap:break-word;
+}
+
+/* LIST STYLE */
+ul{
+list-style-type:square;
+}
+
+/* LIST IMAGE */
+li.image{
+list-style-image:url("bullet.png");
+}
+
+/* GRADIENT */
+.gradient{
+height:100px;
+background:linear-gradient(to right,red,yellow);
+}
+
+/* RADIAL GRADIENT */
+.radial{
+height:100px;
+background:radial-gradient(circle,blue,white);
+}
+
+/* BORDER RADIUS */
+.round{
+border:2px solid black;
+border-radius:20px;
+padding:10px;
+width:200px;
+}
+
+/* TEXT SHADOW */
+.shadow-text{
+font-size:30px;
+text-shadow:2px 2px 5px gray;
+}
+
+/* BOX SHADOW */
+.box-shadow{
+width:200px;
+height:100px;
+background:white;
+box-shadow:5px 5px 10px gray;
+}
+
+/* BACKGROUND SIZE */
+.bg-image{
+height:150px;
+background-image:url("bg.jpg");
+background-size:cover;
+background-origin:border-box;
+background-clip:content-box;
+}
+
+/* SPAN STYLE */
+.highlight{
+color:red;
+font-weight:bold;
+}
+
+/* TRANSFORM */
+.transform{
+width:100px;
+height:100px;
+background:orange;
+transform:rotate(20deg);
+}
+
+/* TRANSITION */
+.transition{
+width:100px;
+height:100px;
+background:green;
+transition:width 2s;
+}
+
+.transition:hover{
+width:200px;
+}
+
+/* 3D TRANSFORM */
+.rotate3d{
+width:100px;
+height:100px;
+background:purple;
+transform:rotateX(45deg);
+}
+
+/* ANIMATION */
+
+@keyframes colorchange{
+
+from{background:red;}
+to{background:yellow;}
+
+}
+
+.animate{
+width:100px;
+height:100px;
+animation-name:colorchange;
+animation-duration:3s;
+animation-iteration-count:infinite;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>CSS3 Complete Concepts Demo</h2>
+
+<h3>Text Overflow</h3>
+<div class="overflow">
+This is a very very very long sentence that will overflow.
+</div>
+
+<h3>Word Wrap</h3>
+<div class="wrap">
+averyveryveryveryveryverylongword
+</div>
+
+<h3>List Styling</h3>
+<ul>
+<li>Cessna</li>
+<li>Beechcraft</li>
+<li>Piper</li>
+</ul>
+
+<h3>Gradient</h3>
+<div class="gradient"></div>
+
+<h3>Radial Gradient</h3>
+<div class="radial"></div>
+
+<h3>Border Radius</h3>
+<div class="round">
+Rounded border example
+</div>
+
+<h3>Text Shadow</h3>
+<p class="shadow-text">Shadow Text</p>
+
+<h3>Box Shadow</h3>
+<div class="box-shadow"></div>
+
+<h3>Background Image</h3>
+<div class="bg-image"></div>
+
+<h3>Span Example</h3>
+<p>
+Now is the <span class="highlight">best time</span> ever
+</p>
+
+<h3>2D Transform</h3>
+<div class="transform"></div>
+
+<h3>Transition</h3>
+<div class="transition"></div>
+
+<h3>3D Transform</h3>
+<div class="rotate3d"></div>
+
+<h3>Animation</h3>
+<div class="animate"></div>
+
+</body>
+
+</html>
