@@ -1,0 +1,329 @@
+1️⃣ CSS Priority Trap
+<!-- <p style="color:red;" class="c1" id="id1">Hello</p>
+
+<style>
+#id1 {color: blue;}
+.c1 {color: green;}
+p {color: yellow;}
+</style>
+
+What is the color?
+
+A. Blue
+B. Green
+C. Yellow
+D. Red
+
+✅ Answer: D
+👉 Inline > ID > Class > Tag -->
+
+
+2️⃣ ID vs Class
+<!-- <p id="a" class="b">Text</p>
+
+<style>
+#a {color: red;}
+.b {color: blue;}
+</style>
+
+Output color?
+
+A. Blue
+B. Red
+C. Black
+D. Depends
+
+✅ Answer: B -->
+
+
+3️⃣ Last Rule Wins
+<!-- <p>Text</p>
+
+<style>
+p {color: red;}
+p {color: blue;}
+</style>
+
+Output?
+
+A. Red
+B. Blue
+C. Black
+D. Error
+
+✅ Answer: B -->
+
+
+4️⃣ Descendant Selector
+<!-- <div>
+  <p>Inside</p>
+</div>
+<p>Outside</p>
+
+<style>
+div p {color: red;}
+</style>
+
+Which is red?
+
+A. Inside only
+B. Outside only
+C. Both
+D. None
+
+✅ Answer: A -->
+
+
+5️⃣ Universal Selector
+<!-- * {color: red;}
+p {color: blue;}
+<p>Hello</p>
+
+Output?
+
+A. Red
+B. Blue
+C. Black
+D. Error
+
+✅ Answer: B -->
+
+
+6️⃣ Class Multiple
+<!-- <p class="a b">Text</p>
+
+<style>
+.a {color: red;}
+.b {color: blue;}
+</style>
+
+Output?
+
+A. Red
+B. Blue
+C. Purple
+D. Undefined
+
+✅ Answer: B 
+👉 Last applied wins (same specificity)-->
+
+
+7️⃣ !important Trap
+<!-- p {color: red !important;}
+#id {color: blue;}
+<p id="id">Hello</p>
+
+Output?
+
+A. Red
+B. Blue
+C. Black
+D. Error
+
+✅ Answer: A -->
+ 
+
+8️⃣ Box Model
+<!-- div{
+width:100px;
+padding:10px;
+border:5px solid;
+}
+
+Total width?
+
+A. 100
+B. 110
+C. 130
+D. 150
+
+✅ Answer: C
+👉 100 + 10+10 + 5+5 = 130 -->
+
+
+9️⃣ text-overflow
+<!-- div{
+width:100px;
+overflow:hidden;
+white-space:nowrap;
+text-overflow:ellipsis;
+}
+
+Output?
+
+A. Full text
+B. Hidden
+C. Text with "..."
+D. Error
+
+✅ Answer: C -->
+
+
+🔟 word-wrap
+<!-- div{
+width:50px;
+word-wrap:break-word;
+}
+
+Long word?
+
+A. Overflows
+B. Breaks to next line
+C. Hidden
+D. Error
+
+✅ Answer: B -->
+
+
+1️⃣1️⃣ Gradient
+<!-- div{
+background:linear-gradient(red,blue);
+}
+
+Direction?
+
+A. Left-right
+B. Top-bottom
+C. Diagonal
+D. Random
+
+✅ Answer: B -->
+
+
+1️⃣2️⃣ border-radius
+<!-- div{
+border-radius:10px 20px;
+}
+
+Meaning?
+
+A. All same
+B. Top-left only
+C. Opposite corners
+D. Random
+
+✅ Answer: C -->
+
+
+1️⃣3️⃣ Shadow Direction
+<!-- text-shadow: 5px 0px 0px red;
+
+Shadow moves?
+
+A. Left
+B. Right
+C. Up
+D. Down
+
+✅ Answer: B -->
+
+
+1️⃣4️⃣ Transform Rotate
+<!-- transform: rotate(90deg);
+
+Effect?
+
+A. Flip
+B. Rotate
+C. Scale
+D. Move
+
+✅ Answer: B -->
+
+
+1️⃣5️⃣ Translate
+<!-- transform: translate(50px, 0);
+
+Effect?
+
+A. Move right
+B. Move left
+C. Move down
+D. Rotate
+
+✅ Answer: A -->
+
+
+1️⃣6️⃣ Scale
+<!-- transform: scale(2);
+
+Effect?
+
+A. Half size
+B. Double size
+C. Rotate
+D. Move
+
+✅ Answer: B -->
+
+
+1️⃣7️⃣ Transition
+<!-- div{
+width:100px;
+transition:width 2s;
+}
+div:hover{
+width:200px;
+}
+
+Effect?
+
+A. Instant change
+B. Smooth change
+C. No change
+D. Error
+
+✅ Answer: B -->
+
+
+1️⃣8️⃣ Animation Missing
+<!-- div{
+animation-name: test;
+}
+
+No animation-duration.
+
+Effect?
+
+A. Works
+B. Infinite
+C. No animation
+D. Error
+
+✅ Answer: C -->
+
+
+1️⃣9️⃣ Multiple Background
+<!-- background-image:url(a.png), url(b.png);
+
+Which is on top?
+
+A. a.png
+B. b.png
+C. Both same
+D. None
+
+✅ Answer: A -->
+
+
+2️⃣0️⃣ Span vs Div
+<!-- <span style="display:block;">Text</span>
+
+Behavior?
+
+A. Inline
+B. Block
+C. Hidden
+D. Error
+
+✅ Answer: B -->
+
+
+<!-- 
+🔥 Final Exam Trick Summary
+---------------------------------
+Inline > ID > Class > Tag
+!important overrides all
+Last rule wins (same specificity)
+Gradient default → top to bottom
+Animation needs duration -->
