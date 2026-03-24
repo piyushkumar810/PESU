@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Built-in Function</title>
+</head>
+<body>
+    <h2>JavaScript Built-in Function Demo</h2>
+    <p id="output"></p>
+
+    <script>
+        let val1 = "Hello";
+        let val2 = 123;
+
+        // isNaN()
+        let check1 = isNaN(val1); 
+        let check2 = isNaN(val2);
+
+        // toString()
+        let num = 100;
+        let strNum = num.toString();
+
+        // Implicit concatenation
+        let concat = "A" + 10;
+
+        // parseInt() and parseFloat()
+        let intval = parseInt("123.45");   // 123
+        let floatval = parseFloat("123.45"); // 123.45
+
+        // typeof (correct keyword)
+        let a = 10;
+        let b = "js";
+        let c = true;
+        let d = 23.56;
+
+        let typeA = typeof a;
+        let typeB = typeof b;
+        let typeC = typeof c;
+        let typeD = typeof d;
+
+        // Display output
+        document.getElementById("output").innerHTML = `
+            <b>isNaN Results:</b><br>
+            isNaN("Hello") = ${check1} <br>
+            isNaN(123) = ${check2} <br><br>
+
+            <b>toString:</b><br>
+            100 → "${strNum}" <br><br>
+
+            <b>Concatenation:</b><br>
+            "A" + 10 = ${concat} <br><br>
+
+            <b>Parsing:</b><br>
+            parseInt("123.45") = ${intval} <br>
+            parseFloat("123.45") = ${floatval} <br><br>
+
+            <b>typeof:</b><br>
+            a = ${typeA} <br>
+            b = ${typeB} <br>
+            c = ${typeC} <br>
+            d = ${typeD}
+        `;
+
+        "<b> Data Object:"
+        colsole.log("Date: ", currentDate)
+    </script>
+</body>
+</html>
