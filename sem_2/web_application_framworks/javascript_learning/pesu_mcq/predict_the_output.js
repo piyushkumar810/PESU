@@ -65,8 +65,8 @@ console.log([] + []);
 // 👉 Ans: B
 
 
-// 7.
-// console.log([] + {});
+7.
+console.log([] + {});
 
 // A. "[object Object]"
 // B. "{}"
@@ -75,7 +75,8 @@ console.log([] + []);
 
 // 👉 Ans: A
 
-// 8.
+
+8.
 // console.log({} + []);
 
 // A. "[object Object]"
@@ -85,7 +86,8 @@ console.log([] + []);
 
 // 👉 Ans: B (TRAP)
 
-// 9.
+
+9.
 // console.log([] == false);
 
 // A. true
