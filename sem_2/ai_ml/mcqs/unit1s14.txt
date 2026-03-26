@@ -1,0 +1,156 @@
+🔥 MCQ 2 (Very Important)
+
+Which of the following statements is TRUE?
+
+Standardization makes mean = 0
+Standardization makes variance = 1
+Min-Max scaling is robust to outliers
+
+A 1 only
+B 1 and 2
+C 2 and 3
+D 1,2,3
+
+✅ Answer: B
+
+💡 Trap: Min-Max is NOT robust to outliers
+
+🔥 MCQ 3 (Numerical Thinking)
+
+If a feature has zero variance (all values same), what happens during standardization?
+
+A Values become 0
+B Values become 1
+C Division by zero occurs
+D Values remain unchanged
+
+✅ Answer: C
+
+💡 Very common GATE trap.
+
+🔥 MCQ 4 (Conceptual Depth)
+
+Which of the following algorithms is MOST affected by feature scaling?
+
+A Decision Tree
+B Random Forest
+C KNN
+D Naive Bayes
+
+✅ Answer: C
+
+💡 Distance-based → sensitive
+
+🔥 MCQ 5 (Tricky)
+
+Which statement is FALSE?
+
+A Standardization centers data
+B Min-Max scaling depends on min & max
+C Binarization uses mean as threshold
+D Feature scaling improves convergence
+
+✅ Answer: C
+
+💡 Binarization uses threshold, not necessarily mean.
+
+🔥 MCQ 6 (Feature Selection)
+
+Which method is suitable for selecting features in a regression problem?
+
+A chi-square
+B f_regression
+C PCA
+D Binarization
+
+✅ Answer: B
+
+🔥 MCQ 7 (Very Tricky)
+
+Which of the following is TRUE?
+
+Feature selection reduces overfitting
+Feature selection reduces dimensionality
+Feature scaling reduces number of features
+
+A 1 only
+B 1 and 2
+C 2 and 3
+D 1,2,3
+
+✅ Answer: B
+
+💡 Scaling ≠ selection
+
+🔥 MCQ 8 (Numerical Insight)
+
+In Min-Max scaling, if min = max, then:
+
+A All values become 1
+B All values become 0
+C Division by zero occurs
+D Values unchanged
+
+✅ Answer: C
+
+🔥 MCQ 9 (Application Based)
+
+Which scenario requires binarization?
+
+A Image classification
+B Converting grayscale image to black & white
+C Predicting house price
+D Feature selection
+
+✅ Answer: B
+
+🔥 MCQ 10 (High-Level Thinking)
+
+Which method preserves relative distance between data points better?
+
+A Binarization
+B Min-Max Scaling
+C Standardization
+D Encoding
+
+✅ Answer: C
+
+💡 Standardization keeps distribution shape.
+
+🔥 MCQ 11 (Multi-Concept)
+
+Which of the following is TRUE?
+
+A Decision Trees require scaling
+B KNN requires scaling
+C Feature selection increases dimensionality
+D Standardization fixes range to [0,1]
+
+✅ Answer: B
+
+🔥 MCQ 12 (Advanced)
+
+Which of the following is used for classification feature selection?
+
+A f_regression
+B chi-square
+C PCA
+D Normalization
+
+✅ Answer: B
+
+🧠 FINAL EXAM STRATEGY
+
+When solving questions:
+
+Step 1: Identify
+Scaling OR Selection?
+Step 2: If scaling
+Keyword	Answer
+Range [0,1]	Min-Max
+Mean = 0	Standardization
+0/1	Binarization
+Step 3: If selection
+Keyword	Answer
+Classification	chi2
+Regression	f_regression
