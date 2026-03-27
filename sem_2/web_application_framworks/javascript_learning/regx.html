@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JS Sunction & Regex Demo</title>
+</head>
+<body>
+    <h2>Javascript Functions & reguale Expressions</h2>
+    <p id ="output"></p>
+    <script>
+        function greet(){
+            return "Hello ! This is a function without parameters.<br>";     
+        }
+        //--------------------Func with parameter-------------------
+        function square(num){
+            return "Square of " + num + " is: "+ (num * num) +"<br>";
+        }
+
+        //---------Regular Expressions-----------------------------
+        function regexDemo() {
+            let text = "HEllo123 Worls_456";
+
+            let result ="<b>Original Text</b> "+ text + "<br><br>";
+
+            //Match digits
+            let dogits = text.match(/[0-9]+/g);
+            result += "Digits [0-9]:" + digits + "<br>";
+    
+            // Match alphabets
+            let alphabets= text.match(/[a-zA-Z]+/g);
+            result += "Alphabets [a-zA-Z]: "+ alphabets + "<br>";
+
+            //lowercase letters
+            let lowercase= text.match(/[a-z]+/g);
+            result += "Alphabets [a-z]: "+ alphabets + "<br>";
+
+            
+            //upperrcase letters
+            let upperrcase= text.match(/[A-Z]+/g);
+            result += "Alphabets [A-Z]: "+ alphabets + "<br>";
+
+            
+            //Match word characters (letters, digits, underscore)
+            let wordChars = text.match(/w+/g);
+            result += "Word Charcters [\\W]: "+ wordChars + "<br>";
+
+            //Match 
+            let uppercase= text.match(/[A-Z]+/g);
+            result += "Alphabets [A-Z]: "+ alphabets + "<br>";
+        }
+    </script>
+</body>
+</html>
