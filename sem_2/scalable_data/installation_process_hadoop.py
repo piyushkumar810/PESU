@@ -97,3 +97,17 @@ START
 
     Ctrl + D --> to exit pyspark
 '''
+
+
+
+'''
+Windows CMD
+   ↓
+wsl -d bigdata-env
+   ↓
+Linux Terminal (WSL)
+   ↓
+su - hadoop
+   ↓
+Run Hadoop commands ✅
+'''
