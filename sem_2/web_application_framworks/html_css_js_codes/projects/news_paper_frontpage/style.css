@@ -1,28 +1,22 @@
-/* Body font */
+/* Font */
 body {
     font-family: "Times New Roman", serif;
 }
 
 /* Container */
 #container {
-    width: 80%;
+    width: 85%;
     margin: auto;
-    background-color: rgba(255, 255, 255, 0.95);
-    border: 2px solid black;
+    background-color: #fff;
+    border: 3px solid black;
     padding: 10px;
 }
 
-/* Header title */
+/* Header */
 #header h1 {
     font-size: 3em;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     margin: 0;
-}
-
-/* Header subtitle */
-#header p {
-    font-size: 0.9em;
-    font-style: italic;
 }
 
 /* Headline */
@@ -34,69 +28,64 @@ body {
     color: hsl(0, 80%, 40%);
 }
 
-/* Paragraph */
-p {
-    font-size: 1em;
-    color: rgb(50, 50, 50);
-    line-height: 1.6;
-}
-
-/* Article (left side) */
-.article {
-    width: 65%;
-    float: left;
-    padding: 15px;
-    text-align: justify;
-
-    /* Newspaper column effect */
-    column-count: 2;
-    column-gap: 20px;
-}
-
-/* Drop cap effect */
-.article p::first-letter {
-    font-size: 2em;
-    font-weight: bold;
-}
-
-/* Sidebar */
-.sidebar {
-    width: 30%;
-    float: right;
-    padding: 15px;
-    border: 2px dashed gray;
-    background-color: #f9f9f9;
-}
-
-/* Sidebar image */
-.sidebar img {
-    width: 100%;
-    margin-bottom: 10px;
-    border: 2px solid black;
-}
-
-/* Content borders */
+/* Content */
 #content {
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
     margin-top: 10px;
+}
+
+/* Article sections (3 columns) */
+.article {
+    width: 28%;
+    float: left;
+    margin: 1.5%;
+    border: 1px solid #aaa;
+    padding: 10px;
+    background-color: #fafafa;
+}
+
+/* Image */
+.article img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 2px solid black;
+    margin-bottom: 8px;
+}
+
+/* Heading */
+.article h3 {
+    font-size: 1.2em;
+    border-bottom: 1px solid gray;
+}
+
+/* Paragraph */
+.article p {
+    text-align: justify;
+    font-size: 0.95em;
+}
+
+/* Scrollable section */
+.more {
+    max-height: 60px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: rgba(200, 200, 200, 0.2);
 }
 
 /* Links */
 a {
-    text-decoration: none;
+    display: block;
+    margin-top: 5px;
     font-weight: bold;
-}
-
-a:link {
-    color: blue;
 }
 
 a:hover {
     color: red;
-    text-decoration: underline;
 }
 
-a:visited {
-    color: purple;
+/* Actions */
+.actions {
+    margin-top: 5px;
+    font-size: 0.9em;
 }
