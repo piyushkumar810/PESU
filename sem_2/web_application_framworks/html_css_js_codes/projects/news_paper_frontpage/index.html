@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspaper</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            background-color: lightgray;
+        }
+
+        #header {
+            text-align: center;
+            color: white;
+            background-color: black;
+            padding: 15px;
+        }
+
+        #headline {
+            text-align: center;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <!-- Header -->
+        <div id="header">
+            <h1>THE DAILY TIMES</h1>
+            <p>Your trusted news source</p>
+        </div>
+
+        <!-- Headline -->
+        <div id="headline">
+            <h2>BREAKING NEWS: CSS MAKES DESIGN EASY</h2>
+        </div>
+
+        <!-- Content -->
+        <div id="content">
+
+            <!-- Article -->
+            <div class="article">
+                <p>
+                    CSS is a powerful tool used to design beautiful webpages. 
+                    It allows developers to control layout, colors, and fonts easily.
+                </p>
+
+                <p>
+                    Modern web development relies heavily on CSS to create visually appealing layouts. 
+                    With features like float, flexbox, and grid, developers can structure content efficiently.
+                </p>
+
+                <a href="#">Read more</a><br>
+                <a href="#">Latest updates</a>
+
+                <!-- Inline CSS (priority demo) -->
+                <p style="color:red;">
+                    This line uses inline CSS to demonstrate priority.
+                </p>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <img src="https://img.freepik.com/premium-vector/breaking-news-transparent-background_213860-1653.jpg" alt="Breaking news image">
+                <p>Special Offer: Subscribe now!</p>
+            </div>
+
+        </div>
+
+        <!-- Clear float -->
+        <div style="clear: both;"></div>
+
+    </div>
+
+</body>
+</html>

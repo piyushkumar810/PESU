@@ -1,0 +1,102 @@
+/* Body font */
+body {
+    font-family: "Times New Roman", serif;
+}
+
+/* Container */
+#container {
+    width: 80%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 2px solid black;
+    padding: 10px;
+}
+
+/* Header title */
+#header h1 {
+    font-size: 3em;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+/* Header subtitle */
+#header p {
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+/* Headline */
+#headline h2 {
+    font-size: 2em;
+    text-transform: uppercase;
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+    color: hsl(0, 80%, 40%);
+}
+
+/* Paragraph */
+p {
+    font-size: 1em;
+    color: rgb(50, 50, 50);
+    line-height: 1.6;
+}
+
+/* Article (left side) */
+.article {
+    width: 65%;
+    float: left;
+    padding: 15px;
+    text-align: justify;
+
+    /* Newspaper column effect */
+    column-count: 2;
+    column-gap: 20px;
+}
+
+/* Drop cap effect */
+.article p::first-letter {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 30%;
+    float: right;
+    padding: 15px;
+    border: 2px dashed gray;
+    background-color: #f9f9f9;
+}
+
+/* Sidebar image */
+.sidebar img {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 2px solid black;
+}
+
+/* Content borders */
+#content {
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    margin-top: 10px;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:link {
+    color: blue;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: purple;
+}
