@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Full Assignment</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        h2 {
+            color: blue;
+        }
+        h3 {
+            color: darkred;
+        }
+        p {
+            font-size: 18px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<h2>JavaScript Assignment</h2>
+
+<script>
+
+// ✅ TASK 1
+document.write("<h3>Task 1</h3>");
+
+// (a) Reverse Number
+let num = prompt("Enter a number to reverse:");
+let reversed = num.split("").reverse().join("");
+document.write("<p>Reversed Number: " + reversed + "</p>");
+
+
+// (b) Multiplication Table
+let n = prompt("Enter number for multiplication table:");
+document.write("<p>Multiplication Table:</p>");
+
+for(let i = 1; i <= 10; i++) {
+    document.write("<p>" + n + " x " + i + " = " + (n*i) + "</p>");
+}
+
+// (c) Random Number
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+let min = parseInt(prompt("Enter minimum value:"));
+let max = parseInt(prompt("Enter maximum value:"));
+let randomNum = getRndInteger(min, max);
+document.write("<p>Random Number: " + randomNum + "</p>");
+
+
+// ✅ TASK 2
+document.write("<h3>Task 2</h3>");
+
+// (a) isNaN()
+document.write("<p>isNaN(123): " + isNaN(123) + "</p>");
+document.write("<p>isNaN('abc'): " + isNaN("abc") + "</p>");
+document.write("<p>isNaN(true): " + isNaN(true) + "</p>");
+document.write("<p>isNaN(undefined): " + isNaN(undefined) + "</p>");
+
+
+// (b) Decimal & Octal
+let number = parseInt(prompt("Enter a number:"));
+
+document.write("<p>Decimal: " + number + "</p>");
+document.write("<p>Octal: " + number.toString(8) + "</p>");
+
+
+// (c) String Operations
+let str = "The quick brown fox jumps over the lazy dog";
+
+document.write("<p>String: " + str + "</p>");
+document.write("<p>Length: " + str.length + "</p>");
+document.write("<p>charAt(5): " + str.charAt(5) + "</p>");
+document.write("<p>indexOf('fox'): " + str.indexOf("fox") + "</p>");
+document.write("<p>lastIndexOf('o'): " + str.lastIndexOf("o") + "</p>");
+document.write("<p>search('dog'): " + str.search("dog") + "</p>");
+document.write("<p>replace('fox','cat'): " + str.replace("fox","cat") + "</p>");
+document.write("<p>substring(4,15): " + str.substring(4,15) + "</p>");
+document.write("<p>slice(10,19): " + str.slice(10,19) + "</p>");
+document.write("<p>Uppercase: " + str.toUpperCase() + "</p>");
+
+
+// ✅ TASK 3
+document.write("<h3>Task 3</h3>");
+
+// (a) 1D Array using switch
+let arr = [];
+
+let choice = prompt("Choose operation: 1-Insert 2-Object Array 3-Length");
+
+switch(choice) {
+
+    case "1":
+        let val = prompt("Enter value to insert:");
+        arr.push(val);
+        document.write("<p>Array after insertion: " + arr + "</p>");
+        break;
+
+    case "2":
+        let objArr = new Array("Hello", 123, true);
+        document.write("<p>Object Array: " + objArr + "</p>");
+        break;
+
+    case "3":
+        arr = ["A", "B", "C"];
+        document.write("<p>Array Length: " + arr.length + "</p>");
+        break;
+
+    default:
+        document.write("<p>Invalid Choice</p>");
+}
+
+
+// (b) 2D Array
+let matrix = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+];
+
+document.write("<p>2D Array:</p>");
+
+for(let i = 0; i < matrix.length; i++) {
+    for(let j = 0; j < matrix[i].length; j++) {
+        document.write(matrix[i][j] + " ");
+    }
+    document.write("<br>");
+}
+
+</script>
+
+</body>
+</html>
