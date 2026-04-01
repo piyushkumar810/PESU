@@ -1,0 +1,42 @@
+🔍 What you need to do
+Find 2nd highest DISTINCT salary
+If it doesn’t exist → return NULL
+
+👉 Keyword: DISTINCT (ignore duplicates)
+
+
+✅ Best SQL Solution (Using LIMIT + OFFSET)
+SELECT (
+    SELECT DISTINCT salary
+    FROM Employee
+    ORDER BY salary DESC
+    LIMIT 1 OFFSET 1
+) AS SecondHighestSalary;
+
+
+
+🧠 Step-by-step understanding
+1. DISTINCT salary
+
+Removes duplicates
+Example:
+
+100, 200, 200, 300 → 100, 200, 300
+2. ORDER BY salary DESC
+
+Sort in descending:
+
+300, 200, 100
+3. LIMIT 1 OFFSET 1
+OFFSET 1 → skip highest (300)
+LIMIT 1 → take next → 200
+4. Outer SELECT
+
+Wraps result and ensures:
+
+If no 2nd value → returns NULL
+🧪 Case Analysis
+Case 1
+100, 200, 300 → answer = 200 ✅
+Case 2
+100 → no second highest → NULL ✅
