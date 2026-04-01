@@ -14,7 +14,7 @@ START
 │   └── (Required for WSL to activate)
 │
 │   ✔ Result: System ready for WSL
-│
+│ 
 ├── 📦 Step 3: Check / Verify WSL
 │   │
 │   └── Command:
