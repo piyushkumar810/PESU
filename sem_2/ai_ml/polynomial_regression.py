@@ -207,23 +207,13 @@ print("R2 Score:", r2)
 # -------------------------------
 
 # sklearn = ML library
-
 # model_selection = used to split data
-
 # train_test_split = divides data into training & testing
-
 # PolynomialFeatures = creates new features
-
 # LinearRegression = learns relationship
-
 # fit() = training
-
 # predict() = testing
-
 # Good model:
-
 # low MSE
-
 # low RMSE
-
 # high R2
