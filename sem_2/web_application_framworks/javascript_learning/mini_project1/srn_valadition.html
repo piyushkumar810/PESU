@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRN VALIDATION</title>
+
+    <style>
+       body {
+        display: flex;
+        justify-content: center;   /* horizontal center */
+        align-items: center;       /* vertical center */
+        height: 100vh;             /* full screen height */
+        margin: 0;
+        }
+
+       #container {
+         width: 200px;
+         height: 200px;
+         padding: 20px;
+         background-color: rgb(227, 242, 247);
+         border: 2px solid;
+       }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+        <h2>Enter SRN</h2>
+        <form onsubmit="return validateSRN()">
+            SRN: <input type="text" id="srn">
+            <br>
+            SEMESTER: <input type="text" id="sem">
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        function validateSRN(){
+            let srn=document.getElementById("srn").value;
+            let sem=document.getElementById("sem").value;
+
+            let pattern=/^[A-Z]{3}[0-9][A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{3}$/;
+
+            if(srn===""){
+                alert("SRN cannot be empty");
+                return false;
+            }
+            if(!pattern.test(srn)){
+                alert("Invalid SRN formate");
+                return false;
+            }
+
+            // alert("valid SRN");
+            // return true;
+
+            // semester validation
+            if(sem===""){
+                alert("sem cannot be empty");
+                return false;
+            }
+            if(sem<1 || sem>4){
+                alert("semester must be between 1 to 4");
+                return false;
+            }
+            alert("valid SRN and Semester!");
+            return true;
+        }
+    </script>
+</body>
+</html>
