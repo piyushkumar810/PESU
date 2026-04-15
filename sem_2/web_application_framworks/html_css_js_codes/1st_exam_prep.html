@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
+    <title>HTML + CSS FULL REVISION</title>
+
+    <!-- ================= CSS START ================= -->
+    <style>
+
+        /* ================= BASIC SELECTORS ================= */
+        body {
+            font-family: Arial, sans-serif; /* Font */
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: blue; /* Element selector */
+        }
+
+        .box {
+            border: 2px solid black; /* Class selector */
+        }
+
+        #unique {
+            color: red; /* ID selector */
+        }
+
+        * {
+            box-sizing: border-box; /* Universal selector */
+        }
+
+        /* ================= COLORS & UNITS ================= */
+        .color-demo {
+            color: rgb(255, 0, 0); /* RGB */
+            background-color: #00ff00; /* HEX */
+            padding: 10px;
+        }
+
+        /* ================= TEXT & FONT ================= */
+        .text-demo {
+            text-align: center;
+            text-decoration: underline;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* ================= BOX MODEL ================= */
+        .box-model {
+            margin: 20px;
+            padding: 20px;
+            border: 5px solid blue;
+        }
+
+        /* ================= DISPLAY ================= */
+        .inline {
+            display: inline;
+            background: yellow;
+        }
+
+        .block {
+            display: block;
+            background: orange;
+        }
+
+        .inline-block {
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            background: pink;
+        }
+
+        /* ================= POSITION ================= */
+        .relative {
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+
+        .absolute-container {
+            position: relative;
+            height: 150px;
+            background: lightgray;
+        }
+
+        .absolute {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: red;
+            color: white;
+        }
+
+        .fixed {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: black;
+            color: white;
+        }
+
+        /* ================= FLEXBOX ================= */
+        .flex-container {
+            display: flex;
+            justify-content: space-around; /* horizontal */
+            align-items: center; /* vertical */
+            background: lightblue;
+            height: 100px;
+        }
+
+        .flex-item {
+            background: blue;
+            color: white;
+            padding: 10px;
+        }
+
+        /* ================= GRID ================= */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap: 10px;
+        }
+
+        .grid-item {
+            background: green;
+            color: white;
+            padding: 20px;
+        }
+
+        /* ================= HOVER & PSEUDO ================= */
+        a:hover {
+            color: red;
+        }
+
+        li:first-child {
+            color: purple;
+        }
+
+        /* ================= TRANSITION ================= */
+        .transition-box {
+            width: 100px;
+            height: 100px;
+            background: coral;
+            transition: 0.5s;
+        }
+
+        .transition-box:hover {
+            transform: scale(1.2);
+            background: black;
+        }
+
+        /* ================= ANIMATION ================= */
+        @keyframes move {
+            from { left: 0; }
+            to { left: 200px; }
+        }
+
+        .animation-box {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            background: purple;
+            animation: move 2s infinite alternate;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 600px) {
+            body {
+                background: lightyellow;
+            }
+        }
+
+    </style>
+    <!-- ================= CSS END ================= -->
+
+</head>
+
+<body>
+
+    <!-- ================= HTML BASICS ================= -->
+
+    <h1>HTML + CSS Revision</h1>
+
+    <p>This is a paragraph</p>
+
+    <!-- ================= LINKS ================= -->
+    <a href="https://example.com" target="_blank">Click me</a>
+
+    <!-- ================= IMAGES ================= -->
+    <img src="https://via.placeholder.com/100" alt="sample image">
+
+    <!-- ================= LISTS ================= -->
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+    <ol>
+        <li>First</li>
+        <li>Second</li>
+    </ol>
+
+    <!-- ================= TABLE ================= -->
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Piyush</td>
+            <td>20</td>
+        </tr>
+    </table>
+
+    <!-- ================= FORM ================= -->
+    <form>
+        <input type="text" placeholder="Enter name"><br><br>
+
+        <input type="password" placeholder="Password"><br><br>
+
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female <br><br>
+
+        <input type="checkbox"> Accept Terms <br><br>
+
+        <select>
+            <option>Option 1</option>
+            <option>Option 2</option>
+        </select><br><br>
+
+        <textarea placeholder="Write here"></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- ================= DIV & SPAN ================= -->
+    <div class="box">This is DIV (block)</div>
+    <span class="inline">SPAN (inline)</span>
+
+    <!-- ================= BOX MODEL ================= -->
+    <div class="box-model">Box Model Example</div>
+
+    <!-- ================= DISPLAY ================= -->
+    <div class="inline">Inline</div>
+    <div class="block">Block</div>
+    <div class="inline-block">Inline-Block</div>
+
+    <!-- ================= POSITION ================= -->
+    <div class="relative">Relative</div>
+
+    <div class="absolute-container">
+        <div class="absolute">Absolute</div>
+    </div>
+
+    <div class="fixed">Fixed</div>
+
+    <!-- ================= FLEXBOX ================= -->
+    <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+    </div>
+
+    <!-- ================= GRID ================= -->
+    <div class="grid-container">
+        <div class="grid-item">A</div>
+        <div class="grid-item">B</div>
+        <div class="grid-item">C</div>
+    </div>
+
+    <!-- ================= TRANSITION ================= -->
+    <div class="transition-box"></div>
+
+    <!-- ================= ANIMATION ================= -->
+    <div class="animation-box"></div>
+
+</body>
+</html>
