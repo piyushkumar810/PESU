@@ -1,0 +1,197 @@
+🧠 Multiplexing & Demultiplexing MCQs (With Explanation)
+🔹 Q1
+
+In UDP, demultiplexing at the receiver is based on:
+
+A) Source IP
+B) Source port
+C) Destination port
+D) 4-tuple
+
+✅ Answer: C
+💡 Explanation:
+UDP uses only destination port
+All packets with same dest port → same socket
+🔹 Q2
+
+In TCP, a connection is uniquely identified by:
+
+A) Destination port
+B) Source port
+C) Destination IP
+D) 4-tuple
+
+✅ Answer: D
+💡 Explanation:
+TCP uses:
+👉 (Src IP, Src Port, Dest IP, Dest Port)
+This uniquely identifies connection
+🔹 Q3
+
+Multiple UDP segments arriving at the same destination port but from different source IPs are delivered to:
+
+A) Different sockets
+B) Same socket
+C) Dropped
+D) Random sockets
+
+✅ Answer: B
+💡 Explanation:
+UDP ignores source info for demux
+Same dest port → same socket
+🔹 Q4
+
+In TCP, multiple clients connect to a web server on port 80. The server:
+
+A) Uses one socket for all
+B) Creates one socket per port
+C) Creates one socket per client
+D) Rejects extra connections
+
+✅ Answer: C
+💡 Explanation:
+TCP creates new socket per connection
+Same port (80), but different clients → different sockets
+🔹 Q5
+
+Which field is used for sending reply in UDP?
+
+A) Destination port
+B) Source port
+C) Destination IP
+D) TTL
+
+✅ Answer: B
+💡 Explanation:
+Receiver uses source port to reply back
+🔹 Q6
+
+Which of the following is TRUE?
+
+A) UDP uses 4-tuple
+B) TCP uses only destination port
+C) UDP demultiplexing uses destination port
+D) TCP ignores source IP
+
+✅ Answer: C
+💡 Explanation:
+UDP → dest port only
+TCP → uses full 4-tuple
+🔹 Q7
+
+In TCP demultiplexing, which of the following is NOT used?
+
+A) Source IP
+B) Source port
+C) Destination IP
+D) MAC address
+
+✅ Answer: D
+💡 Explanation:
+TCP uses 4-tuple (IP + ports)
+MAC is data link layer, not used
+🔹 Q8
+
+Two clients have same source port number and connect to same server. TCP will:
+
+A) Drop one connection
+B) Merge connections
+C) Differentiate using IP
+D) Fail
+
+✅ Answer: C
+💡 Explanation:
+Even if ports same → IP differs
+4-tuple still unique
+🔹 Q9
+
+Which protocol uses a “welcome socket”?
+
+A) UDP
+B) TCP
+C) IP
+D) HTTP
+
+✅ Answer: B
+💡 Explanation:
+TCP server uses:
+One welcome socket
+Then creates new socket per client
+🔹 Q10
+
+In UDP, if destination port is same but source ports differ, packets are:
+
+A) Delivered to different sockets
+B) Delivered to same socket
+C) Dropped
+D) Delayed
+
+✅ Answer: B
+💡 Explanation:
+UDP demux depends only on dest port
+🔹 Q11
+
+Multiplexing refers to:
+
+A) Delivering to correct process
+B) Combining multiple processes data
+C) Routing packets
+D) Error correction
+
+✅ Answer: B
+💡 Explanation:
+Multiplexing = many → one
+🔹 Q12
+
+Demultiplexing refers to:
+
+A) Combining data
+B) Breaking packets
+C) Delivering to correct process
+D) Routing
+
+✅ Answer: C
+💡 Explanation:
+Demux = one → many
+🔹 Q13
+
+Which is correct for TCP?
+
+A) Same port → same socket
+B) Same port → different sockets possible
+C) No port used
+D) Only IP used
+
+✅ Answer: B
+💡 Explanation:
+Same port (80) but different clients
+→ different sockets
+🔹 Q14
+
+Which protocol allows multiple clients to share same server port using separate sockets?
+
+A) UDP
+B) TCP
+C) IP
+D) ARP
+
+✅ Answer: B
+💡 Explanation:
+TCP supports multiple connections using 4-tuple
+🔹 Q15 (Tricky 🔥)
+
+Which statement is CORRECT?
+
+A) UDP uses both source and destination port
+B) TCP uses only destination port
+C) UDP uses only destination port
+D) TCP ignores port numbers
+
+✅ Answer: C
+💡 Explanation:
+UDP demux = dest port only
+TCP uses all 4 values
+🔥 FINAL TAKEAWAY
+
+👉 UDP → Simple (dest port only)
+👉 TCP → Complex (4-tuple)
