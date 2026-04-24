@@ -6,7 +6,38 @@
     <title>ES6 module</title>
 </head>
 <body>
-    <script src="./inside_folder/index.js" type="module"></script>
+    <!-- <script src="./inside_folder/index.js" type="module"> -->
+    <script>
+
+    //    printing even number
+        function printevennum(arr){
+            for(let i=0;i<arr.length;i++){
+                if(arr[i]%2===0){
+                    console.log(arr[i]);
+                }
+            }
+        }
+    // calculate factorial of a number
+        function factorial(n){
+            let fact=1;
+
+            while(n>1){
+                fact=fact*n;
+                n--;
+            }
+
+            console.log("you factorial number is:", fact);
+        }
+
+
+        arr=[1,3,5,45,7,5,45,34,23]
+        printevennum(arr);
+        let n=5;
+        factorial(n)
+
+
+
+    </script>
 </body>
 </html>
 
