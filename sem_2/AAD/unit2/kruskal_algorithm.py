@@ -1,90 +1,99 @@
-# Kruskal's Algorithm using Union-Find (Disjoint Set)
+# Kruskal's Algorithm in Python
+# -----------------------------------------
+# Goal:
+# Find the Minimum Spanning Tree (MST) of a graph
+# MST = subset of edges with minimum total weight that connects all vertices without cycles
 
-# Number of vertices
-V = 5
+# Step 1: Define Disjoint Set (Union-Find) data structure
+# This helps in detecting cycles efficiently
 
-# List of edges: (u, v, weight)
-edges = [
-    (0, 1, 2),
-    (0, 3, 6),
-    (1, 2, 3),
-    (1, 3, 8),
-    (1, 4, 5),
-    (2, 4, 7),
-    (3, 4, 9)
-]
+class DisjointSet:
+    def __init__(self, vertices):
+        # Initially, each vertex is its own parent (self root)
+        self.parent = {v: v for v in vertices}
+        # Rank is used to keep tree shallow (optimization)
+        self.rank = {v: 0 for v in vertices}
 
-# -------------------------------
-# DISJOINT SET (UNION-FIND)
-# -------------------------------
+    def find(self, node):
+        # Path Compression:
+        # Recursively find root and attach node directly to root
+        if self.parent[node] != node:
+            self.parent[node] = self.find(self.parent[node])
+        return self.parent[node]
 
-# Parent array: initially each node is its own parent
-parent = list(range(V))
+    def union(self, u, v):
+        # Find roots of both nodes
+        root_u = self.find(u)
+        root_v = self.find(v)
 
-# Rank array: used to keep tree shallow (optimization)
-rank = [0] * V
+        # If they are already in same set → cycle → do nothing
+        if root_u == root_v:
+            return False
 
+        # Union by rank:
+        # Attach smaller tree under larger tree
+        if self.rank[root_u] > self.rank[root_v]:
+            self.parent[root_v] = root_u
+        elif self.rank[root_u] < self.rank[root_v]:
+            self.parent[root_u] = root_v
+        else:
+            # If ranks equal, choose one and increase rank
+            self.parent[root_v] = root_u
+            self.rank[root_u] += 1
 
-# Find function with Path Compression
-def find(u):
-    # If u is not its own parent
-    if parent[u] != u:
-        # Recursively find root and compress path
-        parent[u] = find(parent[u])
-    return parent[u]
-
-
-# Union function with Rank Optimization
-def union(u, v):
-    root_u = find(u)
-    root_v = find(v)
-
-    # If both have same root → cycle detected → do nothing
-    if root_u == root_v:
-        return False
-
-    # Attach smaller tree under bigger tree
-    if rank[root_u] < rank[root_v]:
-        parent[root_u] = root_v
-    elif rank[root_u] > rank[root_v]:
-        parent[root_v] = root_u
-    else:
-        parent[root_v] = root_u
-        rank[root_u] += 1
-
-    return True
+        return True
 
 
-# -------------------------------
-# KRUSKAL'S ALGORITHM
-# -------------------------------
-
-def kruskal():
-    # Step 1: Sort edges by weight
+# Step 2: Kruskal Algorithm function
+def kruskal(vertices, edges):
+    # Sort edges based on weight (smallest first)
     edges.sort(key=lambda x: x[2])
 
-    mst = []        # To store MST edges
-    total_cost = 0 # Total weight of MST
+    ds = DisjointSet(vertices)
 
-    # Step 2: Process edges one by one
-    for u, v, w in edges:
+    mst = []           # Stores MST edges
+    total_weight = 0   # Stores total cost
 
-        # Try to include edge (u, v)
-        if union(u, v):  # If no cycle is formed
-            mst.append((u, v, w))
-            total_cost += w
+    # Iterate through sorted edges
+    for u, v, weight in edges:
+        # Check if adding this edge forms a cycle
+        if ds.union(u, v):   # If no cycle
+            mst.append((u, v, weight))
+            total_weight += weight
 
-        # Stop when MST has V-1 edges
-        if len(mst) == V - 1:
-            break
-
-    # Print result
-    print("Edge \tWeight")
-    for u, v, w in mst:
-        print(f"{u} - {v} \t {w}")
-
-    print("Total Cost:", total_cost)
+    return mst, total_weight
 
 
-# Call function
-kruskal()
+# Step 3: Example graph
+# Graph represented as edge list: (u, v, weight)
+vertices = ['A', 'B', 'C', 'D', 'E']
+
+edges = [
+    ('A', 'B', 1),
+    ('A', 'C', 3),
+    ('B', 'C', 1),
+    ('B', 'D', 6),
+    ('C', 'D', 4),
+    ('C', 'E', 2),
+    ('D', 'E', 5)
+]
+
+# Step 4: Run Kruskal Algorithm
+mst, total_cost = kruskal(vertices, edges)
+
+# Step 5: Output result
+print("Edges in Minimum Spanning Tree:")
+for u, v, w in mst:
+    print(f"{u} - {v} : {w}")
+
+print("Total Cost of MST:", total_cost)
+
+
+# -----------------------------------------
+# Time Complexity:
+# Sorting edges → O(E log E)
+# Union-Find operations → nearly O(1)
+# Overall → O(E log E)
+
+# Key Concept:
+# Always pick smallest edge that DOES NOT form a cycle
