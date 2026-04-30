@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="">
+        Enetr the message : <input type="text", id="t1">
+        <hr>
+        <input type="button" onclick="submt()", id="btn", value="show">
+    </form>
+
+    <p id="t3">
+
+    </p>
+
+    <script>
+        function submt(){
+            var a=document.getElementById("t1").value;
+            document.getElementById("t3").innerHTML="my accepted message :" +a;
+
+        }
+    </script>
+</body>
+</html>
