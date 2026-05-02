@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Page</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page 1 -->
+    <div id="page1">
+        <h1>Welcome to this page</h1>
+        <button onclick="goToPage2()">Submit</button>
+    </div>
+
+    <!-- Page 2 -->
+    <div id="page2" class="hidden">
+        <h1>This is new page</h1>
+        <button onclick="goBack()">Go Back</button>
+    </div>
+
+    <script>
+        function goToPage2() {
+            document.getElementById("page1").style.display = "none";
+            document.getElementById("page2").style.display = "block";
+        }
+
+        function goBack() {
+            document.getElementById("page2").style.display = "none";
+            document.getElementById("page1").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
