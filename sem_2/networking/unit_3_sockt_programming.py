@@ -139,6 +139,8 @@ SERVER
 python udp_server.py
 CLIENT
 python udp_client.py
+
+
 ✅ EXPECTED OUTPUT
 CLIENT SIDE
 Enter lowercase sentence: hello
@@ -146,13 +148,18 @@ From Server: HELLO
 SERVER SIDE
 UDP Server is ready to receive
 Client Message: hello
+
+
 ⚠ IMPORTANT UDP FUNCTIONS
-Function	Purpose
-socket()	Create socket
-bind()	Attach port
-sendto()	Send data
-recvfrom()	Receive data
-close()	Close socket
+Function	          Purpose
+-------------------------------------
+socket()	        Create socket
+bind()	                Attach port
+sendto()	        Send data
+recvfrom()	        Receive data
+close()	                Close socket
+
+
 ⚠ IMPORTANT MCQ POINTS
 Concept	Answer
 UDP Socket Type	SOCK_DGRAM
