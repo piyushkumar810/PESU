@@ -275,7 +275,6 @@ env.execute("map-celsius-to-fahrenheit")
    ./flink run -py filename.py
 
 ------------------------------------------------------------
-
 22. Common Mistakes You Did
 
    ❌ cd /flink-1.20.0
