@@ -45,7 +45,6 @@ HELLO                              hello
 
 
 '''
-
 🖥 SERVER SIDE STEPS
 1. Open CMD
 2. Go to folder
@@ -167,5 +166,4 @@ TCP Socket Type	SOCK_STREAM
 UDP Nature	Connectionless
 UDP Functions	sendto(), recvfrom()
 TCP Functions	send(), recv()
-
 '''
