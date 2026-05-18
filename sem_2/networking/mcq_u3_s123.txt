@@ -1,0 +1,549 @@
+1.
+
+Which layer provides host-to-host delivery?
+
+A) Transport Layer
+B) Data Link Layer
+C) Network Layer
+D) Session Layer
+
+✅ Correct Option: C
+
+2.
+
+Which device mainly works at Network Layer?
+
+A) Hub
+B) Switch
+C) Repeater
+D) Router
+
+✅ Correct Option: D
+
+3.
+
+Which field prevents packets from looping forever?
+
+A) Identification
+B) Protocol
+C) TTL
+D) Checksum
+
+✅ Correct Option: C
+
+4.
+
+When a router forwards a packet, it mainly examines:
+
+A) Payload
+B) Trailer
+C) Header
+D) Entire file
+
+✅ Correct Option: C
+
+5.
+
+IPv4 is:
+
+A) Connection-oriented
+B) Reliable
+C) Connectionless
+D) Circuit-switched
+
+✅ Correct Option: C
+
+6.
+
+Which protocol maps IP address to MAC address?
+
+A) ICMP
+B) ARP
+C) IGMP
+D) UDP
+
+✅ Correct Option: B
+
+7.
+
+Which protocol is used for multicasting?
+
+A) ICMP
+B) ARP
+C) IGMP
+D) TCP
+
+✅ Correct Option: C
+
+8.
+
+Ping command uses:
+
+A) TCP
+B) UDP
+C) ARP
+D) ICMP
+
+✅ Correct Option: D
+
+9.
+
+Minimum IPv4 header size is:
+
+A) 8 bytes
+B) 20 bytes
+C) 32 bytes
+D) 60 bytes
+
+✅ Correct Option: B
+
+10.
+
+Maximum IPv4 header size is:
+
+A) 20 bytes
+B) 40 bytes
+C) 60 bytes
+D) 128 bytes
+
+✅ Correct Option: C
+
+11.
+
+IPv4 address length is:
+
+A) 16 bits
+B) 32 bits
+C) 64 bits
+D) 128 bits
+
+✅ Correct Option: B
+
+12.
+
+Which field identifies upper-layer protocol?
+
+A) Flags
+B) TTL
+C) Protocol
+D) HLEN
+
+✅ Correct Option: C
+
+13.
+
+Protocol number for TCP is:
+
+A) 1
+B) 2
+C) 6
+D) 17
+
+✅ Correct Option: C
+
+14.
+
+Protocol number for UDP is:
+
+A) 6
+B) 17
+C) 89
+D) 255
+
+✅ Correct Option: B
+
+15.
+
+Which field is used during fragmentation?
+
+A) TTL
+B) Service Type
+C) Identification
+D) Version
+
+✅ Correct Option: C
+
+16.
+
+Header checksum checks errors in:
+
+A) Payload only
+B) Header only
+C) Entire packet
+D) Trailer only
+
+✅ Correct Option: B
+
+17.
+
+Forwarding is:
+
+A) Network-wide process
+B) Local router function
+C) Error control
+D) Flow control
+
+✅ Correct Option: B
+
+18.
+
+Routing is responsible for:
+
+A) Error detection
+B) Packet encryption
+C) Path determination
+D) Flow control
+
+✅ Correct Option: C
+
+19.
+
+In SDN, routing decisions are mainly taken by:
+
+A) Hosts
+B) Routers individually
+C) Central controller
+D) Application layer
+
+✅ Correct Option: C
+
+20.
+
+Best-effort delivery means:
+
+A) Guaranteed delivery
+B) Ordered delivery
+C) Reliable delivery
+D) No delivery guarantee
+
+✅ Correct Option: D
+
+21.
+
+Which layer performs process-to-process communication?
+
+A) Data Link
+B) Network
+C) Transport
+D) Physical
+
+✅ Correct Option: C
+
+22.
+
+IPv4 datagram consists of:
+
+A) Header only
+B) Payload only
+C) Header and Payload
+D) Trailer and Header
+
+✅ Correct Option: C
+
+23.
+
+Which operation is used to find network address?
+
+A) OR
+B) XOR
+C) AND
+D) NOT
+
+✅ Correct Option: C
+
+24.
+
+Which operation flips bits?
+
+A) AND
+B) OR
+C) XOR
+D) NOT
+
+✅ Correct Option: D
+
+25.
+
+CIDR stands for:
+
+A) Classless Internet Data Routing
+B) Classless InterDomain Routing
+C) Centralized Internet Domain Routing
+D) Class Internet Datagram Routing
+
+✅ Correct Option: B
+
+26.
+
+In CIDR notation, /24 means:
+
+A) 24 host bits
+B) 24 network bits
+C) 24 addresses
+D) 24 routers
+
+✅ Correct Option: B
+
+27.
+
+Number of addresses in /28 block is:
+
+A) 8
+B) 16
+C) 32
+D) 64
+
+✅ Correct Option: B
+
+28.
+
+Number of addresses in /26 block is:
+
+A) 16
+B) 32
+C) 64
+D) 128
+
+✅ Correct Option: C
+
+29.
+
+A /27 subnet contains:
+
+A) 16 addresses
+B) 32 addresses
+C) 64 addresses
+D) 128 addresses
+
+✅ Correct Option: B
+
+30.
+
+Subnet mask for /27 is:
+
+A) 255.255.255.0
+B) 255.255.255.128
+C) 255.255.255.192
+D) 255.255.255.224
+
+✅ Correct Option: D
+
+31.
+
+Class C IP addresses start with bits:
+
+A) 0
+B) 10
+C) 110
+D) 1110
+
+✅ Correct Option: C
+
+32.
+
+Class D addresses are used for:
+
+A) Research
+B) Multicasting
+C) Unicasting
+D) Broadcasting
+
+✅ Correct Option: B
+
+33.
+
+Class E addresses are reserved for:
+
+A) Private networks
+B) Routing
+C) Future use
+D) Multicasting
+
+✅ Correct Option: C
+
+34.
+
+Which class has first byte range 128–191?
+
+A) A
+B) B
+C) C
+D) D
+
+✅ Correct Option: B
+
+35.
+
+Which of the following is TRUE?
+
+A) Larger prefix means larger network
+B) Larger prefix means smaller block
+C) Smaller prefix means fewer hosts
+D) Prefix has no relation to block size
+
+✅ Correct Option: B
+
+36.
+
+If prefix length increases, host bits:
+
+A) Increase
+B) Remain same
+C) Decrease
+D) Become zero
+
+✅ Correct Option: C
+
+37.
+
+Which address identifies the network itself?
+
+A) Last address
+B) Broadcast address
+C) First address
+D) Gateway address
+
+✅ Correct Option: C
+
+38.
+
+Routers generally store:
+
+A) All host addresses
+B) MAC tables only
+C) Network prefixes
+D) Payload information
+
+✅ Correct Option: C
+
+39.
+
+An organization requires 60 addresses. Minimum block allocated is:
+
+A) 60
+B) 62
+C) 64
+D) 128
+
+✅ Correct Option: C
+
+40.
+
+An ISP needs approximately 1000 addresses. Prefix allocated will be:
+
+A) /24
+B) /22
+C) /16
+D) /20
+
+✅ Correct Option: B
+
+41.
+
+Which protocol value corresponds to ICMP?
+
+A) 1
+B) 2
+C) 6
+D) 17
+
+✅ Correct Option: A
+
+42.
+
+Which protocol value corresponds to OSPF?
+
+A) 1
+B) 6
+C) 17
+D) 89
+
+✅ Correct Option: D
+
+43.
+
+A router decreases which field by 1 at every hop?
+
+A) Protocol
+B) Header Length
+C) TTL
+D) Identification
+
+✅ Correct Option: C
+
+44.
+
+Which of the following is NOT provided by Network Layer?
+
+A) Best-effort delivery
+B) IP addressing
+C) Guaranteed delivery
+D) Routing
+
+✅ Correct Option: C
+
+45.
+
+Subnetting mainly:
+
+A) Combines networks
+B) Divides network into smaller parts
+C) Removes routing tables
+D) Increases host bits
+
+✅ Correct Option: B
+
+46.
+
+Supernetting is also called:
+
+A) Fragmentation
+B) Aggregation
+C) Broadcasting
+D) Encapsulation
+
+✅ Correct Option: B
+
+47.
+
+Which protocol is responsible for error reporting?
+
+A) ARP
+B) ICMP
+C) IGMP
+D) UDP
+
+✅ Correct Option: B
+
+48.
+
+Which address block has the smallest size?
+
+A) /16
+B) /20
+C) /24
+D) /30
+
+✅ Correct Option: D
+
+49.
+
+A /25 block contains how many host bits?
+
+A) 25
+B) 7
+C) 8
+D) 32
+
+✅ Correct Option: B
+
+50.
+
+Which organization allocates IP address blocks globally?
+
+A) IEEE
+B) ISO
+C) ICANN
+D) IETF
+
+✅ Correct Option: C
