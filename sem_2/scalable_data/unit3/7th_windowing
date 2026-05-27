@@ -1,0 +1,168 @@
+'''
+Topic
+PyFlink Sliding Count Window – Moving Average Order Value Per Customer
+
+This program demonstrates:
+
+PyFlink DataStream API
+Sliding Count Window
+WindowFunction
+Keyed Stream Processing
+Moving Average Calculation
+Real-time Stream Analytics
+Full Complete Code
+'''
+
+from typing import Iterable, Tuple
+
+from pyflink.datastream import StreamExecutionEnvironment
+from pyflink.datastream.functions import WindowFunction
+from pyflink.common.typeinfo import Types
+
+
+# ---------------------------------------------------------
+# Window Function
+# Calculates moving average order value for each customer
+# ---------------------------------------------------------
+
+class MovingAverageOrderValue(WindowFunction):
+
+    def apply(
+        self,
+        key: str,
+        window,
+        inputs: Iterable[Tuple[str, int]]
+    ):
+
+        # Convert iterable to list
+        orders = list(inputs)
+
+        # Calculate total order value
+        total_value = sum(record[1] for record in orders)
+
+        # Calculate average
+        avg_value = total_value / len(orders)
+
+        # Return:
+        # (customer_id, number_of_orders, average_order_value)
+        yield (
+            key,
+            len(orders),
+            round(avg_value, 2)
+        )
+
+
+# ---------------------------------------------------------
+# Create Stream Execution Environment
+# ---------------------------------------------------------
+
+env = StreamExecutionEnvironment.get_execution_environment()
+
+
+# ---------------------------------------------------------
+# Input Data
+# (customer_id, order_value)
+# ---------------------------------------------------------
+
+data = [
+    ("cust-101", 500),
+    ("cust-101", 700),
+    ("cust-102", 300),
+    ("cust-101", 900),
+    ("cust-101", 1000),
+    ("cust-102", 450),
+    ("cust-102", 600),
+    ("cust-101", 800),
+]
+
+
+# ---------------------------------------------------------
+# Create Data Stream
+# ---------------------------------------------------------
+
+ds = env.from_collection(
+    data,
+    type_info=Types.TUPLE([
+        Types.STRING(),
+        Types.INT()
+    ])
+)
+
+
+# ---------------------------------------------------------
+# Apply Sliding Count Window
+#
+# count_window(3,1)
+#
+# Window Size = 3
+# Slide Size  = 1
+#
+# Means:
+# Every time a new record comes,
+# last 3 records are considered
+# ---------------------------------------------------------
+
+result = ds.key_by(
+    lambda x: x[0],
+    key_type=Types.STRING()
+
+).count_window(3, 1).apply(
+
+    MovingAverageOrderValue(),
+
+    output_type=Types.TUPLE([
+        Types.STRING(),
+        Types.INT(),
+        Types.FLOAT()
+    ])
+)
+
+
+# ---------------------------------------------------------
+# Print Output
+# ---------------------------------------------------------
+
+result.print()
+
+
+# ---------------------------------------------------------
+# Execute Program
+# ---------------------------------------------------------
+
+env.execute(
+    "Sliding Count Window - Moving Average Order Value Per Customer"
+)
+
+
+'''
+Logic Explanation
+
+Suppose customer orders are:
+
+cust-101 → 500, 700, 900, 1000
+
+Window size = 3
+
+So windows become:
+
+Window 1
+500, 700, 900
+Average = 700
+
+Output:
+
+('cust-101', 3, 700.0)
+Window 2
+700, 900, 1000
+Average = 866.67
+
+Output:
+
+('cust-101', 3, 866.67)
+Important Concepts                          Concept	Meaning
+key_by()	                              Groups data customer-wise
+count_window(3,1)	                      Sliding window of size 3
+apply()	                                   Executes custom window logic
+WindowFunction	                           User-defined processing logic
+Moving Average	                           Average of latest records
+'''
