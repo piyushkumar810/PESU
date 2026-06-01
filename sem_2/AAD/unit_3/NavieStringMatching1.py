@@ -116,3 +116,35 @@ where,
 n = length of text
 m = length of pattern
 '''
+
+
+# as soon as they will find the pattern they will return but
+# If we want all occurrences?
+
+# Then we should not return immediately.
+'''
+Example:
+
+text = "ABCABCABC"
+pattern = "ABC"
+'''
+for i in range(len(text) - len(pattern) + 1):
+    j = 0
+
+    while j < len(pattern) and pattern[j] == text[i + j]:
+        j += 1
+
+    if j == len(pattern):
+        print("Pattern found at index", i)
+'''
+Output:
+
+Pattern found at index 0
+Pattern found at index 3
+Pattern found at index 6
+
+So:
+
+return i → find the first occurrence only and stop.
+print/store i and continue → find all occurrences.
+'''
