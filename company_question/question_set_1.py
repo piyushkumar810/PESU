@@ -20,7 +20,7 @@
 
 # MEDIUM
 # ------
-# 9. Two Sum
+# 9.  Two Sum
 # 10. Majority Element
 # 11. Best Time to Buy and Sell Stock
 # 12. Product of Array Except Self
