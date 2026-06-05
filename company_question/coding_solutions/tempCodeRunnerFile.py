@@ -1,12 +1,13 @@
-def move_all_zeros(arr):
-    j = 0
+def left_rotate(arr, k):
+    if len(arr) == 0:
+        return []
 
-    for i in range(len(arr)):
-        if arr[i] != 0:
-            arr[j], arr[i] = arr[i], arr[j]
-            j += 1
+    k = k % len(arr)
 
-    return arr
+    return arr[k:] + arr[:k]
 
-arr=[10,30,0,40,2,0,0,23,0,0,24]
-print(move_all_zeros(arr))
+
+arr = [1,2,3,4,5]
+k = 2
+
+print(left_rotate(arr, k))
