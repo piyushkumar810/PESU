@@ -244,48 +244,34 @@ k = 2
 print(left_rotate(arr, k))
 
 Output:
-
 [3, 4, 5, 1, 2]
 
 Another Example
-
 arr = [10, 20, 30, 40, 50]
 k = 3
 
 Step 1
-
 arr[k:]
-
 arr[3:]
 
 Output:
-
 [40, 50]
 
 Step 2
-
 arr[:k]
-
 arr[:3]
 
 Output:
-
 [10, 20, 30]
 
 Step 3
-
 Join both parts:
-
 [40, 50] + [10, 20, 30]
 
 Output:
-
 [40, 50, 10, 20, 30]
 
 Complexity
-
 Time Complexity: O(n)
-
 Space Complexity: O(n)
-
 '''
