@@ -1,13 +1,12 @@
-def left_rotate(arr, k):
-    if len(arr) == 0:
-        return []
+def findMissingNumber(arr):
+    n = len(arr)
 
-    k = k % len(arr)
+    for i in range(n):
+        if arr[i] != i + 1:
+            return i + 1
 
-    return arr[k:] + arr[:k]
+    return n + 1
 
 
-arr = [1,2,3,4,5]
-k = 2
-
-print(left_rotate(arr, k))
+arr=[1,2,4,5]
+print(findMissingNumber(arr))
