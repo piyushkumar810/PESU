@@ -223,7 +223,6 @@ if st.button("🚀 Generate Learning Content"):
                 }
             ]
 
-
             selected = random.sample(
                 conceptual_mcqs,
                 min(3, len(conceptual_mcqs))
@@ -318,7 +317,6 @@ if st.button("🚀 Generate Learning Content"):
 
         else:
             st.error("GATE-level conceptual and tricky MCQs generated.")
-
 # FOOTER
 st.write("---")
 
