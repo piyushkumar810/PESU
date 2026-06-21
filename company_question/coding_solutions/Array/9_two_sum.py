@@ -2,7 +2,8 @@
 Two Sum
 Problem Statement
 
-Given an array of integers nums and an integer target, return the indices of the two numbers such that they add up to the target.
+Given an array of integers nums and an integer target, return the indices of the two numbers such 
+that they add up to the target.
 
 You may assume that:
 
@@ -29,13 +30,12 @@ num = [10,20,4,20,3,4,6,3454,64]
 target = int(input("Enter the value: "))
 
 print(two_sum(num, target))
-
 # got 3/5 bad time complexity
+
 
 # ------------------------ 5/5 better time complexity 
 def two_sum(nums, target):
     seen = {}
-
     for i in range(len(nums)):
         complement = target - nums[i]
 
@@ -49,5 +49,4 @@ def two_sum(nums, target):
 
 nums = [10, 20, 4, 20, 3, 4, 6, 3454, 64]
 target = int(input("Enter the target value: "))
-
 print(two_sum(nums, target))
