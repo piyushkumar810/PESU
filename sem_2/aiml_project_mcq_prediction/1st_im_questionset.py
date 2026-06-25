@@ -14,11 +14,8 @@ Find the class of point (3,2).
 Solution:
 
 Substitute point:
-
 S = 6(3) + 12(2) + 6
-
   = 18 + 24 + 6
-
   = 48
 
 Case:
@@ -28,7 +25,6 @@ S < 0  → Negative Class (-1)
 S = 0  → On Hyperplane
 
 Answer:
-
 48 > 0
 
 Therefore point belongs to Positive Class.
@@ -52,31 +48,21 @@ Distance =
 Solution:
 
 Numerator:
-
 |6(3)+12(2)+6|
-
 = |48|
-
 = 48
 
 Denominator:
-
 √(6² + 12²)
-
 = √(36+144)
-
 = √180
-
 = 13.416
 
 Distance:
-
 48 / 13.416
-
 = 3.58
 
 Answer:
-
 Distance = 3.58
 
 ----------------------------------------------------
@@ -94,17 +80,13 @@ Question:
 Which action is selected during Exploitation?
 
 Rule:
-
 Exploitation chooses Highest Q-value.
 
 Highest:
-
 max(4.5,2.6,3.2)
-
 = 4.5
 
 Answer:
-
 UP
 
 ----------------------------------------------------
@@ -115,11 +97,9 @@ Question:
 Which action may be selected during Exploration?
 
 Answer:
-
 Any valid action.
 
 Reason:
-
 Exploration means trying new actions.
 
 Agent may choose:
@@ -353,7 +333,6 @@ Cluster A = 0.7
 Cluster B = 0.3
 
 Question:
-
 Which cluster is assigned?
 
 Rule:
@@ -414,22 +393,16 @@ Complete Journey
 ----------------------------------------------------
 
 EXPLOITATION
-
 Uses known best action
-
 Higher immediate reward
-
 May miss better solutions
 
 Example:
 Go to favorite restaurant
 
 EXPORATION
-
 Try new actions
-
 May discover better solution
-
 Lower reward initially
 
 Example:
@@ -543,6 +516,5 @@ Silhouette:
 +1 Best
 0 Overlap
 -1 Wrong Assignment
-
 ====================================================
 '''
