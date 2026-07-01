@@ -159,7 +159,10 @@ Differs? Yes
 Efficiency:
 Best: Θ(1)
 Worst: Θ(n²)
-9. Matrix Multiplication
+'''
+
+# 9. Matrix Multiplication
+'''
 Algorithm
 Algorithm MatrixMultiply(A,B,C)
 
