@@ -275,7 +275,6 @@ Differs? No
 Efficiency: Θ(n)
 '''
 
-
 # 15. Find Largest and Smallest Together
 '''
 Algorithm
