@@ -1,28 +1,28 @@
 '''
 Problem
-
-Given an array of intervals where intervals[i] = [start, end], merge all overlapping intervals and return an array of the non-overlapping intervals.
+Given an array of intervals where intervals[i] = [start, end], merge all overlapping intervals and 
+return an array of the non-overlapping intervals.
 
 Example:
-
 Input: [[1,3],[2,6],[8,10],[15,18]]
 Output: [[1,6],[8,10],[15,18]]
 '''
 
 # Approach
-# Step 1: Sort the intervals
-# Sort by the start time.
-# [[1,3],[2,6],[8,10],[15,18]]
+'''
+Step 1: Sort the intervals
+Sort by the start time.
+[[1,3],[2,6],[8,10],[15,18]]
 
-# Step 2: Iterate
-# If the current interval overlaps with the last merged interval:
-# Update the end time.
-# Otherwise:
-# Add it as a new interval.
+Step 2: Iterate
+If the current interval overlaps with the last merged interval:
+Update the end time.
+Otherwise:
+Add it as a new interval.
+'''
 
 
 # Python Solution
-
 def merge(intervals):
     if not intervals:
         return []
