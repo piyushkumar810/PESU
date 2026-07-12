@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>CSS Complete Demo</title>
+
+    <!-- Web Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   Universal Selector
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* =========================
+   Body
+========================= */
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f4f4;
+    padding:30px;
+}
+
+/* =========================
+   Element Selector
+========================= */
+
+h1{
+    color:darkblue;
+    text-align:center;
+}
+
+/* =========================
+   ID Selector
+========================= */
+
+#heading{
+    color:red;
+}
+
+/* =========================
+   Class Selector
+========================= */
+
+.box{
+
+    width:300px;
+    margin:20px auto;
+    padding:20px; 
+
+    background:white;
+
+    border:3px solid blue;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:5px 5px 10px gray;
+
+}
+
+/* =========================
+   Group Selector
+========================= */
+
+h2,p{
+    color:green;
+}
+
+/* =========================
+   Font Properties
+========================= */
+
+.font-demo{
+
+    font-size:24px;
+    font-weight:bold;
+    font-style:italic;
+    font-family:Arial;
+
+}
+
+/* =========================
+   Text Properties
+========================= */
+
+.text-demo{
+
+    text-align:center;
+
+    text-transform:uppercase;
+
+    text-decoration:underline;
+
+    letter-spacing:3px;
+
+    word-spacing:10px;
+
+}
+
+/* =========================
+   Color System
+========================= */
+
+.color-demo{
+
+    color:white;
+
+    background:rgb(0,120,255);
+
+}
+
+/* =========================
+   Background Property
+========================= */
+
+.background-demo{
+
+    background-image:url("https://picsum.photos/300/150");
+
+    background-size:cover;
+
+    color:white;
+
+    height:150px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* =========================
+   Gradient
+========================= */
+
+.gradient{
+
+    background:linear-gradient(to right,red,yellow);
+
+    color:white;
+
+}
+
+/* =========================
+   List Styling
+========================= */
+
+ul{
+
+    list-style-type:square;
+
+}
+
+/* =========================
+   Border
+========================= */
+
+.border-demo{
+
+    border:5px dashed red;
+
+}
+
+/* =========================
+   Shadow
+========================= */
+
+.shadow{
+
+    text-shadow:2px 2px 5px gray;
+
+}
+
+/* =========================
+   2D Transform
+========================= */
+
+.transform2d{
+
+    width:150px;
+
+    background:orange;
+
+    padding:20px;
+
+    transition:1s;
+
+}
+
+.transform2d:hover{
+
+    transform:rotate(20deg) scale(1.2);
+
+}
+
+/* =========================
+   3D Transform
+========================= */
+
+.transform3d{
+
+    width:150px;
+
+    background:purple;
+
+    color:white;
+
+    padding:20px;
+
+    transition:1s;
+
+}
+
+.transform3d:hover{
+
+    transform:rotateY(180deg);
+
+}
+
+/* =========================
+   Transition
+========================= */
+
+.transition{
+
+    width:150px;
+
+    height:50px;
+
+    background:green;
+
+    color:white;
+
+    transition:1s;
+
+}
+
+.transition:hover{
+
+    width:250px;
+
+    background:red;
+
+}
+
+/* =========================
+   Animation
+========================= */
+
+.animation{
+
+    width:100px;
+
+    height:100px;
+
+    background:blue;
+
+    animation:move 3s infinite;
+
+}
+
+@keyframes move{
+
+0%{
+
+transform:translateX(0);
+
+}
+
+50%{
+
+transform:translateX(200px);
+
+}
+
+100%{
+
+transform:translateX(0);
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1 id="heading">CSS Complete Example</h1>
+
+<div class="box">
+
+<h2>Font Property</h2>
+
+<p class="font-demo">
+
+Hello CSS
+
+</p>
+
+</div>
+
+<div class="box color-demo">
+
+Color System Example
+
+</div>
+
+<div class="box text-demo">
+
+Text Property Example
+
+</div>
+
+<div class="box background-demo">
+
+Background Image
+
+</div>
+
+<div class="box gradient">
+
+Gradient Example
+
+</div>
+
+<div class="box border-demo">
+
+Border Example
+
+</div>
+
+<div class="box">
+
+<h2 class="shadow">
+
+Shadow Effect
+
+</h2>
+
+</div>
+
+<div class="box">
+
+<h2>List Styling</h2>
+
+<ul>
+
+<li>HTML</li>
+
+<li>CSS</li>
+
+<li>JavaScript</li>
+
+</ul>
+
+</div>
+
+<div class="box">
+
+<div class="transform2d">
+
+Hover Me (2D)
+
+</div>
+
+</div>
+
+<div class="box">
+
+<div class="transform3d">
+
+Hover Me (3D)
+
+</div>
+
+</div>
+
+<div class="box">
+
+<div class="transition">
+
+Hover Me
+
+</div>
+
+</div>
+
+<div class="box">
+
+<div class="animation">
+
+</div>
+
+</div>
+
+<hr>
+
+<h2>HTML Styling Tags</h2>
+
+<b>Bold</b><br>
+
+<i>Italic</i><br>
+
+<u>Underline</u><br>
+
+<mark>Highlighted</mark><br>
+
+<small>Small Text</small><br>
+
+<del>Deleted Text</del><br>
+
+<ins>Inserted Text</ins><br>
+
+<sub>H2O</sub><br>
+
+<sup>x²</sup>
+
+</body>
+
+</html>
