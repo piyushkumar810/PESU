@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>browser display with js</title>
+</head>
+<body>
+
+    <form action="#">
+        <label>Enter a message : </label>
+        <input type="text" class="t1" id="T1"><br>
+
+        <input type="button" onclick="display()" value="show">
+    </form>
+
+    <script>
+        function display(){
+            var m=document.getElementById("T1").value;
+            alert("my accepted message : "+m)
+        }
+    </script>
+</body>
+</html>
