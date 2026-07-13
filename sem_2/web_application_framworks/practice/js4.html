@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Displaying message by clicking</title>
+</head>
+<body>
+    <form action="">
+        Enter 1st value: <input type="number" name="t1" id="T1">
+        <br>
+        Enter 2nd value: <input type="number" name="t1" id="T2">
+        <br>
+
+        <input type="button" value="+" onclick="add()">
+        <input type="button" value="-" onclick="sub()">
+        <input type="button" value="*" onclick="multiply()">
+        <input type="button" value="/" onclick="div()">
+        <input type="button" value="%" onclick="moduloDiv()">
+    </form>
+
+    <p id="T3"></p>
+
+    <script>
+        function add(){
+            var m=parseInt(document.getElementById("T1").value);
+            var n=parseInt(document.getElementById("T2").value);
+            document.getElementById("T3").innerHTML="Result: "+(m+n);
+        }
+
+        function sub(){
+            var m=parseInt(document.getElementById("T1").value);
+            var n=parseInt(document.getElementById("T2").value);
+            document.getElementById("T3").innerHTML="Result: "+(m-n);
+        }
+
+        function multiply(){
+            var m=parseInt(document.getElementById("T1").value);
+            var n=parseInt(document.getElementById("T2").value);
+            document.getElementById("T3").innerHTML="Result: "+(m*n);
+        }
+
+        function div(){
+            var m=parseInt(document.getElementById("T1").value);
+            var n=parseInt(document.getElementById("T2").value);
+            document.getElementById("T3").innerHTML="Result: "+(m/n);
+        }
+
+        function moduloDiv(){
+            var m=parseInt(document.getElementById("T1").value);
+            var n=parseInt(document.getElementById("T2").value);
+            document.getElementById("T3").innerHTML="Result: "+(m*n);
+        }
+    </script>
+</body>
+</html>
