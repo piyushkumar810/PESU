@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Displaying message by clicking</title>
+</head>
+<body>
+    <form action="">
+        Enter the message: <input type="text" name="t1" id="T1">
+        <br>
+
+        <input type="button" value="show" onclick="display()">
+    </form>
+
+    <p id="T2"></p>
+
+    <script>
+        function display(){
+            var m=document.getElementById("T1").value;
+            document.getElementById("T2").innerHTML="my accepted message: "+m;
+        }
+    </script>
+</body>
+</html>
