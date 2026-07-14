@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Element Positioning Demo</title>
+
+<style>
+
+/* -------------------------------------
+   BODY
+-------------------------------------- */
+
+body{
+    font-family:Arial, sans-serif;
+    margin:0;
+    background:#f4f4f4;
+}
+
+/* -------------------------------------
+   STATIC
+   Default position.
+   top,left,right,bottom DO NOT work.
+-------------------------------------- */
+
+.static{
+    position:static;
+    background:skyblue;
+    padding:20px;
+    margin:20px;
+    border:2px solid blue;
+}
+
+/* -------------------------------------
+   RELATIVE
+   Moves from its ORIGINAL position.
+   Original space is still reserved.
+-------------------------------------- */
+
+.relative{
+
+    position:relative;
+
+    left:60px;
+
+    top:20px;
+
+    background:orange;
+
+    padding:20px;
+
+    margin:20px;
+
+    border:2px solid darkorange;
+}
+
+/* -------------------------------------
+   PARENT
+   position:relative is needed so that
+   absolute child moves inside it.
+-------------------------------------- */
+
+.parent{
+
+    position:relative;
+
+    width:500px;
+
+    height:220px;
+
+    border:3px dashed black;
+
+    background:white;
+
+    margin:30px auto;
+}
+
+/* -------------------------------------
+   ABSOLUTE
+   Leaves normal flow.
+   Moves relative to nearest parent.
+-------------------------------------- */
+
+.absolute{
+
+    position:absolute;
+
+    top:30px;
+
+    left:80px;
+
+    width:180px;
+
+    background:red;
+
+    color:white;
+
+    padding:20px;
+
+}
+
+/* -------------------------------------
+   FIXED
+   Always stays on screen.
+   Doesn't move while scrolling.
+-------------------------------------- */
+
+.fixed{
+
+    position:fixed;
+
+    bottom:20px;
+
+    right:20px;
+
+    background:green;
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:10px;
+}
+
+/* -------------------------------------
+   STICKY
+   Behaves like relative.
+   After scrolling reaches top,
+   it becomes fixed.
+-------------------------------------- */
+
+.sticky{
+
+    position:sticky;
+
+    top:0;
+
+    background:gold;
+
+    padding:20px;
+
+    font-size:20px;
+
+    text-align:center;
+
+}
+
+/* Extra content for scrolling */
+
+.content{
+
+    height:1200px;
+
+    padding:30px;
+
+}
+
+.box{
+
+    width:250px;
+
+    padding:20px;
+
+    background:white;
+
+    margin:20px;
+
+    border:1px solid gray;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ==========================
+     STICKY
+========================== -->
+
+<div class="sticky">
+
+📌 Sticky Navigation Bar
+(Scroll Down)
+
+</div>
+
+<!-- ==========================
+     STATIC
+========================== -->
+
+<div class="static">
+
+<h2>Static Position</h2>
+
+<p>
+This is the default position.
+It stays where HTML places it.
+</p>
+
+</div>
+
+<!-- ==========================
+     RELATIVE
+========================== -->
+
+<div class="relative">
+
+<h2>Relative Position</h2>
+
+<p>
+Original position was here,
+then moved 60px right and 20px down.
+Notice that its original space is still reserved.
+</p>
+
+</div>
+
+<!-- ==========================
+     ABSOLUTE
+========================== -->
+
+<div class="parent">
+
+<h2 style="padding:10px;">
+Parent (position:relative)
+</h2>
+
+<div class="absolute">
+
+<h3>Absolute Box</h3>
+
+<p>
+Positioned 30px from TOP
+and 80px from LEFT
+of the parent.
+</p>
+
+</div>
+
+</div>
+
+<!-- Content to make scrolling -->
+
+<div class="content">
+
+<div class="box">
+
+<h2>Scroll Down</h2>
+
+<p>
+Observe two things:
+
+1. Sticky bar stays at the top after reaching it.
+
+2. Fixed button always stays at the bottom-right.
+</p>
+
+</div>
+
+<div class="box">
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+</div>
+
+<div class="box">
+
+Keep scrolling...
+
+</div>
+
+<div class="box">
+
+More Content...
+
+</div>
+
+<div class="box">
+
+End of Page
+
+</div>
+
+</div>
+
+<!-- ==========================
+     FIXED
+========================== -->
+
+<div class="fixed">
+
+💬 Fixed Button
+
+</div>
+
+</body>
+</html>
