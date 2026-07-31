@@ -1,3 +1,11 @@
+# Problem Statement
+'''
+A number is called a happy number if:
+--Replace the number with the sum of the squares of its digits.
+--Repeat the process.
+--If the number eventually becomes 1, it is a happy number.
+--If the process enters a cycle that does not include 1, it is not a happy number.
+'''
 class Solution:
     def isHappy(self, n: int) -> bool:
         seen = set()
