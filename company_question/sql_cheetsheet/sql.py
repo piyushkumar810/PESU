@@ -56,70 +56,62 @@ FROM employees;
 
 # ---------------------------------------------
 # 3. WHERE — FILTER ROWS
-
-```sql
+'''
 SELECT *
 FROM employees
 WHERE salary > 50000;
-```
+'''
 
 ### Operators
-
-```text
+'''
 =       Equal
 <> / != Not equal
 >       Greater
 <       Smaller
 >=      Greater/equal
 <=      Smaller/equal
-```
+'''
 
 ### AND / OR / NOT
-
-```sql
+'''
 WHERE salary > 50000 AND department = 'IT';
 
 WHERE department = 'IT' OR department = 'HR';
 
 WHERE NOT department = 'HR';
-```
+'''
 
 ### IN
-
-```sql
+'''
 WHERE department IN ('IT', 'HR', 'Sales');
-```
+'''
 
 ### BETWEEN
-
-```sql
+'''
 WHERE salary BETWEEN 30000 AND 60000;
-```
+'''
 
 ### NULL
-
-```sql
+'''
 WHERE phone IS NULL;
 
 WHERE phone IS NOT NULL;
-```
+'''
 
-⚠️ Never use:
-
-```sql
+# ⚠️ Never use:
+'''
 WHERE phone = NULL;
-```
+'''
+# ----------------------------------------
 
----
 
 # 4. LIKE — PATTERN SEARCH
-
-```text
+'''
 % → any number of characters
 _ → exactly one character
-```
+'''
 
-```sql
+'''
 -- Starts with A
 WHERE name LIKE 'A%';
 
@@ -131,59 +123,48 @@ WHERE name LIKE '%A%';
 
 -- Second character is A
 WHERE name LIKE '_A%';
-```
+'''
 
----
+# ---------------------------------------------
 
 # 5. ORDER BY — SORT
-
-```sql
+'''
 ORDER BY salary ASC;
-```
+'''
 
-```sql
+'''
 ORDER BY salary DESC;
-```
+'''
 
 ### Multiple columns
-
-```sql
+'''
 ORDER BY department ASC, salary DESC;
-```
-
----
+'''
 
 # 6. LIMIT — TOP N
-
-```sql
+'''
 SELECT *
 FROM employees
 ORDER BY salary DESC
 LIMIT 5;
-```
-
+'''
 ### Top 1 / highest salary
-
-```sql
+'''
 ORDER BY salary DESC
 LIMIT 1;
-```
+'''
 
----
 
 # 7. 🔢 AGGREGATE FUNCTIONS
-
-```text
+'''
 COUNT() → Number
 SUM()   → Total
 AVG()   → Average
 MAX()   → Highest
 MIN()   → Lowest
-```
 
 Examples:
 
-```sql
 SELECT COUNT(*) FROM employees;
 
 SELECT SUM(salary) FROM employees;
@@ -193,183 +174,163 @@ SELECT AVG(salary) FROM employees;
 SELECT MAX(salary) FROM employees;
 
 SELECT MIN(salary) FROM employees;
-```
+'''
 
 ### COUNT differences
-
-```sql
+'''
 COUNT(*)                 -- all rows
 COUNT(column)            -- non-NULL values
 COUNT(DISTINCT column)   -- unique non-NULL values
-```
-
----
+'''
 
 # 8. GROUP BY — MAKE GROUPS
 
 ### Example: employees per department
-
-```sql
+'''
 SELECT department, COUNT(*) AS total
 FROM employees
 GROUP BY department;
-```
+'''
 
 ### Average salary per department
-
-```sql
+'''
 SELECT department, AVG(salary) AS avg_salary
 FROM employees
 GROUP BY department;
-```
+'''
 
 ### Golden Rule
-
+'''
 If you use:
 
-```sql
 GROUP BY department
-```
-
+'''
+'''
 then columns in `SELECT` generally must be either:
+'''
 
-```text
+'''
 GROUP BY columns
 OR
 Aggregate functions
-```
-
----
+'''
 
 # 9. HAVING — FILTER GROUPS
 
 ### WHERE → filters rows
-
 ### HAVING → filters groups
-
-```sql
+'''
 SELECT department, COUNT(*) AS total
 FROM employees
 GROUP BY department
 HAVING COUNT(*) > 5;
-```
+'''
 
 ### Remember:
-
-```text
+'''
 WHERE  → before GROUP BY
 HAVING → after GROUP BY
-```
-
----
+'''
 
 # 10. 🔗 JOINS
-
+'''
 Used when data is in multiple tables.
-
+'''
 ### INNER JOIN
-
+'''
 Only matching rows:
+'''
 
-```sql
+'''
 SELECT e.name, d.department_name
 FROM employees e
 JOIN departments d
 ON e.department_id = d.department_id;
-```
+'''
 
 ### LEFT JOIN
-
+'''
 Everything from left table + matching right:
+'''
 
-```sql
+'''
 SELECT e.name, d.department_name
 FROM employees e
 LEFT JOIN departments d
 ON e.department_id = d.department_id;
-```
+'''
 
 ### RIGHT JOIN
-
+'''
 Everything from right table:
+'''
 
-```sql
+'''
 RIGHT JOIN departments d
 ON e.department_id = d.department_id;
-```
+'''
 
 ### FULL OUTER JOIN
-
+'''
 Everything from both:
+'''
 
-```sql
+'''
 FULL OUTER JOIN departments d
 ON e.department_id = d.department_id;
-```
+'''
 
 ### JOIN Memory
-
-```text
+'''
 INNER → matching only
 LEFT  → all left
 RIGHT → all right
 FULL  → all both
-```
-
----
+'''
 
 # 11. 🔥 MULTIPLE JOINS
-
-```sql
+'''
 SELECT o.order_id, c.name, p.product_name
 FROM orders o
 JOIN customers c
 ON o.customer_id = c.customer_id
 JOIN products p
 ON o.product_id = p.product_id;
-```
-
----
+'''
 
 # 12. 🧩 SUBQUERY
-
+'''
 Query inside another query.
-
+'''
 ### Greater than average salary
-
-```sql
+'''
 SELECT *
 FROM employees
 WHERE salary > (
     SELECT AVG(salary)
     FROM employees
 );
-```
+'''
 
 ### Highest salary
-
-```sql
+'''
 SELECT *
 FROM employees
 WHERE salary = (
     SELECT MAX(salary)
     FROM employees
 );
-```
+'''
 
 ### Second highest salary
-
-```sql
+'''
 SELECT MAX(salary)
 FROM employees
 WHERE salary < (
     SELECT MAX(salary)
     FROM employees
 );
-```
-
----
-
+'''
 # 13. EXISTS
 
 ### Customers who have orders
