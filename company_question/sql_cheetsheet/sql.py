@@ -334,8 +334,7 @@ WHERE salary < (
 # 13. EXISTS
 
 ### Customers who have orders
-
-```sql
+'''
 SELECT *
 FROM customers c
 WHERE EXISTS (
@@ -343,25 +342,22 @@ WHERE EXISTS (
     FROM orders o
     WHERE o.customer_id = c.customer_id
 );
-```
+'''
 
 ### Customers with no orders
 
-```sql
+'''
 WHERE NOT EXISTS (...);
-```
+'''
 
-```text
+'''
 EXISTS → matching record exists?
-```
-
----
+'''
 
 # 14. 🔀 CASE WHEN
+# SQL's IF/ELSE.
 
-SQL's IF/ELSE.
-
-```sql
+'''
 SELECT name, salary,
        CASE
            WHEN salary >= 100000 THEN 'High'
@@ -369,54 +365,43 @@ SELECT name, salary,
            ELSE 'Low'
        END AS salary_level
 FROM employees;
-```
+'''
 
 ### Basic structure
-
-```sql
+'''
 CASE
     WHEN condition THEN result
     WHEN condition THEN result
     ELSE result
 END
-```
-
----
+'''
 
 # 15. NULL HANDLING
-
-```sql
+'''
 COALESCE(column, 'Default Value')
-```
 
 Example:
 
-```sql
 SELECT name,
        COALESCE(phone, 'Not Available') AS phone
 FROM employees;
-```
-
----
+'''
 
 # 16. 📝 COMMON STRING FUNCTIONS
 
-```sql
+'''
 UPPER(name)
 LOWER(name)
 LENGTH(name)
 TRIM(name)
 CONCAT(first_name, last_name)
 SUBSTRING(name, 1, 3)
-```
-
----
+'''
 
 # 17. 📅 DATE FUNCTIONS
-
+'''
 Common concepts:
 
-```text
 CURRENT_DATE
 CURRENT_TIMESTAMP
 YEAR()
@@ -424,66 +409,57 @@ MONTH()
 DAY()
 DATEDIFF()
 DATE_ADD()
-```
 
 ⚠️ Exact syntax can differ between MySQL, PostgreSQL, SQL Server and Oracle.
-
----
+'''
 
 # 18. 🏆 WINDOW FUNCTIONS
-
+'''
 Used for ranking and calculations without collapsing rows.
-
+'''
 ### ROW_NUMBER
-
-```sql
+'''
 SELECT name, salary,
        ROW_NUMBER() OVER (
            ORDER BY salary DESC
        ) AS rn
 FROM employees;
-```
+'''
 
 ### RANK
-
-```sql
+'''
 RANK() OVER (ORDER BY salary DESC)
-```
+'''
 
 ### DENSE_RANK
-
-```sql
+'''
 DENSE_RANK() OVER (ORDER BY salary DESC)
-```
+'''
 
 ### Difference
-
-```text
+'''
 RANK:
 1, 2, 2, 4
 
 DENSE_RANK:
 1, 2, 2, 3
-```
-
----
+'''
 
 # 19. 🔥 PARTITION BY
 
-Ranking separately inside each group.
+# Ranking separately inside each group.
 
 ### Highest-paid employee in each department
 
-```sql
+'''
 ROW_NUMBER() OVER (
     PARTITION BY department
     ORDER BY salary DESC
 )
-```
+'''
 
-Complete:
-
-```sql
+# Complete:
+'''
 SELECT *
 FROM (
     SELECT e.*,
@@ -494,15 +470,13 @@ FROM (
     FROM employees e
 ) x
 WHERE rn = 1;
-```
-
----
+'''
 
 # 20. WITH — CTE
-
+'''
 Used to make complicated queries easier.
 
-```sql
+
 WITH high_salary AS (
     SELECT *
     FROM employees
@@ -510,101 +484,82 @@ WITH high_salary AS (
 )
 SELECT *
 FROM high_salary;
-```
+'''
 
 ### Multiple CTEs
-
-```sql
+'''
 WITH a AS (...),
      b AS (...)
 SELECT ...
 FROM a
 JOIN b ON ...;
-```
-
----
+'''
 
 # 21. UNION
-
+'''
 Combine results vertically.
 
-```sql
 SELECT name FROM employees
 UNION
 SELECT name FROM managers;
-```
 
-```text
+
 UNION     → removes duplicates
 UNION ALL → keeps duplicates
-```
 
----
+'''
 
 # 22. INSERT
-
-```sql
+'''
 INSERT INTO employees
 (name, salary, department)
 VALUES
 ('Piyush', 50000, 'IT');
-```
-
----
+'''
 
 # 23. UPDATE
-
-```sql
+'''
 UPDATE employees
 SET salary = 60000
 WHERE emp_id = 10;
-```
-
+'''
+'''
 ⚠️ Without `WHERE`, all rows are updated.
-
----
+'''
 
 # 24. DELETE
 
-```sql
+'''
 DELETE FROM employees
 WHERE emp_id = 10;
-```
 
 ⚠️ Without `WHERE`, all rows are deleted.
-
----
+'''
 
 # 25. CREATE TABLE
-
-```sql
+'''
 CREATE TABLE employees (
     emp_id INT PRIMARY KEY,
     name VARCHAR(100),
     salary DECIMAL(10,2),
     department VARCHAR(50)
 );
-```
-
----
+'''
 
 # 26. ALTER TABLE
-
-```sql
+'''
 ALTER TABLE employees
 ADD email VARCHAR(100);
-```
+'''
 
-```sql
+'''
 ALTER TABLE employees
 DROP COLUMN email;
-```
-
----
+'''
 
 # 🧠 SQL QUESTION → WHAT SHOULD I USE?
 
-```text
+'''
 "What columns?"
         ↓
 SELECT
@@ -664,15 +619,14 @@ CASE
 "Complicated query?"
         ↓
 CTE / WITH
-```
+'''
 
----
 
 # ⭐ THE MASTER SQL TEMPLATE
-
+'''
 When you don't know where to start, write this:
 
-```sql
+
 SELECT ...
 FROM ...
 JOIN ...
@@ -682,17 +636,15 @@ GROUP BY ...
 HAVING ...
 ORDER BY ...
 LIMIT ...;
-```
 
 Then remove the parts you don't need.
-
----
+'''
 
 # 🧠 LOGICAL SQL EXECUTION ORDER
 
 Very important for understanding SQL:
 
-```text
+
 1. FROM
 2. JOIN
 3. ON
@@ -703,7 +655,7 @@ Very important for understanding SQL:
 8. DISTINCT
 9. ORDER BY
 10. LIMIT
-```
+
 
 ### Writing order:
 
