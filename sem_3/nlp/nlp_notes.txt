@@ -1,0 +1,72 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Text processing and text Analytics(text Analytics->analysis processed text to discover the pattern)
+raw text (corpus)-> text processing-> text Analytics -> insights
+
+1) lowercase
+2) check puncatuation
+3) check special charecter
+4) tokenization
+5) stop words ->(the word which does not have much impact on the sentence like :- a , are, the)
+6) stenity and comma
+
+# why text Analytics is required
+-> 1) huge amount of data
+   2) text is mostly unstructured
+   3) discover hidden pattern
+   4) supports decision making
+
+# how text Analytics works?
+-> 1) data collection (form different sources like ...)
+   2) text processing
+   3) feature extraction :- it includes (bag of words)
+   4) modeling and analysis:-
+   5) interpretation and visualization
+
+# NLP Pipeline
+-> # stages of NLP
+   -> 1) data collection
+      2) text processing
+      3) feature extraction
+      4) Model training
+      5) Prediction
+      6) Evaluation
+      7) deployment
+      8) iteration and im
+
+# in text pre-processing 
+  1) tokenization 
+     (language specific  rule)
+     it also depend on model 
+
+     spacy.load("en_core_web_sm")
+
+     example for tokenization:-
+       "Let's so to N.Y!" -> ['Let', "'s", 'go', 'to', 'N.Y', '!'] (total tokens = 6.)
+
+       1) dr. smith lives in the U.S.A -> ['dr.', 'smith', 'lives', 'in', 'the', 'U.S.A']
+       2) "she said, 'Let's go shopping!'"  -> ['she', 'said', ',', "'", 'Let', "'s", 'go', 'shopping', '!', "'"]
+       3) "The event (on 25th dec.) was great!"  -> ['The', 'event', '(', 'on', '25th', 'dec.', ')', 'was', 'great', '!']
