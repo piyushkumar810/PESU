@@ -11,3 +11,19 @@ def largest_element(arr):
 
 arr=[2,4,34,45,56,23]
 print(largest_element(arr))
+
+
+# 2nd largets element 
+def second_largest(arr):
+    if(len(arr)<1):
+        return None
+
+    largest=second_lar=float("-inf")
+    for i in arr:
+        if(largest<i):
+            largest=i
+            second_lar=largest
+        elif(largest)
+
+arr=[2,4,34,45,56,23]
+print(largest_element(arr))
