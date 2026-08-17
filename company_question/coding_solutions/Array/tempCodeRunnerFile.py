@@ -1,13 +1,10 @@
-def remove_duplicate(arr):
-    if(len(arr)==0):
-        return []
-    result=[arr[0]]
+def move_all_zeros(arr):
+    j=0
+    for i in range(len(arr)):
+        if(arr[i]!=0):
+            arr[j],arr[i]=arr[i],arr[j]
+            j+=1
+    return arr
 
-    for i in range(1,len(arr)):
-        if(arr[i]!=arr[i-1]):
-            result.append(arr[i])
-    return result
-
-
-arr=[2,4,4,6,6,7,9,12,12,12,15]
-print(remove_duplicate(arr))
+arr=[2,4,0,6,0,7,9,12,0,0,15,0]
+print(move_all_zeros(arr))
