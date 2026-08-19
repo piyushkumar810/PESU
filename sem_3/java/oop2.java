@@ -17,8 +17,6 @@ class OOP2 {
         d1.display1();
     }
 }
-
-
 class Dog {
 
     // Private data members
@@ -79,3 +77,4 @@ class Dog {
         System.out.println("Breed : " + getBreed());
     }
 }
+
