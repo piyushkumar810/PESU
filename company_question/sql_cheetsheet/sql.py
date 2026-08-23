@@ -642,9 +642,9 @@ Then remove the parts you don't need.
 
 # 🧠 LOGICAL SQL EXECUTION ORDER
 
-Very important for understanding SQL:
+# Very important for understanding SQL:
 
-
+'''
 1. FROM
 2. JOIN
 3. ON
@@ -655,72 +655,60 @@ Very important for understanding SQL:
 8. DISTINCT
 9. ORDER BY
 10. LIMIT
-
+'''
 
 ### Writing order:
-
-```text
+'''
 SELECT → FROM → JOIN → WHERE → GROUP BY → HAVING → ORDER BY → LIMIT
-```
+'''
 
 ### Execution order:
-
-```text
+'''
 FROM → JOIN → WHERE → GROUP BY → HAVING → SELECT → ORDER BY → LIMIT
-```
-
----
+'''
 
 # 🔥 FINAL MASTER QUESTION
-
 ## Database
 
 ### employees
-
-```text
+'''
 emp_id
 name
 department_id
 salary
 hire_date
 manager_id
-```
+'''
 
 ### departments
-
-```text
+'''
 department_id
 department_name
-```
+'''
 
 ### projects
-
-```text
+'''
 project_id
 project_name
 department_id
 budget
-```
+'''
 
 ### employee_projects
-
-```text
+'''
 emp_id
 project_id
 hours_worked
-```
-
----
+'''
 
 ## QUESTION
-
-Write **one SQL query** that:
-
+# Write **one SQL query** that:
+'''
 > Find the **top 2 highest-paid employees in each department**, showing their **name, department name, salary, salary category (High/Medium/Low), number of projects they worked on, and total hours worked**. Include departments even if they have no projects. Consider only employees whose salary is **greater than the overall average salary**. Show only departments having **at least 2 such employees**. Rank employees within each department by salary descending. If two employees have the same salary, rank them by name. Finally, sort the result by department name and salary descending.
-
+'''
 ### This single question tests:
 
-```text
+'''
 ✅ SELECT
 ✅ FROM
 ✅ JOIN
@@ -739,11 +727,11 @@ Write **one SQL query** that:
 ✅ ROW_NUMBER()
 ✅ PARTITION BY
 ✅ ORDER BY
-```
+'''
 
 ### Suggested approach:
 
-```text
+'''
 Step 1 → Calculate overall average salary
 Step 2 → Filter employees above average
 Step 3 → Join departments
@@ -755,6 +743,6 @@ Step 8 → Create salary category using CASE
 Step 9 → ROW_NUMBER() PARTITION BY department
 Step 10 → Keep rank <= 2
 Step 11 → ORDER BY department + salary
-```
+'''
 
 ### 🔥 If you can solve this question without looking at the cheat sheet, you have a very strong foundation in SQL.
