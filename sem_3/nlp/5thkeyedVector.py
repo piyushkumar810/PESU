@@ -28,3 +28,9 @@ print(model.most_similar("king", topn=5))
 # "queen" = second word
 # The result is usually between -1 and 1
 print(model.similarity("king", "queen"))
+
+
+'''
+Exam point:
+KeyedVectors → word → vector representation → used for similarity, most similar words, vector operations, etc.
+'''
