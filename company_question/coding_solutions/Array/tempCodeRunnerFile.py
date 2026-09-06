@@ -1,12 +1,17 @@
-def findMissingNumber(arr):
-    n = len(arr)
 
-    for i in range(n):
-        if arr[i] != i + 1:
-            return i + 1
+class Solution:
+    def removing_duplicate(self, arr):
+        i = 0
 
-    return n + 1
+        for j in range(1, len(arr)):
+            if arr[j] != arr[i]:
+                i += 1
+                arr[i] = arr[j]
+
+        return arr[:i+1]
 
 
-arr=[1,2,4,5]
-print(findMissingNumber(arr))
+arr = [1,2,2,3,3,5]
+
+obj = Solution()
+print(obj.removing_duplicate(arr))
