@@ -528,3 +528,400 @@ Weak HAS-A relationship.
 Composition:
 Strong HAS-A relationship.
 '''
+
+
+'''
+---------------------------------------------1. SOLID Principles in Python
+
+SOLID is a set of 5 principles used to write code that is clean, maintainable, reusable, and easy to extend.
+
+The five principles are:
+
+Letter	Principle	Simple meaning
+S	Single Responsibility Principle	One class → one responsibility
+O	Open/Closed Principle	Extend code without modifying existing code
+L	Liskov Substitution Principle	Child class should properly replace parent class
+I	Interface Segregation Principle	Don't force classes to implement unnecessary methods
+D	Dependency Inversion Principle	Depend on abstractions, not concrete classes
+S — Single Responsibility Principle (SRP)
+Concept
+
+A class should have only one responsibility or one main reason to change.
+
+❌ Bad example
+class Employee:
+    def calculate_salary(self):
+        pass
+
+    def save_to_database(self):
+        pass
+
+    def generate_report(self):
+        pass
+
+This class is doing three different jobs:
+
+Salary calculation
+Database operations
+Report generation
+
+If the database logic changes, we have to modify Employee.
+
+✅ Better example
+
+Separate responsibilities:
+
+class SalaryCalculator:
+    def calculate_salary(self, employee):
+        return employee.salary
+
+
+class EmployeeRepository:
+    def save(self, employee):
+        print("Saving employee to database")
+
+
+class ReportGenerator:
+    def generate(self, employee):
+        print("Generating employee report")
+
+Now each class has a clear responsibility.
+
+Interview answer
+
+SRP means a class should have one responsibility and one reason to change.
+
+O — Open/Closed Principle (OCP)
+Concept
+
+Software should be:
+
+Open for extension, but closed for modification.
+
+This means we should be able to add new functionality without changing existing working code.
+
+❌ Bad example
+class Payment:
+    def pay(self, payment_type):
+        if payment_type == "card":
+            print("Paying using card")
+        elif payment_type == "upi":
+            print("Paying using UPI")
+        elif payment_type == "cash":
+            print("Paying using cash")
+
+Suppose tomorrow we add:
+
+PayPal
+Google Pay
+Apple Pay
+
+We have to keep modifying the existing class.
+
+✅ Better example
+
+Use polymorphism:
+
+class Payment:
+    def pay(self):
+        pass
+
+
+class CardPayment(Payment):
+    def pay(self):
+        print("Paying using card")
+
+
+class UPIPayment(Payment):
+    def pay(self):
+        print("Paying using UPI")
+
+
+class CashPayment(Payment):
+    def pay(self):
+        print("Paying using cash")
+
+Now:
+
+payments = [
+    CardPayment(),
+    UPIPayment(),
+    CashPayment()
+]
+
+for payment in payments:
+    payment.pay()
+
+If we want PayPal:
+
+class PayPalPayment(Payment):
+    def pay(self):
+        print("Paying using PayPal")
+
+We extend the system without modifying the existing payment classes.
+
+Interview answer
+
+OCP means existing code should be closed for modification but open for adding new functionality through extension.
+
+L — Liskov Substitution Principle (LSP)
+Concept
+
+A child class should be able to replace its parent class without breaking the program.
+
+In simple words:
+
+If B is a subclass of A, wherever we expect A, we should be able to use B.
+
+Example
+class Bird:
+    def fly(self):
+        print("Flying")
+
+
+class Sparrow(Bird):
+    def fly(self):
+        print("Sparrow flying")
+
+This works because a sparrow can fly.
+
+But consider:
+
+class Penguin(Bird):
+    def fly(self):
+        raise Exception("Penguins cannot fly")
+
+Now:
+
+def make_bird_fly(bird):
+    bird.fly()
+
+
+make_bird_fly(Penguin())
+
+The program breaks.
+
+So Penguin should not inherit from a parent that promises that every bird can fly.
+
+✅ Better design
+class Bird:
+    def eat(self):
+        print("Eating")
+
+
+class FlyingBird(Bird):
+    def fly(self):
+        print("Flying")
+
+
+class Sparrow(FlyingBird):
+    pass
+
+
+class Penguin(Bird):
+    pass
+
+Now the hierarchy makes more sense.
+
+Interview answer
+
+LSP says that derived classes must be substitutable for their base classes without changing the correctness of the program.
+
+I — Interface Segregation Principle (ISP)
+
+Python doesn't have interfaces in exactly the same way as Java, but we can demonstrate the principle using abstract base classes.
+
+Concept
+
+A class should not be forced to implement methods it doesn't need.
+
+❌ Bad example
+from abc import ABC, abstractmethod
+
+
+class Worker(ABC):
+
+    @abstractmethod
+    def work(self):
+        pass
+
+    @abstractmethod
+    def eat(self):
+        pass
+
+Now imagine a robot:
+
+class Robot(Worker):
+
+    def work(self):
+        print("Robot working")
+
+    def eat(self):
+        raise Exception("Robot doesn't eat")
+
+The robot is being forced to implement eat() even though it doesn't need it.
+
+✅ Better
+
+Split the interface:
+
+from abc import ABC, abstractmethod
+
+
+class Workable(ABC):
+
+    @abstractmethod
+    def work(self):
+        pass
+
+
+class Eatable(ABC):
+
+    @abstractmethod
+    def eat(self):
+        pass
+
+Human:
+
+class Human(Workable, Eatable):
+
+    def work(self):
+        print("Human working")
+
+    def eat(self):
+        print("Human eating")
+
+Robot:
+
+class Robot(Workable):
+
+    def work(self):
+        print("Robot working")
+
+The robot only implements what it needs.
+
+Interview answer
+
+ISP says that clients should not be forced to depend on methods they don't use. Prefer small, specific interfaces over large interfaces.
+
+D — Dependency Inversion Principle (DIP)
+Concept
+
+High-level classes should not directly depend on low-level classes.
+
+Instead:
+
+Both should depend on abstractions.
+
+❌ Bad example
+class MySQLDatabase:
+
+    def save(self, data):
+        print("Saving to MySQL")
+
+
+class UserService:
+
+    def __init__(self):
+        self.database = MySQLDatabase()
+
+    def save_user(self, user):
+        self.database.save(user)
+
+UserService is tightly coupled to MySQLDatabase.
+
+If we want MongoDB, we need to change UserService.
+
+✅ Better
+
+Create an abstraction:
+
+from abc import ABC, abstractmethod
+
+
+class Database(ABC):
+
+    @abstractmethod
+    def save(self, data):
+        pass
+
+MySQL:
+
+class MySQLDatabase(Database):
+
+    def save(self, data):
+        print("Saving to MySQL")
+
+MongoDB:
+
+class MongoDB(Database):
+
+    def save(self, data):
+        print("Saving to MongoDB")
+
+Now UserService depends on the abstraction:
+
+class UserService:
+
+    def __init__(self, database):
+        self.database = database
+
+    def save_user(self, user):
+        self.database.save(user)
+
+We can use either:
+
+mysql = MySQLDatabase()
+service = UserService(mysql)
+
+service.save_user("Piyush")
+
+or:
+
+mongo = MongoDB()
+service = UserService(mongo)
+
+service.save_user("Piyush")
+
+No change to UserService.
+
+Interview answer
+
+DIP says high-level modules should depend on abstractions rather than concrete implementations.
+
+SOLID — Quick Revision
+
+Remember this:
+
+S → Single responsibility
+    One class = one main job
+
+O → Open/Closed
+    Add functionality without modifying existing code
+
+L → Liskov substitution
+    Child should safely replace parent
+
+I → Interface segregation
+    Don't force unnecessary methods
+
+D → Dependency inversion
+    Depend on abstractions, not concrete classes
+Easy real-world example
+
+Imagine you're building an online car rental system:
+
+S → Booking handles booking
+    Payment handles payment
+    Notification handles notifications
+
+O → Add UPI payment without rewriting existing payment logic
+
+L → Different vehicle types should behave correctly wherever
+    the base vehicle type is expected
+
+I → Don't force a car class to implement bike-specific operations
+
+D → BookingService depends on a Payment interface,
+    not directly on Razorpay/Stripe/etc.
+'''
