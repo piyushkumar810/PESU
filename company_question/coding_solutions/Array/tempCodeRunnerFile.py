@@ -1,17 +1,19 @@
 
-class Solution:
-    def removing_duplicate(self, arr):
-        i = 0
+def product(arr):
+    answer = [1] * len(arr)
 
-        for j in range(1, len(arr)):
-            if arr[j] != arr[i]:
-                i += 1
-                arr[i] = arr[j]
+    for i in range(len(arr)):
+        product = 1
 
-        return arr[:i+1]
+        for j in range(len(arr)):
+            if i != j:
+                product *= arr[j]
+
+        answer[i] = product
+
+    return answer
 
 
-arr = [1,2,2,3,3,5]
+arr = [1, 2, 3, 4]
 
-obj = Solution()
-print(obj.removing_duplicate(arr))
+print(product(arr))
