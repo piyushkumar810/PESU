@@ -543,6 +543,8 @@ O	Open/Closed Principle	Extend code without modifying existing code
 L	Liskov Substitution Principle	Child class should properly replace parent class
 I	Interface Segregation Principle	Don't force classes to implement unnecessary methods
 D	Dependency Inversion Principle	Depend on abstractions, not concrete classes
+
+
 S — Single Responsibility Principle (SRP)
 Concept
 
