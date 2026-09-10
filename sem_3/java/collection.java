@@ -223,21 +223,21 @@ Example:
 ============================================================
 */
 
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
-class ArrayListExample {
+// class ArrayListExample {
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
 
-        ArrayList<Integer> numbers = new ArrayList<>();
+//         ArrayList<Integer> numbers = new ArrayList<>();
 
-        numbers.add(10);
-        numbers.add(20);
-        numbers.add(30);
+//         numbers.add(10);
+//         numbers.add(20);
+//         numbers.add(30);
 
-        System.out.println(numbers);
-    }
-}
+//         System.out.println(numbers);
+//     }
+// }
 
 
 /*
@@ -354,21 +354,21 @@ Syntax:
 Example:
 */
 
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
-class AddExample {
+// class AddExample {
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
 
-        ArrayList<String> names = new ArrayList<>();
+//         ArrayList<String> names = new ArrayList<>();
 
-        names.add("Piyush");
-        names.add("Rahul");
-        names.add("Aman");
+//         names.add("Piyush");
+//         names.add("Rahul");
+//         names.add("Aman");
 
-        System.out.println(names);
-    }
-}
+//         System.out.println(names);
+//     }
+// }
 
 
 /*
@@ -391,22 +391,22 @@ Syntax:
 Example:
 */
 
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
-class AddIndexExample {
+// class AddIndexExample {
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
 
-        ArrayList<String> names = new ArrayList<>();
+//         ArrayList<String> names = new ArrayList<>();
 
-        names.add("Piyush");
-        names.add("Rahul");
+//         names.add("Piyush");
+//         names.add("Rahul");
 
-        names.add(1, "Aman");
+//         names.add(1, "Aman");
 
-        System.out.println(names);
-    }
-}
+//         System.out.println(names);
+//     }
+// }
 
 
 /*
@@ -431,22 +431,22 @@ Syntax:
 Example:
 */
 
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
-class GetExample {
+// class GetExample {
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
 
-        ArrayList<String> names = new ArrayList<>();
+//         ArrayList<String> names = new ArrayList<>();
 
-        names.add("Piyush");
-        names.add("Rahul");
-        names.add("Aman");
+//         names.add("Piyush");
+//         names.add("Rahul");
+//         names.add("Aman");
 
-        System.out.println(names.get(0));
-        System.out.println(names.get(1));
-    }
-}
+//         System.out.println(names.get(0));
+//         System.out.println(names.get(1));
+//     }
+// }
 
 
 /*
@@ -483,23 +483,23 @@ Syntax:
 Example:
 */
 
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
-class SetExample {
+// class SetExample {
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
 
-        ArrayList<String> names = new ArrayList<>();
+//         ArrayList<String> names = new ArrayList<>();
 
-        names.add("Piyush");
-        names.add("Rahul");
-        names.add("Aman");
+//         names.add("Piyush");
+//         names.add("Rahul");
+//         names.add("Aman");
 
-        names.set(1, "Rohit");
+//         names.set(1, "Rohit");
 
-        System.out.println(names);
-    }
-}
+//         System.out.println(names);
+//     }
+// }
 
 
 /*
@@ -597,21 +597,21 @@ Syntax:
 Example:
 */
 
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
-class SizeExample {
+// class SizeExample {
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
 
-        ArrayList<Integer> numbers = new ArrayList<>();
+//         ArrayList<Integer> numbers = new ArrayList<>();
 
-        numbers.add(10);
-        numbers.add(20);
-        numbers.add(30);
+//         numbers.add(10);
+//         numbers.add(20);
+//         numbers.add(30);
 
-        System.out.println(numbers.size());
-    }
-}
+//         System.out.println(numbers.size());
+//     }
+// }
 
 
 /*
@@ -646,21 +646,21 @@ Returns:
 Example:
 */
 
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
-class EmptyExample {
+// class EmptyExample {
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
 
-        ArrayList<Integer> numbers = new ArrayList<>();
+//         ArrayList<Integer> numbers = new ArrayList<>();
 
-        System.out.println(numbers.isEmpty());
+//         System.out.println(numbers.isEmpty());
 
-        numbers.add(10);
+//         numbers.add(10);
 
-        System.out.println(numbers.isEmpty());
-    }
-}
+//         System.out.println(numbers.isEmpty());
+//     }
+// }
 
 
 /*
@@ -685,21 +685,21 @@ Returns:
 Example:
 */
 
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
-class ContainsExample {
+// class ContainsExample {
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
 
-        ArrayList<String> names = new ArrayList<>();
+//         ArrayList<String> names = new ArrayList<>();
 
-        names.add("Piyush");
-        names.add("Rahul");
+//         names.add("Piyush");
+//         names.add("Rahul");
 
-        System.out.println(names.contains("Piyush"));
-        System.out.println(names.contains("Aman"));
-    }
-}
+//         System.out.println(names.contains("Piyush"));
+//         System.out.println(names.contains("Aman"));
+//     }
+// }
 
 
 /*
@@ -789,24 +789,24 @@ There are several ways to iterate through an ArrayList.
 ============================================================
 */
 
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
-class LoopExample {
+// class LoopExample {
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
 
-        ArrayList<String> names = new ArrayList<>();
+//         ArrayList<String> names = new ArrayList<>();
 
-        names.add("Piyush");
-        names.add("Rahul");
-        names.add("Aman");
+//         names.add("Piyush");
+//         names.add("Rahul");
+//         names.add("Aman");
 
-        for (int i = 0; i < names.size(); i++) {
+//         for (int i = 0; i < names.size(); i++) {
 
-            System.out.println(names.get(i));
-        }
-    }
-}
+//             System.out.println(names.get(i));
+//         }
+//     }
+// }
 
 
 /*
@@ -815,24 +815,24 @@ class LoopExample {
 ============================================================
 */
 
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
-class EnhancedLoopExample {
+// class EnhancedLoopExample {
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
 
-        ArrayList<String> names = new ArrayList<>();
+//         ArrayList<String> names = new ArrayList<>();
 
-        names.add("Piyush");
-        names.add("Rahul");
-        names.add("Aman");
+//         names.add("Piyush");
+//         names.add("Rahul");
+//         names.add("Aman");
 
-        for (String name : names) {
+//         for (String name : names) {
 
-            System.out.println(name);
-        }
-    }
-}
+//             System.out.println(name);
+//         }
+//     }
+// }
 
 
 /*
@@ -860,27 +860,27 @@ Returns the next element.
 Example:
 */
 
-import java.util.ArrayList;
-import java.util.Iterator;
+// import java.util.ArrayList;
+// import java.util.Iterator;
 
-class IteratorExample {
+// class IteratorExample {
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
 
-        ArrayList<String> names = new ArrayList<>();
+//         ArrayList<String> names = new ArrayList<>();
 
-        names.add("Piyush");
-        names.add("Rahul");
-        names.add("Aman");
+//         names.add("Piyush");
+//         names.add("Rahul");
+//         names.add("Aman");
 
-        Iterator<String> it = names.iterator();
+//         Iterator<String> it = names.iterator();
 
-        while (it.hasNext()) {
+//         while (it.hasNext()) {
 
-            System.out.println(it.next());
-        }
-    }
-}
+//             System.out.println(it.next());
+//         }
+//     }
+// }
 
 
 /*
@@ -912,20 +912,20 @@ Advantages:
 Example:
 */
 
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
-class GenericExample {
+// class GenericExample {
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
 
-        ArrayList<String> names = new ArrayList<>();
+//         ArrayList<String> names = new ArrayList<>();
 
-        names.add("Piyush");
-        names.add("Rahul");
+//         names.add("Piyush");
+//         names.add("Rahul");
 
-        // names.add(10);   // Compile-time error
-    }
-}
+//         // names.add(10);   // Compile-time error
+//     }
+// }
 
 
 /*
@@ -1184,21 +1184,21 @@ ArrayList allows null values.
 Example:
 */
 
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
-class NullExample {
+// class NullExample {
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
 
-        ArrayList<String> names = new ArrayList<>();
+//         ArrayList<String> names = new ArrayList<>();
 
-        names.add("Piyush");
-        names.add(null);
-        names.add("Rahul");
+//         names.add("Piyush");
+//         names.add(null);
+//         names.add("Rahul");
 
-        System.out.println(names);
-    }
-}
+//         System.out.println(names);
+//     }
+// }
 
 
 /*
@@ -1216,22 +1216,22 @@ ArrayList allows duplicate elements.
 Example:
 */
 
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
-class DuplicateExample {
+// class DuplicateExample {
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
 
-        ArrayList<Integer> numbers = new ArrayList<>();
+//         ArrayList<Integer> numbers = new ArrayList<>();
 
-        numbers.add(10);
-        numbers.add(20);
-        numbers.add(10);
-        numbers.add(20);
+//         numbers.add(10);
+//         numbers.add(20);
+//         numbers.add(10);
+//         numbers.add(20);
 
-        System.out.println(numbers);
-    }
-}
+//         System.out.println(numbers);
+//     }
+// }
 
 
 /*
@@ -1249,25 +1249,25 @@ Collections.sort() can be used to sort a List.
 Example:
 */
 
-import java.util.ArrayList;
-import java.util.Collections;
+// import java.util.ArrayList;
+// import java.util.Collections;
 
-class SortExample {
+// class SortExample {
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
 
-        ArrayList<Integer> numbers = new ArrayList<>();
+//         ArrayList<Integer> numbers = new ArrayList<>();
 
-        numbers.add(50);
-        numbers.add(10);
-        numbers.add(30);
-        numbers.add(20);
+//         numbers.add(50);
+//         numbers.add(10);
+//         numbers.add(30);
+//         numbers.add(20);
 
-        Collections.sort(numbers);
+//         Collections.sort(numbers);
 
-        System.out.println(numbers);
-    }
-}
+//         System.out.println(numbers);
+//     }
+// }
 
 
 /*
@@ -1285,24 +1285,24 @@ Collections.reverse() reverses the order.
 Example:
 */
 
-import java.util.ArrayList;
-import java.util.Collections;
+// import java.util.ArrayList;
+// import java.util.Collections;
 
-class ReverseExample {
+// class ReverseExample {
 
-    public static void main(String[] args) {
+//     public static void main(String[] args) {
 
-        ArrayList<Integer> numbers = new ArrayList<>();
+//         ArrayList<Integer> numbers = new ArrayList<>();
 
-        numbers.add(10);
-        numbers.add(20);
-        numbers.add(30);
+//         numbers.add(10);
+//         numbers.add(20);
+//         numbers.add(30);
 
-        Collections.reverse(numbers);
+//         Collections.reverse(numbers);
 
-        System.out.println(numbers);
-    }
-}
+//         System.out.println(numbers);
+//     }
+// }
 
 
 /*
