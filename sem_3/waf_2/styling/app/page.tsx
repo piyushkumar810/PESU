@@ -63,6 +63,17 @@ export default function Home() {
             Documentation
           </a>
         </div>
+
+        <div className="p-6 bg-gray-100">
+          <h2 className="text-3xl font-bold text-blue-600">
+            welcome to next .js
+            <p className="mt-4 text-gray-700">
+              Learned teilwind css eith Next.js
+            </p>
+
+            <p>this page uses the optimazied inter font</p>
+          </h2>
+        </div>
       </main>
     </div>
   );
