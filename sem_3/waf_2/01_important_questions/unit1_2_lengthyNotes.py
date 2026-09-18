@@ -348,11 +348,11 @@ An interface defines the shape/structure of an object.
 
 Example:
 """
-
+'''
 interface User {
     name: string
     age: number
-}
+}'''
 
 # Example usage:
 # const user: User = {
@@ -1076,12 +1076,12 @@ change.
 # -----------------------------------------------------------------------------
 
 """
-| Method | Rendering Time | Data Freshness | SEO | Typical Use |
-|--------|-----------------|----------------|-----|-------------|
-| CSR    | Browser         | Can be dynamic  | Lower initial SEO | Dashboards |
-| SSR    | Request/server  | Fresh per request | Good | Dynamic pages |
-| SSG    | Build time      | Static          | Excellent | Blogs/docs |
-| ISR    | Static + revalidation | Periodically updated | Excellent | Product/content sites |
+| Method | Rendering Time  | Data Freshness   | SEO                | Typical Use           |
+|--------|-----------------|------------------|--------------------|-----------------------|
+| CSR    | Browser         | Can be dynamic m | Lower initial SEO  | Dashboards            |
+| SSR    | Request/server  | Fresh per request| Good               | Dynamic pages         |
+| SSG    | Build time      | Static           | Excellent          | Blogs/docs            |
+| ISR    | Static + revalidation | Periodically updated | Excellent| Product/content sites |
 
 MEMORY TRICK:
 CSR = Client
