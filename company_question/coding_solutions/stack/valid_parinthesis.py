@@ -1,3 +1,23 @@
+'''
+1. Valid Parentheses ⭐⭐⭐⭐⭐
+Problem
+
+Given:
+
+"()[]{}"
+
+Check whether the brackets are correctly matched.
+
+Examples:
+
+"()"       → True
+"()[]{}"   → True
+"(]"       → False
+"([)]"     → False
+"{[]}"     → True
+'''
+
+
 def isValid(s: str) -> bool:
     stack = []
     pairs = {
