@@ -85,19 +85,19 @@ Example of Checked Exception: IOException
 -----------------------------------------------------------
 */
 
-import java.io.*;
+// import java.io.*;
 
-class CheckedExample {
-    public static void main(String[] args) {
+// class CheckedExample {
+//     public static void main(String[] args) {
 
-        try {
-            FileReader file = new FileReader("abc.txt");
-            System.out.println("File opened");
-        } catch (IOException e) {
-            System.out.println("File not found or cannot be read");
-        }
-    }
-}
+//         try {
+//             FileReader file = new FileReader("abc.txt");
+//             System.out.println("File opened");
+//         } catch (IOException e) {
+//             System.out.println("File not found or cannot be read");
+//         }
+//     }
+// }
 
 
 /*
@@ -247,38 +247,38 @@ because the object is not in the required state.
 ===========================================================
 */
 
-class UncheckedExample {
-    public static void main(String[] args) {
+// class UncheckedExample {
+//     public static void main(String[] args) {
 
-        // ArithmeticException
-        int a = 10;
-        int b = 0;
+//         // ArithmeticException
+//         int a = 10;
+//         int b = 0;
 
-        // System.out.println(a / b);
-
-
-        // NullPointerException
-        String name = null;
-
-        // System.out.println(name.length());
+//         // System.out.println(a / b);
 
 
-        // ArrayIndexOutOfBoundsException
-        int[] numbers = {10, 20, 30};
+//         // NullPointerException
+//         String name = null;
 
-        // System.out.println(numbers[5]);
-
-
-        // NumberFormatException
-        // int num = Integer.parseInt("abc");
+//         System.out.println(name.length());
 
 
-        // ClassCastException
-        Object obj = "Hello";
+//         // ArrayIndexOutOfBoundsException
+//         int[] numbers = {10, 20, 30};
 
-        // Integer value = (Integer) obj;
-    }
-}
+//         System.out.println(numbers[5]);
+
+
+//         // NumberFormatException
+//         int num = Integer.parseInt("abc");
+
+
+//         // ClassCastException
+//         Object obj = "Hello";
+
+//         Integer value = (Integer) obj;
+//     }
+// }
 
 
 /*
