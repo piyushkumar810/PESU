@@ -15,6 +15,25 @@ ORDER BY
 LIMIT
 '''
 
+# The logical execution starts from:
+'''
+1. FROM
+     ↓
+2. JOIN ... ON
+     ↓
+3. WHERE
+     ↓
+4. GROUP BY
+     ↓
+5. HAVING
+     ↓
+6. SELECT
+     ↓
+7. ORDER BY
+     ↓
+8. LIMIT
+'''
+
 ### Easy Memory Trick:
 '''WHAT → FROM WHERE → JOIN → FILTER → GROUP → FILTER GROUP → SORT → LIMIT
 
@@ -289,6 +308,7 @@ FULL  → all both
 '''
 
 # 11. 🔥 MULTIPLE JOINS
+### goal:- For each order, show the Order ID + Customer Name + Product Name.
 '''
 SELECT o.order_id, c.name, p.product_name
 FROM orders o
