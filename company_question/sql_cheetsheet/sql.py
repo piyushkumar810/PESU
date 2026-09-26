@@ -766,3 +766,81 @@ Step 11 → ORDER BY department + salary
 '''
 
 ### 🔥 If you can solve this question without looking at the cheat sheet, you have a very strong foundation in SQL.
+
+# solution
+'''
+WITH eligible_employees AS (
+    SELECT
+        e.emp_id,
+        e.name,
+        e.department_id,
+        e.salary,
+        e.hire_date,
+        CASE
+            WHEN e.salary >= 80000 THEN 'High'
+            WHEN e.salary >= 50000 THEN 'Medium'
+            ELSE 'Low'
+        END AS salary_category
+    FROM employees e
+    WHERE e.salary > (
+        SELECT AVG(salary)
+        FROM employees
+    )
+),
+
+department_stats AS (
+    SELECT
+        department_id,
+        COUNT(*) AS employee_count
+    FROM eligible_employees
+    GROUP BY department_id
+    HAVING COUNT(*) >= 2
+),
+
+employee_work AS (
+    SELECT
+        ee.emp_id,
+        ee.name,
+        ee.department_id,
+        ee.salary,
+        ee.salary_category,
+        COUNT(ep.project_id) AS project_count,
+        COALESCE(SUM(ep.hours_worked), 0) AS total_hours
+    FROM eligible_employees ee
+    LEFT JOIN employee_projects ep
+        ON ee.emp_id = ep.emp_id
+    GROUP BY
+        ee.emp_id,
+        ee.name,
+        ee.department_id,
+        ee.salary,
+        ee.salary_category
+),
+
+ranked_employees AS (
+    SELECT
+        ew.*,
+        ROW_NUMBER() OVER (
+            PARTITION BY ew.department_id
+            ORDER BY ew.salary DESC, ew.name
+        ) AS employee_rank
+    FROM employee_work ew
+    JOIN department_stats ds
+        ON ew.department_id = ds.department_id
+)
+
+SELECT
+    re.name,
+    d.department_name,
+    re.salary,
+    re.salary_category,
+    re.project_count,
+    re.total_hours
+FROM ranked_employees re
+JOIN departments d
+    ON re.department_id = d.department_id
+WHERE re.employee_rank <= 2
+ORDER BY
+    d.department_name,
+    re.salary DESC;
+'''
