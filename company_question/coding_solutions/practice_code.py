@@ -78,3 +78,38 @@ def duplicy_removal(arr):
 arr=[10,20,20,30,40,40,50,60,60]
 print(duplicy_removal(arr))
 
+
+# Q5
+def move_zeros_at_last(arr):
+    i=0
+    for j in range(len(arr)):
+        if(arr[j]!=0):
+            arr[i],arr[j]=arr[j],arr[i]
+            i+=1
+
+    return arr
+
+arr=[1,24,0,34,0,34,0,67,0,0,1,0]
+print(move_zeros_at_last(arr))
+
+
+# Q6
+def rotating_kth_position(arr,k):
+    if(len(arr)==0 or len(arr)<k):
+        return []
+    
+    k=k%len(arr)
+    arr[:]=arr[-k:]+arr[:-k]
+    return arr
+
+
+arr=[2,4,6,1,2,8]
+print(rotating_kth_position(arr,2))
+
+
+# Q7 taking input as array of element
+
+n=int(input("entwr no of elements"))
+arr=list(map(int,input("enter element").split()))
+print(arr)
+
