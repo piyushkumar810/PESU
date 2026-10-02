@@ -29,8 +29,6 @@ min_stack → minimum values
 '''
 
 
-
-
 class MinStack:
 
     def __init__(self):
@@ -40,10 +38,8 @@ class MinStack:
     def push(self, val: int) -> None:
         self.stack.append(val)
 
-        if not self.min_stack:
+        if not self.min_stack or val <= self.min_stack[-1]:
             self.min_stack.append(val)
-        else:
-            self.min_stack.append(min(val, self.min_stack[-1]))
 
     def pop(self) -> None:
         self.stack.pop()
@@ -54,3 +50,18 @@ class MinStack:
 
     def getMin(self) -> int:
         return self.min_stack[-1]
+
+
+# Example
+stack = MinStack()
+
+stack.push(-2)
+stack.push(0)
+stack.push(-3)
+
+print("Minimum:", stack.getMin())
+
+stack.pop()
+
+print("Top:", stack.top())
+print("Minimum:", stack.getMin())
