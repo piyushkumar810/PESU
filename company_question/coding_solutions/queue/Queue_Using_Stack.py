@@ -44,3 +44,37 @@ print(q.peek())     # 30
 print(q.dequeue())  # 30
 print(q.dequeue())  # 40
 print(q.dequeue())  # -1
+
+'''
+3. Example
+
+Suppose we do:
+
+push(1)
+push(2)
+push(3)
+
+Initially:
+
+stack1 = []
+stack2 = []
+push(1)
+stack1 = [1]
+stack2 = []
+push(2)
+stack1 = [1, 2]
+stack2 = []
+push(3)
+stack1 = [1, 2, 3]
+stack2 = []
+
+Now we want:
+
+pop() → 1
+
+But stack1 gives us:
+
+3
+
+That's the opposite of what a queue wants.
+'''
