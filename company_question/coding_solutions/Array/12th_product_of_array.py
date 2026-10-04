@@ -24,6 +24,7 @@ working:-
 def productExceptSelf(nums):
     n = len(nums)
     answer = [1] * n
+    print(answer)
 
     # Prefix products
     prefix = 1
@@ -41,3 +42,64 @@ def productExceptSelf(nums):
 
 nums=[2,4,6,8]
 print(productExceptSelf(nums))
+
+
+# dry run
+'''
+def productExceptSelf(nums):
+
+    # nums = [2, 4, 6, 8]
+
+    n = len(nums)
+
+    # n = 4
+
+    answer = [1] * n
+
+    # [1] * 4
+    # answer = [1, 1, 1, 1]
+
+    print(answer)
+
+    # Output:
+    # [1, 1, 1, 1]
+
+
+    # -----------------------------------
+    # PREFIX PRODUCTS
+    # -----------------------------------
+
+    prefix = 1
+
+    # prefix = 1
+
+    for i in range(n):
+
+        # i = 0
+        # answer[0] = prefix
+        # answer[0] = 1
+        # answer = [1, 1, 1, 1]
+
+        answer[i] = prefix
+
+        # prefix *= nums[i]
+        # prefix = 1 * nums[0]
+        # prefix = 1 * 2
+        # prefix = 2
+
+        prefix *= nums[i]
+
+
+        # i = 1
+        # answer[1] = prefix
+        # answer[1] = 2
+        # answer = [1, 2, 1, 1]
+
+        # prefix = 2 * nums[1]
+        # prefix = 2 * 4
+        # prefix = 8
+
+        answer[i] = prefix
+        # NOTE: In actual execution, this line happens before
+        # prefix *= nums[i], so see the corrected sequence below.
+'''
