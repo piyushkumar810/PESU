@@ -46,7 +46,9 @@ class Solution:
         """
 
         rows = len(matrix)
+        print(rows)
         cols = len(matrix[0])
+        print(cols)
 
         zero_rows = set()
         zero_cols = set()
@@ -64,3 +66,14 @@ class Solution:
         for j in zero_cols:
             for i in range(rows):
                 matrix[i][j] = 0
+
+matrix = [
+    [1, 2, 3],
+    [4, 0, 6],
+    [7, 8, 9]
+]
+
+Solution().setZeroes(matrix)
+
+for row in matrix:
+    print(row)
