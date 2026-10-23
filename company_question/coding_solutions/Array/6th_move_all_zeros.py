@@ -1,5 +1,5 @@
 # 6. Move all zeros to the end
-def move_all_zeros(arr):
+def move_all_zero(arr):
     if(len(arr)==0):
         return []
     
@@ -17,7 +17,7 @@ def move_all_zeros(arr):
 
 
 arr=[10,30,0,40,2,0,0,23,0,0,24]
-print(move_all_zeros(arr))
+print(move_all_zero(arr))
 
 
 
