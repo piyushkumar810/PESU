@@ -126,35 +126,35 @@ while True:
             6, (0, 0, 255), -1
         )
 
-        # 9. Correct prediction if measurement exists
-        if measurement is not None:
-            corrected = kalman.correct(measurement)
+        # # 9. Correct prediction if measurement exists
+        # if measurement is not None:
+        #     corrected = kalman.correct(measurement)
 
-            corr_x = int(corrected[0, 0])
-            corr_y = int(corrected[1, 0])
+        #     corr_x = int(corrected[0, 0])
+        #     corr_y = int(corrected[1, 0])
 
-            cv2.circle(
-                frame, (corr_x, corr_y),
-                5, (255, 0, 0), -1
-            )
+        #     cv2.circle(
+        #         frame, (corr_x, corr_y),
+        #         5, (255, 0, 0), -1
+        #     )
 
-        cv2.putText(
-            frame, "Green: Measurement",
-            (10, 25), cv2.FONT_HERSHEY_SIMPLEX,
-            0.6, (0, 255, 0), 2
-        )
+        # cv2.putText(
+        #     frame, "Green: Measurement",
+        #     (10, 25), cv2.FONT_HERSHEY_SIMPLEX,
+        #     0.6, (0, 255, 0), 2
+        # )
 
-        cv2.putText(
-            frame, "Red: Prediction",
-            (10, 50), cv2.FONT_HERSHEY_SIMPLEX,
-            0.6, (0, 0, 255), 2
-        )
+        # cv2.putText(
+        #     frame, "Red: Prediction",
+        #     (10, 50), cv2.FONT_HERSHEY_SIMPLEX,
+        #     0.6, (0, 0, 255), 2
+        # )
 
-        cv2.putText(
-            frame, "Blue: Corrected estimate",
-            (10, 75), cv2.FONT_HERSHEY_SIMPLEX,
-            0.6, (255, 0, 0), 2
-        )
+        # cv2.putText(
+        #     frame, "Blue: Corrected estimate",
+        #     (10, 75), cv2.FONT_HERSHEY_SIMPLEX,
+        #     0.6, (255, 0, 0), 2
+        # )
 
     # 10. Display output
     cv2.imshow("Kalman Object Tracking", frame)
