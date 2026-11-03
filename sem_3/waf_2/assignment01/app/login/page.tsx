@@ -21,16 +21,25 @@ export default function LoginPage() {
 
       setMessage("Login successful!");
 
-      router.push("/assignment49");
-    } catch (error) {
-      setMessage(
-        error instanceof Error
-          ? error.message
-          : "Login failed"
-      );
-    }
-  }
-
+      const next = new URLSearchParams(
+      window.location.search
+      ).get("next");
+      
+      const destination =
+        next && next.startsWith("/") && !next.startsWith("//")
+          ? next
+          : "/assignment49";
+      
+      router.push(destination);
+          } catch (error) {
+            setMessage(
+              error instanceof Error
+                ? error.message
+                : "Login failed"
+            );
+          }
+        }
+      
   return (
     <main className="flex min-h-screen items-center justify-center bg-gray-100 p-5">
 

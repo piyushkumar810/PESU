@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -6,7 +7,11 @@ import FeedbackForm from "@/components/FeedbackForm";
 import AdminFeedback from "@/components/AdminFeedback";
 
 export default function Assignment18() {
-  const { user } = useAuth();
+  const { user, loading } = useAuth();
+
+  if (loading) {
+    return <p className="p-8">Checking login...</p>;
+  }
 
   return (
     <main className="min-h-screen bg-gray-50 p-8 text-gray-900">
@@ -23,8 +28,9 @@ export default function Assignment18() {
         {!user ? (
           <div>
             <p>Please login to continue.</p>
+
             <Link
-              href="/login"
+              href="/login?next=/assignment18"
               className="text-blue-600 underline"
             >
               Login here
@@ -35,6 +41,15 @@ export default function Assignment18() {
         ) : (
           <AdminFeedback />
         )}
+
+        <div className="mt-8">
+          <Link
+            href="/"
+            className="text-blue-600 underline"
+          >
+            Back to Home
+          </Link>
+        </div>
 
       </div>
     </main>
