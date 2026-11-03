@@ -79,10 +79,19 @@ export async function POST(request: NextRequest) {
     });
 
     return response;
-  } catch {
+
+    } catch (error) {
+    console.error("LOGIN ERROR:", error);
+
     return NextResponse.json(
-      { message: "Invalid request" },
-      { status: 400 }
-    );
-  }
+    {
+      message: "Login failed",
+      error:
+        error instanceof Error
+          ? error.message
+          : "Unknown error",
+        },
+        { status: 500 }
+        );
+    }
 }
