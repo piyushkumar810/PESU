@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Database connection -->
+        <property name="hibernate.connection.driver_class">
+            com.mysql.cj.jdbc.Driver
+        </property>
+
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost:3306/author_book_db
+        </property>
+
+        <property name="hibernate.connection.username">
+            root
+        </property>
+
+        <property name="hibernate.connection.password">
+            YOUR_MYSQL_PASSWORD
+        </property>
+
+        <!-- Hibernate dialect -->
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.MySQLDialect
+        </property>
+
+        <!-- Automatically create/update tables -->
+        <property name="hibernate.hbm2ddl.auto">
+            update
+        </property>
+
+        <!-- Show SQL queries -->
+        <property name="hibernate.show_sql">
+            true
+        </property>
+
+        <property name="hibernate.format_sql">
+            true
+        </property>
+
+        <!-- Register entity classes -->
+        <mapping class="com.hibernate.entity.Author"/>
+        <mapping class="com.hibernate.entity.Book"/>
+
+    </session-factory>
+</hibernate-configuration>
