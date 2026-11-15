@@ -1,4 +1,31 @@
 
+"""
+LeetCode 92: Reverse Linked List II
+
+Question:
+Given the head of a singly linked list and two positions
+left and right, reverse the nodes from position left to right.
+
+Example:
+Input:
+head = 1 -> 2 -> 3 -> 4 -> 5
+left = 2
+right = 4
+
+Output:
+1 -> 4 -> 3 -> 2 -> 5
+
+Approach:
+1. Create a dummy node.
+2. Move prev to the node before left.
+3. Set current to the first node of the section.
+4. Move the next node after current to the beginning.
+5. Repeat right - left times.
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+"""
+
 from typing import Optional
 
 
